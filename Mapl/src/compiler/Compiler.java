@@ -25,7 +25,7 @@ public class Compiler extends VisitorAdapter<String> {
         }
         return ir;
     }
-
+    
 
     /*========================================================*/
     /* Statement visitors (all return an IR statement string) */
@@ -41,8 +41,17 @@ public class Compiler extends VisitorAdapter<String> {
     }
     @Override
     public String visit(StmBlock n){
+        String ir="";
+        for(Stm s : n.ss){
+            ir=seq(ir,s.accept(this));
+        }
+        return ir;
+    }
+    @Override
+    public String visit(StmOutput n){
         
     }
+
     /*==========================================================*/
     /* Expression visitors (all return an IR expression string) */
     /*==========================================================*/
