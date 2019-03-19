@@ -71,19 +71,19 @@ public class Compiler extends VisitorAdapter<String> {
     }
     @Override
     public String visit(ExpVar n){
-        return "TEMP "+ n.v;
+        return "TEMP "+ n.v.toString();
     }
     @Override
     public String visit(ExpNot n){
         String a= "CJUMP("+n.e+ ", LT , 1 , true , false)";
         
         String seqLabel1 ;
-        FreshLabelgenerator label1=new FreshLabelGenerator();
+        FreshLabelGenerator label1=new FreshLabelGenerator();
         seqLabel1=seq(label1.makeLabel("true"),
         "TEMP 1");
 
         String seqLabel2 ;
-        FreshLabelgenerator label2=new FreshLabelGenerator();
+        FreshLabelGenerator label2=new FreshLabelGenerator();
         seqLabel2=seq(label2.makeLabel("false"),
         "TEMP 0");
 
@@ -93,7 +93,7 @@ public class Compiler extends VisitorAdapter<String> {
 
     @Override
     public String visit(ExpOp n){
-    switch(n.name) {
+    switch(n.op.toString()) {
         case "and":
             return "AND";
             break;
