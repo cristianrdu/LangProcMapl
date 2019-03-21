@@ -11,6 +11,8 @@ import static compiler.FreshLabelGenerator.makeLabel;
  */
 public class Compiler extends VisitorAdapter<String> {
 
+    //FreshLabelGenerator makeLabels = new FreshLabelGenerator();
+
     public Compiler() {}
 
     private String seq(String l, String r) {
@@ -37,7 +39,7 @@ public class Compiler extends VisitorAdapter<String> {
     }
     @Override
     public String visit(StmOutchar n) {
-        return "EXP(CALL(NAME _printint, " + n.e.accept(this) + "))";
+        return "EXP(CALL(NAME _printchar, " + n.e.accept(this) + "))";
     }
     @Override
     public String visit(StmBlock n){
@@ -49,8 +51,15 @@ public class Compiler extends VisitorAdapter<String> {
     }
     @Override
     public String visit(StmOutput n){
-        
+        return "EXP(CALL(NAME _printint, " + n.e.accept(this) + "))";
     }
+    @Override
+    public String visit(StmAssing n){
+
+        n.v.toString()+
+        return "EXP(CALL(NAME _printint, " + n.e.accept(this) + "))";
+    }
+
 
     /*==========================================================*/
     /* Expression visitors (all return an IR expression string) */
@@ -75,16 +84,14 @@ public class Compiler extends VisitorAdapter<String> {
     }
     @Override
     public String visit(ExpNot n){
-        String a= "CJUMP("+n.e+ ", LT , 1 , true , false)";
+        String a= "CJUMP("+n.e.toString()+ ", LT , 1 , true , false)";
         
         String seqLabel1 ;
-        FreshLabelGenerator label1=new FreshLabelGenerator();
-        seqLabel1=seq(label1.makeLabel("true"),
+        seqLabel1=seq(makeLabel("true"),
         "TEMP 1");
 
         String seqLabel2 ;
-        FreshLabelGenerator label2=new FreshLabelGenerator();
-        seqLabel2=seq(label2.makeLabel("false"),
+        seqLabel2=seq(makeLabel("false"),
         "TEMP 0");
 
         String seqLabels=seq(seqLabel1, seqLabel2);
@@ -93,32 +100,36 @@ public class Compiler extends VisitorAdapter<String> {
 
     @Override
     public String visit(ExpOp n){
+        String d="";
     switch(n.op.toString()) {
         case "and":
-            return "AND";
+            if(Integer.parseInt(n.e1.accept(this))+Integer.parseInt(n.e2.accept(this))==2)
+               { d=d+ "BINOP("+n.e1.accept(this)+", AND ,"+n.e2.accept(this) +")";}
             break;
         case "<":
-            return "LT";
+            d=d+"BINOP("+n.e1.accept(this)+", LT ,"+n.e2.accept(this) +")";
             break;
         case "==":
-            return "EQ";
+            d=d+ "BINOP("+n.e1.accept(this)+", EQ ,"+n.e2.accept(this) +")";
             break;
         case "div":
-            return "DIV";
+            d=d+ "BINOP("+n.e1.accept(this)+", DIV ,"+n.e2.accept(this) +")";
             break;
         case "+":
-            return "ADD";
+            d=d+ "BINOP("+n.e1.accept(this)+", ADD ,"+n.e2.accept(this) +")";
             break;
         case "-":
-            return "SUB";
+            d=d+ "BINOP("+n.e1.accept(this)+", SUB ,"+n.e2.accept(this) +")";
             break;
         case "*":
-            return "MUL";
+            d=d+ "BINOP("+n.e1.accept(this)+", MUL ,"+n.e2.accept(this) +")";
             break;
-        case "<==":
-            return "LE";
+        case "<=":
+            d=d+ "BINOP("+n.e1.accept(this)+", LE ,"+n.e2.accept(this) +")";
             break;
+            
         }
+        return d;
     /* AND case doesn't exist in the IR grammar 
         LE is missing from the java class
             clarifications

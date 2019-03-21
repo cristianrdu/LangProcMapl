@@ -1,0 +1,1 @@
+SEQ(NOOP, EXP(CALL(NAME _printint, BINOP(CONST 2, ADD ,CONST 3))))
