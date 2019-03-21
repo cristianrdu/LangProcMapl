@@ -53,12 +53,13 @@ public class Compiler extends VisitorAdapter<String> {
     public String visit(StmOutput n){
         return "EXP(CALL(NAME _printint, " + n.e.accept(this) + "))";
     }
-    @Override
-    public String visit(StmAssing n){
 
-        n.v.toString()+
-        return "EXP(CALL(NAME _printint, " + n.e.accept(this) + "))";
-    }
+    // @Override
+    // public String visit(StmAssing n){
+
+    //     n.v.toString()+
+    //     return "EXP(CALL(NAME _printint, " + n.e.accept(this) + "))";
+    // }
 
 
     /*==========================================================*/
