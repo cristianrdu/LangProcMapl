@@ -88,12 +88,12 @@ public class Compiler extends VisitorAdapter<String> {
 
     @Override
     public String visit(StmWhile n) {
-        String b=FreshLabelGenerator.makeLabel("b");
+        String b1=FreshLabelGenerator.makeLabel("b");
         String done=FreshLabelGenerator.makeLabel("done");
         String start=FreshLabelGenerator.makeLabel("start");
         String a = "LABEL "+start;
-        String b = "CJUMP (" + n.e.accept(this) + ", EQ, CONST 1, "+d+" , "+done+")";
-        String c = "LABEL "+ b;
+        String b = "CJUMP (" + n.e.accept(this) + ", EQ, CONST 1, "+b1+" , "+done+")";
+        String c = "LABEL "+ b1;
         String d = visit(n.b);
         String e = "JUMP(NAME "+start+")";
         String f = "LABEL "+ done;
