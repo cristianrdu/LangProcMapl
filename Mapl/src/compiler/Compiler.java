@@ -45,7 +45,7 @@ public class Compiler extends VisitorAdapter<String> {
 
     @Override
     public String visit(StmBlock n) {
-        String ir = "";
+        String ir = "NOOP";
         for (Stm s : n.ss) {
             ir = seq(ir, s.accept(this));
         }
@@ -84,13 +84,15 @@ public class Compiler extends VisitorAdapter<String> {
 
     @Override
     public String visit(StmWhile n) {
-
-        String a = "LABEL start";
-        String b = "CJUMP (" + n.e.accept(this) + ", EQ, CONST 1, b , done)";
-        String c = "LABEL b";
+        String b=FreshLabelGenerator.makeLabel("b");
+        String done=FreshLabelGenerator.makeLabel("done");
+        String start=FreshLabelGenerator.makeLabel("start");
+        String a = "LABEL "+start;
+        String b = "CJUMP (" + n.e.accept(this) + ", EQ, CONST 1, "+d+" , "+done+")";
+        String c = "LABEL "+ b;
         String d = visit(n.b);
-        String e = "JUMP(NAME start)";
-        String f = "LABEL done";
+        String e = "JUMP(NAME "+start+")";
+        String f = "LABEL "+ done;
         String completedWhileStatement = a;
         completedWhileStatement = seq(completedWhileStatement, b);
         completedWhileStatement = seq(completedWhileStatement, c);
