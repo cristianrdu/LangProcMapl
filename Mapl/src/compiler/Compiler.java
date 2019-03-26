@@ -45,7 +45,7 @@ public class Compiler extends VisitorAdapter<String> {
 
     @Override
     public String visit(StmBlock n) {
-        String ir = "";
+        String ir = "NOOP";
         for (Stm s : n.ss) {
             ir = seq(ir, s.accept(this));
         }
@@ -64,13 +64,17 @@ public class Compiler extends VisitorAdapter<String> {
 
     @Override
     public String visit(StmIf n) {
-        String ifStm = "CJUMP(" + n.e.accept(this) + ", EQ, CONST 1, trueCase, falseCase)";
-        String labelTrue = "LABEL trueCase";
+        String trueCase = FreshLabelGenerator.makeLabel("trueCase");
+        String falseCase = FreshLabelGenerator.makeLabel("falseCase");
+        String done = FreshLabelGenerator.makeLabel("done");
+
+        String ifStm = "CJUMP(" + n.e.accept(this) + ", EQ, CONST 1, " + trueCase + "," + falseCase + ")";
+        String labelTrue = "LABEL " + trueCase;
         String block1 = n.b1.accept(this);
         String jumpDone = "JUMP(NAME done)";
-        String labelFalse = "LABEL falseCase";
+        String labelFalse = "LABEL " + falseCase;
         String block2 = n.b2.accept(this);
-        String labelDone = "LABEL done";
+        String labelDone = "LABEL " + done;
 
         String finishedStm = ifStm;
         finishedStm = seq(finishedStm, labelTrue);
