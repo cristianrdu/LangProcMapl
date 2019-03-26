@@ -1,0 +1,1 @@
+SEQ(NOOP, SEQ(SEQ(SEQ(SEQ(SEQ(LABEL start, CJUMP (CONST 1, EQ, CONST 1, b , done)), LABEL b), SEQ(, EXP(CALL(NAME _printint, CONST 7)))), JUMP(NAME start)), LABEL done))

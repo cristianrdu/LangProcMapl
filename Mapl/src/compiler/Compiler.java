@@ -57,6 +57,49 @@ public class Compiler extends VisitorAdapter<String> {
         return "EXP(CALL(NAME _printint, " + n.e.accept(this) + "))";
     }
 
+    @Override
+    public String visit(StmAssign n) {
+        return "MOVE(TEMP " + n.v.toString() + ", " + n.e.accept(this) + ")";
+    }
+
+    @Override
+    public String visit(StmIf n) {
+        String ifStm = "CJUMP(" + n.e.accept(this) + ", EQ, CONST 1, trueCase, falseCase)";
+        String labelTrue = "LABEL trueCase";
+        String block1 = n.b1.accept(this);
+        String jumpDone = "JUMP(NAME done)";
+        String labelFalse = "LABEL falseCase";
+        String block2 = n.b2.accept(this);
+        String labelDone = "LABEL done";
+
+        String finishedStm = ifStm;
+        finishedStm = seq(finishedStm, labelTrue);
+        finishedStm = seq(finishedStm, block1);
+        finishedStm = seq(finishedStm, jumpDone);
+        finishedStm = seq(finishedStm, labelFalse);
+        finishedStm = seq(finishedStm, block2);
+        finishedStm = seq(finishedStm, labelDone);
+        return finishedStm;
+    }
+
+    @Override
+    public String visit(StmWhile n) {
+
+        String a = "LABEL start";
+        String b = "CJUMP (" + n.e.accept(this) + ", EQ, CONST 1, b , done)";
+        String c = "LABEL b";
+        String d = visit(n.b);
+        String e = "JUMP(NAME start)";
+        String f = "LABEL done";
+        String completedWhileStatement = a;
+        completedWhileStatement = seq(completedWhileStatement, b);
+        completedWhileStatement = seq(completedWhileStatement, c);
+        completedWhileStatement = seq(completedWhileStatement, d);
+        completedWhileStatement = seq(completedWhileStatement, e);
+        completedWhileStatement = seq(completedWhileStatement, f);
+        return completedWhileStatement;
+    }
+
     /* ========================================================== */
     /* Expression visitors (all return an IR expression string) */
     /* ========================================================== */
@@ -68,13 +111,13 @@ public class Compiler extends VisitorAdapter<String> {
 
     @Override
     public String visit(ExpFalse n) {
-        return "false";
+        return "CONST 0";
 
     }
 
     @Override
     public String visit(ExpTrue n) {
-        return "true";
+        return "CONST 1";
     }
 
     @Override
@@ -84,55 +127,39 @@ public class Compiler extends VisitorAdapter<String> {
 
     @Override
     public String visit(ExpNot n) {
-        String a = "CJUMP(" + n.e.toString() + ", LT , 1 , true , false)";
-
-        String seqLabel1;
-        seqLabel1 = seq(makeLabel("true"), "TEMP 1");
-
-        String seqLabel2;
-        seqLabel2 = seq(makeLabel("false"), "TEMP 0");
-
-        String seqLabels = seq(seqLabel1, seqLabel2);
-        return seq(a, seqLabels);
+        String a = "BINOP(" + n.e.accept(this) + ", EQ , CONST 0)";
+        return a;
     }
 
     @Override
     public String visit(ExpOp n) {
-        String d = "";
-        switch (n.op.toString()) {
-        case "and":
-            if (Integer.parseInt(n.e1.accept(this)) + Integer.parseInt(n.e2.accept(this)) == 2) {
-                d = d + "BINOP(" + n.e1.accept(this) + ", AND ," + n.e2.accept(this) + ")";
-            }
+        String operator = "";
+        switch (n.op) {
+        case LESSTHAN:
+            operator = "LT";
             break;
-        case "<":
-            d = d + "BINOP(" + n.e1.accept(this) + ", LT ," + n.e2.accept(this) + ")";
+        case EQUALS:
+            operator = "EQ";
             break;
-        case "==":
-            d = d + "BINOP(" + n.e1.accept(this) + ", EQ ," + n.e2.accept(this) + ")";
+        case DIV:
+            operator = "DIV";
             break;
-        case "div":
-            d = d + "BINOP(" + n.e1.accept(this) + ", DIV ," + n.e2.accept(this) + ")";
+        case PLUS:
+            operator = "ADD";
             break;
-        case "+":
-            d = d + "BINOP(" + n.e1.accept(this) + ", ADD ," + n.e2.accept(this) + ")";
+        case MINUS:
+            operator = "SUB";
             break;
-        case "-":
-            d = d + "BINOP(" + n.e1.accept(this) + ", SUB ," + n.e2.accept(this) + ")";
+        case TIMES:
+            operator = "MUL";
             break;
-        case "*":
-            d = d + "BINOP(" + n.e1.accept(this) + ", MUL ," + n.e2.accept(this) + ")";
-            break;
-        case "<=":
-            d = d + "BINOP(" + n.e1.accept(this) + ", LE ," + n.e2.accept(this) + ")";
-            break;
-
+        case AND:
+            String a = "BINOP(" + n.e1.accept(this) + ", EQ, CONST 1)";
+            String b = "BINOP(" + n.e2.accept(this) + ",EQ, CONST 1)";
+            operator = "BINOP(" + a + " , AND, " + b + ")";
+            return operator;
         }
-        return d;
-        /*
-         * AND case doesn't exist in the IR grammar LE is missing from the java class
-         * clarifications
-         */
+        return "BINOP(" + n.e1.accept(this) + ", " + operator + ", " + n.e2.accept(this) + ")";
     }
 
 }

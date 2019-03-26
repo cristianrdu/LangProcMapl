@@ -1,0 +1,3766 @@
+.data
+  ACC   : 1
+  FP    : 3
+  MEMHI : 7
+  MEMLO : 6
+  OUT   : 2
+  PC    : 0
+  RET   : 4
+  RV    : 8
+  SP    : 5
+  tmp.x : 9
+
+.text
+    0:              LOADI  $ACC, 1
+    6:              MOVE   $10, $ACC
+    9:              LOADI  $ACC, 1
+   15:              MOVE   $11, $ACC
+   18:              LOADI  $ACC, 1
+   24:              MOVE   $12, $ACC
+   27:              LOADI  $ACC, 1
+   33:              MOVE   $13, $ACC
+   36:              LOADI  $ACC, 5
+   42:              MOVE   $14, $ACC
+   45:              LOADI  $ACC, 1
+   51:              MOVE   $15, $ACC
+   54:              LOADI  $ACC, 1
+   60:              MOVE   $16, $ACC
+   63:              LOADI  $ACC, 1
+   69:              MOVE   $17, $ACC
+   72:              LOADI  $ACC, 1
+   78:              MOVE   $18, $ACC
+   81:              LOADI  $ACC, 0
+   87:              MOVE   $19, $ACC
+   90:              LOADI  $ACC, 1
+   96:              MOVE   $20, $ACC
+   99:              LOADI  $ACC, 5
+  105:              MOVE   $21, $ACC
+  108:              LOADI  $ACC, 1
+  114:              MOVE   $22, $ACC
+  117:              LOADI  $ACC, 1
+  123:              MOVE   $23, $ACC
+  126:              LOADI  $ACC, 0
+  132:              MOVE   $24, $ACC
+  135:              LOADI  $ACC, 0
+  141:              MOVE   $25, $ACC
+  144:              LOADI  $ACC, 0
+  150:              MOVE   $26, $ACC
+  153:              LOADI  $ACC, 0
+  159:              MOVE   $27, $ACC
+  162:              LOADI  $ACC, 3
+  168:              ADD    $27, $ACC
+  171:              ADD    $26, $ACC
+  174:              ADD    $25, $ACC
+  177:              ADD    $24, $ACC
+  180:              ADD    $23, $ACC
+  183:              ADD    $22, $ACC
+  186:              SUB    $21, $ACC
+  189:              ADD    $20, $ACC
+  192:              ADD    $19, $ACC
+  195:              ADD    $18, $ACC
+  198:              ADD    $17, $ACC
+  201:              ADD    $16, $ACC
+  204:              ADD    $15, $ACC
+  207:              SUB    $14, $ACC
+  210:              ADD    $13, $ACC
+  213:              ADD    $12, $ACC
+  216:              ADD    $11, $ACC
+  219:              MOVE   $11, $ACC
+  222:              LOADI  $ACC, 2
+  228:              MUL    $11, $ACC
+  231:              MOVE   $11, $ACC
+  234:              LOADI  $ACC, 1
+  240:              MOVE   $12, $ACC
+  243:              LOADI  $ACC, 1
+  249:              MOVE   $13, $ACC
+  252:              LOADI  $ACC, 1
+  258:              MOVE   $14, $ACC
+  261:              LOADI  $ACC, 5
+  267:              MOVE   $15, $ACC
+  270:              LOADI  $ACC, 1
+  276:              MOVE   $16, $ACC
+  279:              LOADI  $ACC, 1
+  285:              MOVE   $17, $ACC
+  288:              LOADI  $ACC, 1
+  294:              MOVE   $18, $ACC
+  297:              LOADI  $ACC, 1
+  303:              MOVE   $19, $ACC
+  306:              LOADI  $ACC, 0
+  312:              MOVE   $20, $ACC
+  315:              LOADI  $ACC, 1
+  321:              MOVE   $21, $ACC
+  324:              LOADI  $ACC, 5
+  330:              MOVE   $22, $ACC
+  333:              LOADI  $ACC, 1
+  339:              MOVE   $23, $ACC
+  342:              LOADI  $ACC, 1
+  348:              MOVE   $24, $ACC
+  351:              LOADI  $ACC, 0
+  357:              MOVE   $25, $ACC
+  360:              LOADI  $ACC, 0
+  366:              MOVE   $26, $ACC
+  369:              LOADI  $ACC, 0
+  375:              MOVE   $27, $ACC
+  378:              LOADI  $ACC, 0
+  384:              MOVE   $28, $ACC
+  387:              LOADI  $ACC, 3
+  393:              ADD    $28, $ACC
+  396:              ADD    $27, $ACC
+  399:              ADD    $26, $ACC
+  402:              ADD    $25, $ACC
+  405:              ADD    $24, $ACC
+  408:              ADD    $23, $ACC
+  411:              SUB    $22, $ACC
+  414:              ADD    $21, $ACC
+  417:              ADD    $20, $ACC
+  420:              ADD    $19, $ACC
+  423:              ADD    $18, $ACC
+  426:              ADD    $17, $ACC
+  429:              ADD    $16, $ACC
+  432:              SUB    $15, $ACC
+  435:              ADD    $14, $ACC
+  438:              ADD    $13, $ACC
+  441:              ADD    $12, $ACC
+  444:              MOVE   $12, $ACC
+  447:              LOADI  $ACC, 2
+  453:              MUL    $12, $ACC
+  456:              MUL    $11, $ACC
+  459:              MOVE   $11, $ACC
+  462:              LOADI  $ACC, 1
+  468:              MOVE   $12, $ACC
+  471:              LOADI  $ACC, 1
+  477:              MOVE   $13, $ACC
+  480:              LOADI  $ACC, 1
+  486:              MOVE   $14, $ACC
+  489:              LOADI  $ACC, 5
+  495:              MOVE   $15, $ACC
+  498:              LOADI  $ACC, 1
+  504:              MOVE   $16, $ACC
+  507:              LOADI  $ACC, 1
+  513:              MOVE   $17, $ACC
+  516:              LOADI  $ACC, 1
+  522:              MOVE   $18, $ACC
+  525:              LOADI  $ACC, 1
+  531:              MOVE   $19, $ACC
+  534:              LOADI  $ACC, 0
+  540:              MOVE   $20, $ACC
+  543:              LOADI  $ACC, 1
+  549:              MOVE   $21, $ACC
+  552:              LOADI  $ACC, 5
+  558:              MOVE   $22, $ACC
+  561:              LOADI  $ACC, 1
+  567:              MOVE   $23, $ACC
+  570:              LOADI  $ACC, 1
+  576:              MOVE   $24, $ACC
+  579:              LOADI  $ACC, 0
+  585:              MOVE   $25, $ACC
+  588:              LOADI  $ACC, 0
+  594:              MOVE   $26, $ACC
+  597:              LOADI  $ACC, 0
+  603:              MOVE   $27, $ACC
+  606:              LOADI  $ACC, 0
+  612:              MOVE   $28, $ACC
+  615:              LOADI  $ACC, 3
+  621:              ADD    $28, $ACC
+  624:              ADD    $27, $ACC
+  627:              ADD    $26, $ACC
+  630:              ADD    $25, $ACC
+  633:              ADD    $24, $ACC
+  636:              ADD    $23, $ACC
+  639:              SUB    $22, $ACC
+  642:              ADD    $21, $ACC
+  645:              ADD    $20, $ACC
+  648:              ADD    $19, $ACC
+  651:              ADD    $18, $ACC
+  654:              ADD    $17, $ACC
+  657:              ADD    $16, $ACC
+  660:              SUB    $15, $ACC
+  663:              ADD    $14, $ACC
+  666:              ADD    $13, $ACC
+  669:              ADD    $12, $ACC
+  672:              MOVE   $12, $ACC
+  675:              LOADI  $ACC, 2
+  681:              MUL    $12, $ACC
+  684:              MOVE   $12, $ACC
+  687:              LOADI  $ACC, 1
+  693:              MOVE   $13, $ACC
+  696:              LOADI  $ACC, 1
+  702:              MOVE   $14, $ACC
+  705:              LOADI  $ACC, 1
+  711:              MOVE   $15, $ACC
+  714:              LOADI  $ACC, 5
+  720:              MOVE   $16, $ACC
+  723:              LOADI  $ACC, 1
+  729:              MOVE   $17, $ACC
+  732:              LOADI  $ACC, 1
+  738:              MOVE   $18, $ACC
+  741:              LOADI  $ACC, 1
+  747:              MOVE   $19, $ACC
+  750:              LOADI  $ACC, 1
+  756:              MOVE   $20, $ACC
+  759:              LOADI  $ACC, 0
+  765:              MOVE   $21, $ACC
+  768:              LOADI  $ACC, 1
+  774:              MOVE   $22, $ACC
+  777:              LOADI  $ACC, 5
+  783:              MOVE   $23, $ACC
+  786:              LOADI  $ACC, 1
+  792:              MOVE   $24, $ACC
+  795:              LOADI  $ACC, 1
+  801:              MOVE   $25, $ACC
+  804:              LOADI  $ACC, 0
+  810:              MOVE   $26, $ACC
+  813:              LOADI  $ACC, 0
+  819:              MOVE   $27, $ACC
+  822:              LOADI  $ACC, 0
+  828:              MOVE   $28, $ACC
+  831:              LOADI  $ACC, 0
+  837:              MOVE   $29, $ACC
+  840:              LOADI  $ACC, 3
+  846:              ADD    $29, $ACC
+  849:              ADD    $28, $ACC
+  852:              ADD    $27, $ACC
+  855:              ADD    $26, $ACC
+  858:              ADD    $25, $ACC
+  861:              ADD    $24, $ACC
+  864:              SUB    $23, $ACC
+  867:              ADD    $22, $ACC
+  870:              ADD    $21, $ACC
+  873:              ADD    $20, $ACC
+  876:              ADD    $19, $ACC
+  879:              ADD    $18, $ACC
+  882:              ADD    $17, $ACC
+  885:              SUB    $16, $ACC
+  888:              ADD    $15, $ACC
+  891:              ADD    $14, $ACC
+  894:              ADD    $13, $ACC
+  897:              MOVE   $13, $ACC
+  900:              LOADI  $ACC, 2
+  906:              MUL    $13, $ACC
+  909:              MUL    $12, $ACC
+  912:              ADD    $11, $ACC
+  915:              MOVE   $11, $ACC
+  918:              LOADI  $ACC, 1
+  924:              MOVE   $12, $ACC
+  927:              LOADI  $ACC, 1
+  933:              MOVE   $13, $ACC
+  936:              LOADI  $ACC, 1
+  942:              MOVE   $14, $ACC
+  945:              LOADI  $ACC, 5
+  951:              MOVE   $15, $ACC
+  954:              LOADI  $ACC, 1
+  960:              MOVE   $16, $ACC
+  963:              LOADI  $ACC, 1
+  969:              MOVE   $17, $ACC
+  972:              LOADI  $ACC, 1
+  978:              MOVE   $18, $ACC
+  981:              LOADI  $ACC, 1
+  987:              MOVE   $19, $ACC
+  990:              LOADI  $ACC, 0
+  996:              MOVE   $20, $ACC
+  999:              LOADI  $ACC, 1
+ 1005:              MOVE   $21, $ACC
+ 1008:              LOADI  $ACC, 5
+ 1014:              MOVE   $22, $ACC
+ 1017:              LOADI  $ACC, 1
+ 1023:              MOVE   $23, $ACC
+ 1026:              LOADI  $ACC, 1
+ 1032:              MOVE   $24, $ACC
+ 1035:              LOADI  $ACC, 0
+ 1041:              MOVE   $25, $ACC
+ 1044:              LOADI  $ACC, 0
+ 1050:              MOVE   $26, $ACC
+ 1053:              LOADI  $ACC, 0
+ 1059:              MOVE   $27, $ACC
+ 1062:              LOADI  $ACC, 0
+ 1068:              MOVE   $28, $ACC
+ 1071:              LOADI  $ACC, 3
+ 1077:              ADD    $28, $ACC
+ 1080:              ADD    $27, $ACC
+ 1083:              ADD    $26, $ACC
+ 1086:              ADD    $25, $ACC
+ 1089:              ADD    $24, $ACC
+ 1092:              ADD    $23, $ACC
+ 1095:              SUB    $22, $ACC
+ 1098:              ADD    $21, $ACC
+ 1101:              ADD    $20, $ACC
+ 1104:              ADD    $19, $ACC
+ 1107:              ADD    $18, $ACC
+ 1110:              ADD    $17, $ACC
+ 1113:              ADD    $16, $ACC
+ 1116:              SUB    $15, $ACC
+ 1119:              ADD    $14, $ACC
+ 1122:              ADD    $13, $ACC
+ 1125:              ADD    $12, $ACC
+ 1128:              MOVE   $12, $ACC
+ 1131:              LOADI  $ACC, 2
+ 1137:              MUL    $12, $ACC
+ 1140:              MOVE   $12, $ACC
+ 1143:              LOADI  $ACC, 1
+ 1149:              MOVE   $13, $ACC
+ 1152:              LOADI  $ACC, 1
+ 1158:              MOVE   $14, $ACC
+ 1161:              LOADI  $ACC, 1
+ 1167:              MOVE   $15, $ACC
+ 1170:              LOADI  $ACC, 5
+ 1176:              MOVE   $16, $ACC
+ 1179:              LOADI  $ACC, 1
+ 1185:              MOVE   $17, $ACC
+ 1188:              LOADI  $ACC, 1
+ 1194:              MOVE   $18, $ACC
+ 1197:              LOADI  $ACC, 1
+ 1203:              MOVE   $19, $ACC
+ 1206:              LOADI  $ACC, 1
+ 1212:              MOVE   $20, $ACC
+ 1215:              LOADI  $ACC, 0
+ 1221:              MOVE   $21, $ACC
+ 1224:              LOADI  $ACC, 1
+ 1230:              MOVE   $22, $ACC
+ 1233:              LOADI  $ACC, 5
+ 1239:              MOVE   $23, $ACC
+ 1242:              LOADI  $ACC, 1
+ 1248:              MOVE   $24, $ACC
+ 1251:              LOADI  $ACC, 1
+ 1257:              MOVE   $25, $ACC
+ 1260:              LOADI  $ACC, 0
+ 1266:              MOVE   $26, $ACC
+ 1269:              LOADI  $ACC, 0
+ 1275:              MOVE   $27, $ACC
+ 1278:              LOADI  $ACC, 0
+ 1284:              MOVE   $28, $ACC
+ 1287:              LOADI  $ACC, 0
+ 1293:              MOVE   $29, $ACC
+ 1296:              LOADI  $ACC, 3
+ 1302:              ADD    $29, $ACC
+ 1305:              ADD    $28, $ACC
+ 1308:              ADD    $27, $ACC
+ 1311:              ADD    $26, $ACC
+ 1314:              ADD    $25, $ACC
+ 1317:              ADD    $24, $ACC
+ 1320:              SUB    $23, $ACC
+ 1323:              ADD    $22, $ACC
+ 1326:              ADD    $21, $ACC
+ 1329:              ADD    $20, $ACC
+ 1332:              ADD    $19, $ACC
+ 1335:              ADD    $18, $ACC
+ 1338:              ADD    $17, $ACC
+ 1341:              SUB    $16, $ACC
+ 1344:              ADD    $15, $ACC
+ 1347:              ADD    $14, $ACC
+ 1350:              ADD    $13, $ACC
+ 1353:              MOVE   $13, $ACC
+ 1356:              LOADI  $ACC, 2
+ 1362:              MUL    $13, $ACC
+ 1365:              MUL    $12, $ACC
+ 1368:              MOVE   $12, $ACC
+ 1371:              LOADI  $ACC, 1
+ 1377:              MOVE   $13, $ACC
+ 1380:              LOADI  $ACC, 1
+ 1386:              MOVE   $14, $ACC
+ 1389:              LOADI  $ACC, 1
+ 1395:              MOVE   $15, $ACC
+ 1398:              LOADI  $ACC, 5
+ 1404:              MOVE   $16, $ACC
+ 1407:              LOADI  $ACC, 1
+ 1413:              MOVE   $17, $ACC
+ 1416:              LOADI  $ACC, 1
+ 1422:              MOVE   $18, $ACC
+ 1425:              LOADI  $ACC, 1
+ 1431:              MOVE   $19, $ACC
+ 1434:              LOADI  $ACC, 1
+ 1440:              MOVE   $20, $ACC
+ 1443:              LOADI  $ACC, 0
+ 1449:              MOVE   $21, $ACC
+ 1452:              LOADI  $ACC, 1
+ 1458:              MOVE   $22, $ACC
+ 1461:              LOADI  $ACC, 5
+ 1467:              MOVE   $23, $ACC
+ 1470:              LOADI  $ACC, 1
+ 1476:              MOVE   $24, $ACC
+ 1479:              LOADI  $ACC, 1
+ 1485:              MOVE   $25, $ACC
+ 1488:              LOADI  $ACC, 0
+ 1494:              MOVE   $26, $ACC
+ 1497:              LOADI  $ACC, 0
+ 1503:              MOVE   $27, $ACC
+ 1506:              LOADI  $ACC, 0
+ 1512:              MOVE   $28, $ACC
+ 1515:              LOADI  $ACC, 0
+ 1521:              MOVE   $29, $ACC
+ 1524:              LOADI  $ACC, 3
+ 1530:              ADD    $29, $ACC
+ 1533:              ADD    $28, $ACC
+ 1536:              ADD    $27, $ACC
+ 1539:              ADD    $26, $ACC
+ 1542:              ADD    $25, $ACC
+ 1545:              ADD    $24, $ACC
+ 1548:              SUB    $23, $ACC
+ 1551:              ADD    $22, $ACC
+ 1554:              ADD    $21, $ACC
+ 1557:              ADD    $20, $ACC
+ 1560:              ADD    $19, $ACC
+ 1563:              ADD    $18, $ACC
+ 1566:              ADD    $17, $ACC
+ 1569:              SUB    $16, $ACC
+ 1572:              ADD    $15, $ACC
+ 1575:              ADD    $14, $ACC
+ 1578:              ADD    $13, $ACC
+ 1581:              MOVE   $13, $ACC
+ 1584:              LOADI  $ACC, 2
+ 1590:              MUL    $13, $ACC
+ 1593:              MOVE   $13, $ACC
+ 1596:              LOADI  $ACC, 1
+ 1602:              MOVE   $14, $ACC
+ 1605:              LOADI  $ACC, 1
+ 1611:              MOVE   $15, $ACC
+ 1614:              LOADI  $ACC, 1
+ 1620:              MOVE   $16, $ACC
+ 1623:              LOADI  $ACC, 5
+ 1629:              MOVE   $17, $ACC
+ 1632:              LOADI  $ACC, 1
+ 1638:              MOVE   $18, $ACC
+ 1641:              LOADI  $ACC, 1
+ 1647:              MOVE   $19, $ACC
+ 1650:              LOADI  $ACC, 1
+ 1656:              MOVE   $20, $ACC
+ 1659:              LOADI  $ACC, 1
+ 1665:              MOVE   $21, $ACC
+ 1668:              LOADI  $ACC, 0
+ 1674:              MOVE   $22, $ACC
+ 1677:              LOADI  $ACC, 1
+ 1683:              MOVE   $23, $ACC
+ 1686:              LOADI  $ACC, 5
+ 1692:              MOVE   $24, $ACC
+ 1695:              LOADI  $ACC, 1
+ 1701:              MOVE   $25, $ACC
+ 1704:              LOADI  $ACC, 1
+ 1710:              MOVE   $26, $ACC
+ 1713:              LOADI  $ACC, 0
+ 1719:              MOVE   $27, $ACC
+ 1722:              LOADI  $ACC, 0
+ 1728:              MOVE   $28, $ACC
+ 1731:              LOADI  $ACC, 0
+ 1737:              MOVE   $29, $ACC
+ 1740:              LOADI  $ACC, 0
+ 1746:              MOVE   $30, $ACC
+ 1749:              LOADI  $ACC, 3
+ 1755:              ADD    $30, $ACC
+ 1758:              ADD    $29, $ACC
+ 1761:              ADD    $28, $ACC
+ 1764:              ADD    $27, $ACC
+ 1767:              ADD    $26, $ACC
+ 1770:              ADD    $25, $ACC
+ 1773:              SUB    $24, $ACC
+ 1776:              ADD    $23, $ACC
+ 1779:              ADD    $22, $ACC
+ 1782:              ADD    $21, $ACC
+ 1785:              ADD    $20, $ACC
+ 1788:              ADD    $19, $ACC
+ 1791:              ADD    $18, $ACC
+ 1794:              SUB    $17, $ACC
+ 1797:              ADD    $16, $ACC
+ 1800:              ADD    $15, $ACC
+ 1803:              ADD    $14, $ACC
+ 1806:              MOVE   $14, $ACC
+ 1809:              LOADI  $ACC, 2
+ 1815:              MUL    $14, $ACC
+ 1818:              MUL    $13, $ACC
+ 1821:              ADD    $12, $ACC
+ 1824:              MUL    $11, $ACC
+ 1827:              MOVE   $11, $ACC
+ 1830:              LOADI  $ACC, 1
+ 1836:              MOVE   $12, $ACC
+ 1839:              LOADI  $ACC, 1
+ 1845:              MOVE   $13, $ACC
+ 1848:              LOADI  $ACC, 1
+ 1854:              MOVE   $14, $ACC
+ 1857:              LOADI  $ACC, 5
+ 1863:              MOVE   $15, $ACC
+ 1866:              LOADI  $ACC, 1
+ 1872:              MOVE   $16, $ACC
+ 1875:              LOADI  $ACC, 1
+ 1881:              MOVE   $17, $ACC
+ 1884:              LOADI  $ACC, 1
+ 1890:              MOVE   $18, $ACC
+ 1893:              LOADI  $ACC, 1
+ 1899:              MOVE   $19, $ACC
+ 1902:              LOADI  $ACC, 0
+ 1908:              MOVE   $20, $ACC
+ 1911:              LOADI  $ACC, 1
+ 1917:              MOVE   $21, $ACC
+ 1920:              LOADI  $ACC, 5
+ 1926:              MOVE   $22, $ACC
+ 1929:              LOADI  $ACC, 1
+ 1935:              MOVE   $23, $ACC
+ 1938:              LOADI  $ACC, 1
+ 1944:              MOVE   $24, $ACC
+ 1947:              LOADI  $ACC, 0
+ 1953:              MOVE   $25, $ACC
+ 1956:              LOADI  $ACC, 0
+ 1962:              MOVE   $26, $ACC
+ 1965:              LOADI  $ACC, 0
+ 1971:              MOVE   $27, $ACC
+ 1974:              LOADI  $ACC, 0
+ 1980:              MOVE   $28, $ACC
+ 1983:              LOADI  $ACC, 3
+ 1989:              ADD    $28, $ACC
+ 1992:              ADD    $27, $ACC
+ 1995:              ADD    $26, $ACC
+ 1998:              ADD    $25, $ACC
+ 2001:              ADD    $24, $ACC
+ 2004:              ADD    $23, $ACC
+ 2007:              SUB    $22, $ACC
+ 2010:              ADD    $21, $ACC
+ 2013:              ADD    $20, $ACC
+ 2016:              ADD    $19, $ACC
+ 2019:              ADD    $18, $ACC
+ 2022:              ADD    $17, $ACC
+ 2025:              ADD    $16, $ACC
+ 2028:              SUB    $15, $ACC
+ 2031:              ADD    $14, $ACC
+ 2034:              ADD    $13, $ACC
+ 2037:              ADD    $12, $ACC
+ 2040:              MOVE   $12, $ACC
+ 2043:              LOADI  $ACC, 2
+ 2049:              MUL    $12, $ACC
+ 2052:              MOVE   $12, $ACC
+ 2055:              LOADI  $ACC, 1
+ 2061:              MOVE   $13, $ACC
+ 2064:              LOADI  $ACC, 1
+ 2070:              MOVE   $14, $ACC
+ 2073:              LOADI  $ACC, 1
+ 2079:              MOVE   $15, $ACC
+ 2082:              LOADI  $ACC, 5
+ 2088:              MOVE   $16, $ACC
+ 2091:              LOADI  $ACC, 1
+ 2097:              MOVE   $17, $ACC
+ 2100:              LOADI  $ACC, 1
+ 2106:              MOVE   $18, $ACC
+ 2109:              LOADI  $ACC, 1
+ 2115:              MOVE   $19, $ACC
+ 2118:              LOADI  $ACC, 1
+ 2124:              MOVE   $20, $ACC
+ 2127:              LOADI  $ACC, 0
+ 2133:              MOVE   $21, $ACC
+ 2136:              LOADI  $ACC, 1
+ 2142:              MOVE   $22, $ACC
+ 2145:              LOADI  $ACC, 5
+ 2151:              MOVE   $23, $ACC
+ 2154:              LOADI  $ACC, 1
+ 2160:              MOVE   $24, $ACC
+ 2163:              LOADI  $ACC, 1
+ 2169:              MOVE   $25, $ACC
+ 2172:              LOADI  $ACC, 0
+ 2178:              MOVE   $26, $ACC
+ 2181:              LOADI  $ACC, 0
+ 2187:              MOVE   $27, $ACC
+ 2190:              LOADI  $ACC, 0
+ 2196:              MOVE   $28, $ACC
+ 2199:              LOADI  $ACC, 0
+ 2205:              MOVE   $29, $ACC
+ 2208:              LOADI  $ACC, 3
+ 2214:              ADD    $29, $ACC
+ 2217:              ADD    $28, $ACC
+ 2220:              ADD    $27, $ACC
+ 2223:              ADD    $26, $ACC
+ 2226:              ADD    $25, $ACC
+ 2229:              ADD    $24, $ACC
+ 2232:              SUB    $23, $ACC
+ 2235:              ADD    $22, $ACC
+ 2238:              ADD    $21, $ACC
+ 2241:              ADD    $20, $ACC
+ 2244:              ADD    $19, $ACC
+ 2247:              ADD    $18, $ACC
+ 2250:              ADD    $17, $ACC
+ 2253:              SUB    $16, $ACC
+ 2256:              ADD    $15, $ACC
+ 2259:              ADD    $14, $ACC
+ 2262:              ADD    $13, $ACC
+ 2265:              MOVE   $13, $ACC
+ 2268:              LOADI  $ACC, 2
+ 2274:              MUL    $13, $ACC
+ 2277:              MUL    $12, $ACC
+ 2280:              MOVE   $12, $ACC
+ 2283:              LOADI  $ACC, 1
+ 2289:              MOVE   $13, $ACC
+ 2292:              LOADI  $ACC, 1
+ 2298:              MOVE   $14, $ACC
+ 2301:              LOADI  $ACC, 1
+ 2307:              MOVE   $15, $ACC
+ 2310:              LOADI  $ACC, 5
+ 2316:              MOVE   $16, $ACC
+ 2319:              LOADI  $ACC, 1
+ 2325:              MOVE   $17, $ACC
+ 2328:              LOADI  $ACC, 1
+ 2334:              MOVE   $18, $ACC
+ 2337:              LOADI  $ACC, 1
+ 2343:              MOVE   $19, $ACC
+ 2346:              LOADI  $ACC, 1
+ 2352:              MOVE   $20, $ACC
+ 2355:              LOADI  $ACC, 0
+ 2361:              MOVE   $21, $ACC
+ 2364:              LOADI  $ACC, 1
+ 2370:              MOVE   $22, $ACC
+ 2373:              LOADI  $ACC, 5
+ 2379:              MOVE   $23, $ACC
+ 2382:              LOADI  $ACC, 1
+ 2388:              MOVE   $24, $ACC
+ 2391:              LOADI  $ACC, 1
+ 2397:              MOVE   $25, $ACC
+ 2400:              LOADI  $ACC, 0
+ 2406:              MOVE   $26, $ACC
+ 2409:              LOADI  $ACC, 0
+ 2415:              MOVE   $27, $ACC
+ 2418:              LOADI  $ACC, 0
+ 2424:              MOVE   $28, $ACC
+ 2427:              LOADI  $ACC, 0
+ 2433:              MOVE   $29, $ACC
+ 2436:              LOADI  $ACC, 3
+ 2442:              ADD    $29, $ACC
+ 2445:              ADD    $28, $ACC
+ 2448:              ADD    $27, $ACC
+ 2451:              ADD    $26, $ACC
+ 2454:              ADD    $25, $ACC
+ 2457:              ADD    $24, $ACC
+ 2460:              SUB    $23, $ACC
+ 2463:              ADD    $22, $ACC
+ 2466:              ADD    $21, $ACC
+ 2469:              ADD    $20, $ACC
+ 2472:              ADD    $19, $ACC
+ 2475:              ADD    $18, $ACC
+ 2478:              ADD    $17, $ACC
+ 2481:              SUB    $16, $ACC
+ 2484:              ADD    $15, $ACC
+ 2487:              ADD    $14, $ACC
+ 2490:              ADD    $13, $ACC
+ 2493:              MOVE   $13, $ACC
+ 2496:              LOADI  $ACC, 2
+ 2502:              MUL    $13, $ACC
+ 2505:              MOVE   $13, $ACC
+ 2508:              LOADI  $ACC, 1
+ 2514:              MOVE   $14, $ACC
+ 2517:              LOADI  $ACC, 1
+ 2523:              MOVE   $15, $ACC
+ 2526:              LOADI  $ACC, 1
+ 2532:              MOVE   $16, $ACC
+ 2535:              LOADI  $ACC, 5
+ 2541:              MOVE   $17, $ACC
+ 2544:              LOADI  $ACC, 1
+ 2550:              MOVE   $18, $ACC
+ 2553:              LOADI  $ACC, 1
+ 2559:              MOVE   $19, $ACC
+ 2562:              LOADI  $ACC, 1
+ 2568:              MOVE   $20, $ACC
+ 2571:              LOADI  $ACC, 1
+ 2577:              MOVE   $21, $ACC
+ 2580:              LOADI  $ACC, 0
+ 2586:              MOVE   $22, $ACC
+ 2589:              LOADI  $ACC, 1
+ 2595:              MOVE   $23, $ACC
+ 2598:              LOADI  $ACC, 5
+ 2604:              MOVE   $24, $ACC
+ 2607:              LOADI  $ACC, 1
+ 2613:              MOVE   $25, $ACC
+ 2616:              LOADI  $ACC, 1
+ 2622:              MOVE   $26, $ACC
+ 2625:              LOADI  $ACC, 0
+ 2631:              MOVE   $27, $ACC
+ 2634:              LOADI  $ACC, 0
+ 2640:              MOVE   $28, $ACC
+ 2643:              LOADI  $ACC, 0
+ 2649:              MOVE   $29, $ACC
+ 2652:              LOADI  $ACC, 0
+ 2658:              MOVE   $30, $ACC
+ 2661:              LOADI  $ACC, 3
+ 2667:              ADD    $30, $ACC
+ 2670:              ADD    $29, $ACC
+ 2673:              ADD    $28, $ACC
+ 2676:              ADD    $27, $ACC
+ 2679:              ADD    $26, $ACC
+ 2682:              ADD    $25, $ACC
+ 2685:              SUB    $24, $ACC
+ 2688:              ADD    $23, $ACC
+ 2691:              ADD    $22, $ACC
+ 2694:              ADD    $21, $ACC
+ 2697:              ADD    $20, $ACC
+ 2700:              ADD    $19, $ACC
+ 2703:              ADD    $18, $ACC
+ 2706:              SUB    $17, $ACC
+ 2709:              ADD    $16, $ACC
+ 2712:              ADD    $15, $ACC
+ 2715:              ADD    $14, $ACC
+ 2718:              MOVE   $14, $ACC
+ 2721:              LOADI  $ACC, 2
+ 2727:              MUL    $14, $ACC
+ 2730:              MUL    $13, $ACC
+ 2733:              ADD    $12, $ACC
+ 2736:              MOVE   $12, $ACC
+ 2739:              LOADI  $ACC, 1
+ 2745:              MOVE   $13, $ACC
+ 2748:              LOADI  $ACC, 1
+ 2754:              MOVE   $14, $ACC
+ 2757:              LOADI  $ACC, 1
+ 2763:              MOVE   $15, $ACC
+ 2766:              LOADI  $ACC, 5
+ 2772:              MOVE   $16, $ACC
+ 2775:              LOADI  $ACC, 1
+ 2781:              MOVE   $17, $ACC
+ 2784:              LOADI  $ACC, 1
+ 2790:              MOVE   $18, $ACC
+ 2793:              LOADI  $ACC, 1
+ 2799:              MOVE   $19, $ACC
+ 2802:              LOADI  $ACC, 1
+ 2808:              MOVE   $20, $ACC
+ 2811:              LOADI  $ACC, 0
+ 2817:              MOVE   $21, $ACC
+ 2820:              LOADI  $ACC, 1
+ 2826:              MOVE   $22, $ACC
+ 2829:              LOADI  $ACC, 5
+ 2835:              MOVE   $23, $ACC
+ 2838:              LOADI  $ACC, 1
+ 2844:              MOVE   $24, $ACC
+ 2847:              LOADI  $ACC, 1
+ 2853:              MOVE   $25, $ACC
+ 2856:              LOADI  $ACC, 0
+ 2862:              MOVE   $26, $ACC
+ 2865:              LOADI  $ACC, 0
+ 2871:              MOVE   $27, $ACC
+ 2874:              LOADI  $ACC, 0
+ 2880:              MOVE   $28, $ACC
+ 2883:              LOADI  $ACC, 0
+ 2889:              MOVE   $29, $ACC
+ 2892:              LOADI  $ACC, 3
+ 2898:              ADD    $29, $ACC
+ 2901:              ADD    $28, $ACC
+ 2904:              ADD    $27, $ACC
+ 2907:              ADD    $26, $ACC
+ 2910:              ADD    $25, $ACC
+ 2913:              ADD    $24, $ACC
+ 2916:              SUB    $23, $ACC
+ 2919:              ADD    $22, $ACC
+ 2922:              ADD    $21, $ACC
+ 2925:              ADD    $20, $ACC
+ 2928:              ADD    $19, $ACC
+ 2931:              ADD    $18, $ACC
+ 2934:              ADD    $17, $ACC
+ 2937:              SUB    $16, $ACC
+ 2940:              ADD    $15, $ACC
+ 2943:              ADD    $14, $ACC
+ 2946:              ADD    $13, $ACC
+ 2949:              MOVE   $13, $ACC
+ 2952:              LOADI  $ACC, 2
+ 2958:              MUL    $13, $ACC
+ 2961:              MOVE   $13, $ACC
+ 2964:              LOADI  $ACC, 1
+ 2970:              MOVE   $14, $ACC
+ 2973:              LOADI  $ACC, 1
+ 2979:              MOVE   $15, $ACC
+ 2982:              LOADI  $ACC, 1
+ 2988:              MOVE   $16, $ACC
+ 2991:              LOADI  $ACC, 5
+ 2997:              MOVE   $17, $ACC
+ 3000:              LOADI  $ACC, 1
+ 3006:              MOVE   $18, $ACC
+ 3009:              LOADI  $ACC, 1
+ 3015:              MOVE   $19, $ACC
+ 3018:              LOADI  $ACC, 1
+ 3024:              MOVE   $20, $ACC
+ 3027:              LOADI  $ACC, 1
+ 3033:              MOVE   $21, $ACC
+ 3036:              LOADI  $ACC, 0
+ 3042:              MOVE   $22, $ACC
+ 3045:              LOADI  $ACC, 1
+ 3051:              MOVE   $23, $ACC
+ 3054:              LOADI  $ACC, 5
+ 3060:              MOVE   $24, $ACC
+ 3063:              LOADI  $ACC, 1
+ 3069:              MOVE   $25, $ACC
+ 3072:              LOADI  $ACC, 1
+ 3078:              MOVE   $26, $ACC
+ 3081:              LOADI  $ACC, 0
+ 3087:              MOVE   $27, $ACC
+ 3090:              LOADI  $ACC, 0
+ 3096:              MOVE   $28, $ACC
+ 3099:              LOADI  $ACC, 0
+ 3105:              MOVE   $29, $ACC
+ 3108:              LOADI  $ACC, 0
+ 3114:              MOVE   $30, $ACC
+ 3117:              LOADI  $ACC, 3
+ 3123:              ADD    $30, $ACC
+ 3126:              ADD    $29, $ACC
+ 3129:              ADD    $28, $ACC
+ 3132:              ADD    $27, $ACC
+ 3135:              ADD    $26, $ACC
+ 3138:              ADD    $25, $ACC
+ 3141:              SUB    $24, $ACC
+ 3144:              ADD    $23, $ACC
+ 3147:              ADD    $22, $ACC
+ 3150:              ADD    $21, $ACC
+ 3153:              ADD    $20, $ACC
+ 3156:              ADD    $19, $ACC
+ 3159:              ADD    $18, $ACC
+ 3162:              SUB    $17, $ACC
+ 3165:              ADD    $16, $ACC
+ 3168:              ADD    $15, $ACC
+ 3171:              ADD    $14, $ACC
+ 3174:              MOVE   $14, $ACC
+ 3177:              LOADI  $ACC, 2
+ 3183:              MUL    $14, $ACC
+ 3186:              MUL    $13, $ACC
+ 3189:              MOVE   $13, $ACC
+ 3192:              LOADI  $ACC, 1
+ 3198:              MOVE   $14, $ACC
+ 3201:              LOADI  $ACC, 1
+ 3207:              MOVE   $15, $ACC
+ 3210:              LOADI  $ACC, 1
+ 3216:              MOVE   $16, $ACC
+ 3219:              LOADI  $ACC, 5
+ 3225:              MOVE   $17, $ACC
+ 3228:              LOADI  $ACC, 1
+ 3234:              MOVE   $18, $ACC
+ 3237:              LOADI  $ACC, 1
+ 3243:              MOVE   $19, $ACC
+ 3246:              LOADI  $ACC, 1
+ 3252:              MOVE   $20, $ACC
+ 3255:              LOADI  $ACC, 1
+ 3261:              MOVE   $21, $ACC
+ 3264:              LOADI  $ACC, 0
+ 3270:              MOVE   $22, $ACC
+ 3273:              LOADI  $ACC, 1
+ 3279:              MOVE   $23, $ACC
+ 3282:              LOADI  $ACC, 5
+ 3288:              MOVE   $24, $ACC
+ 3291:              LOADI  $ACC, 1
+ 3297:              MOVE   $25, $ACC
+ 3300:              LOADI  $ACC, 1
+ 3306:              MOVE   $26, $ACC
+ 3309:              LOADI  $ACC, 0
+ 3315:              MOVE   $27, $ACC
+ 3318:              LOADI  $ACC, 0
+ 3324:              MOVE   $28, $ACC
+ 3327:              LOADI  $ACC, 0
+ 3333:              MOVE   $29, $ACC
+ 3336:              LOADI  $ACC, 0
+ 3342:              MOVE   $30, $ACC
+ 3345:              LOADI  $ACC, 3
+ 3351:              ADD    $30, $ACC
+ 3354:              ADD    $29, $ACC
+ 3357:              ADD    $28, $ACC
+ 3360:              ADD    $27, $ACC
+ 3363:              ADD    $26, $ACC
+ 3366:              ADD    $25, $ACC
+ 3369:              SUB    $24, $ACC
+ 3372:              ADD    $23, $ACC
+ 3375:              ADD    $22, $ACC
+ 3378:              ADD    $21, $ACC
+ 3381:              ADD    $20, $ACC
+ 3384:              ADD    $19, $ACC
+ 3387:              ADD    $18, $ACC
+ 3390:              SUB    $17, $ACC
+ 3393:              ADD    $16, $ACC
+ 3396:              ADD    $15, $ACC
+ 3399:              ADD    $14, $ACC
+ 3402:              MOVE   $14, $ACC
+ 3405:              LOADI  $ACC, 2
+ 3411:              MUL    $14, $ACC
+ 3414:              MOVE   $14, $ACC
+ 3417:              LOADI  $ACC, 1
+ 3423:              MOVE   $15, $ACC
+ 3426:              LOADI  $ACC, 1
+ 3432:              MOVE   $16, $ACC
+ 3435:              LOADI  $ACC, 1
+ 3441:              MOVE   $17, $ACC
+ 3444:              LOADI  $ACC, 5
+ 3450:              MOVE   $18, $ACC
+ 3453:              LOADI  $ACC, 1
+ 3459:              MOVE   $19, $ACC
+ 3462:              LOADI  $ACC, 1
+ 3468:              MOVE   $20, $ACC
+ 3471:              LOADI  $ACC, 1
+ 3477:              MOVE   $21, $ACC
+ 3480:              LOADI  $ACC, 1
+ 3486:              MOVE   $22, $ACC
+ 3489:              LOADI  $ACC, 0
+ 3495:              MOVE   $23, $ACC
+ 3498:              LOADI  $ACC, 1
+ 3504:              MOVE   $24, $ACC
+ 3507:              LOADI  $ACC, 5
+ 3513:              MOVE   $25, $ACC
+ 3516:              LOADI  $ACC, 1
+ 3522:              MOVE   $26, $ACC
+ 3525:              LOADI  $ACC, 1
+ 3531:              MOVE   $27, $ACC
+ 3534:              LOADI  $ACC, 0
+ 3540:              MOVE   $28, $ACC
+ 3543:              LOADI  $ACC, 0
+ 3549:              MOVE   $29, $ACC
+ 3552:              LOADI  $ACC, 0
+ 3558:              MOVE   $30, $ACC
+ 3561:              LOADI  $ACC, 0
+ 3567:              MOVE   $31, $ACC
+ 3570:              LOADI  $ACC, 3
+ 3576:              ADD    $31, $ACC
+ 3579:              ADD    $30, $ACC
+ 3582:              ADD    $29, $ACC
+ 3585:              ADD    $28, $ACC
+ 3588:              ADD    $27, $ACC
+ 3591:              ADD    $26, $ACC
+ 3594:              SUB    $25, $ACC
+ 3597:              ADD    $24, $ACC
+ 3600:              ADD    $23, $ACC
+ 3603:              ADD    $22, $ACC
+ 3606:              ADD    $21, $ACC
+ 3609:              ADD    $20, $ACC
+ 3612:              ADD    $19, $ACC
+ 3615:              SUB    $18, $ACC
+ 3618:              ADD    $17, $ACC
+ 3621:              ADD    $16, $ACC
+ 3624:              ADD    $15, $ACC
+ 3627:              MOVE   $15, $ACC
+ 3630:              LOADI  $ACC, 2
+ 3636:              MUL    $15, $ACC
+ 3639:              MUL    $14, $ACC
+ 3642:              ADD    $13, $ACC
+ 3645:              MUL    $12, $ACC
+ 3648:              ADD    $11, $ACC
+ 3651:              MOVE   $11, $ACC
+ 3654:              LOADI  $ACC, 1
+ 3660:              MOVE   $12, $ACC
+ 3663:              LOADI  $ACC, 1
+ 3669:              MOVE   $13, $ACC
+ 3672:              LOADI  $ACC, 1
+ 3678:              MOVE   $14, $ACC
+ 3681:              LOADI  $ACC, 5
+ 3687:              MOVE   $15, $ACC
+ 3690:              LOADI  $ACC, 1
+ 3696:              MOVE   $16, $ACC
+ 3699:              LOADI  $ACC, 1
+ 3705:              MOVE   $17, $ACC
+ 3708:              LOADI  $ACC, 1
+ 3714:              MOVE   $18, $ACC
+ 3717:              LOADI  $ACC, 1
+ 3723:              MOVE   $19, $ACC
+ 3726:              LOADI  $ACC, 0
+ 3732:              MOVE   $20, $ACC
+ 3735:              LOADI  $ACC, 1
+ 3741:              MOVE   $21, $ACC
+ 3744:              LOADI  $ACC, 5
+ 3750:              MOVE   $22, $ACC
+ 3753:              LOADI  $ACC, 1
+ 3759:              MOVE   $23, $ACC
+ 3762:              LOADI  $ACC, 1
+ 3768:              MOVE   $24, $ACC
+ 3771:              LOADI  $ACC, 0
+ 3777:              MOVE   $25, $ACC
+ 3780:              LOADI  $ACC, 0
+ 3786:              MOVE   $26, $ACC
+ 3789:              LOADI  $ACC, 0
+ 3795:              MOVE   $27, $ACC
+ 3798:              LOADI  $ACC, 0
+ 3804:              MOVE   $28, $ACC
+ 3807:              LOADI  $ACC, 3
+ 3813:              ADD    $28, $ACC
+ 3816:              ADD    $27, $ACC
+ 3819:              ADD    $26, $ACC
+ 3822:              ADD    $25, $ACC
+ 3825:              ADD    $24, $ACC
+ 3828:              ADD    $23, $ACC
+ 3831:              SUB    $22, $ACC
+ 3834:              ADD    $21, $ACC
+ 3837:              ADD    $20, $ACC
+ 3840:              ADD    $19, $ACC
+ 3843:              ADD    $18, $ACC
+ 3846:              ADD    $17, $ACC
+ 3849:              ADD    $16, $ACC
+ 3852:              SUB    $15, $ACC
+ 3855:              ADD    $14, $ACC
+ 3858:              ADD    $13, $ACC
+ 3861:              ADD    $12, $ACC
+ 3864:              MOVE   $12, $ACC
+ 3867:              LOADI  $ACC, 2
+ 3873:              MUL    $12, $ACC
+ 3876:              MOVE   $12, $ACC
+ 3879:              LOADI  $ACC, 1
+ 3885:              MOVE   $13, $ACC
+ 3888:              LOADI  $ACC, 1
+ 3894:              MOVE   $14, $ACC
+ 3897:              LOADI  $ACC, 1
+ 3903:              MOVE   $15, $ACC
+ 3906:              LOADI  $ACC, 5
+ 3912:              MOVE   $16, $ACC
+ 3915:              LOADI  $ACC, 1
+ 3921:              MOVE   $17, $ACC
+ 3924:              LOADI  $ACC, 1
+ 3930:              MOVE   $18, $ACC
+ 3933:              LOADI  $ACC, 1
+ 3939:              MOVE   $19, $ACC
+ 3942:              LOADI  $ACC, 1
+ 3948:              MOVE   $20, $ACC
+ 3951:              LOADI  $ACC, 0
+ 3957:              MOVE   $21, $ACC
+ 3960:              LOADI  $ACC, 1
+ 3966:              MOVE   $22, $ACC
+ 3969:              LOADI  $ACC, 5
+ 3975:              MOVE   $23, $ACC
+ 3978:              LOADI  $ACC, 1
+ 3984:              MOVE   $24, $ACC
+ 3987:              LOADI  $ACC, 1
+ 3993:              MOVE   $25, $ACC
+ 3996:              LOADI  $ACC, 0
+ 4002:              MOVE   $26, $ACC
+ 4005:              LOADI  $ACC, 0
+ 4011:              MOVE   $27, $ACC
+ 4014:              LOADI  $ACC, 0
+ 4020:              MOVE   $28, $ACC
+ 4023:              LOADI  $ACC, 0
+ 4029:              MOVE   $29, $ACC
+ 4032:              LOADI  $ACC, 3
+ 4038:              ADD    $29, $ACC
+ 4041:              ADD    $28, $ACC
+ 4044:              ADD    $27, $ACC
+ 4047:              ADD    $26, $ACC
+ 4050:              ADD    $25, $ACC
+ 4053:              ADD    $24, $ACC
+ 4056:              SUB    $23, $ACC
+ 4059:              ADD    $22, $ACC
+ 4062:              ADD    $21, $ACC
+ 4065:              ADD    $20, $ACC
+ 4068:              ADD    $19, $ACC
+ 4071:              ADD    $18, $ACC
+ 4074:              ADD    $17, $ACC
+ 4077:              SUB    $16, $ACC
+ 4080:              ADD    $15, $ACC
+ 4083:              ADD    $14, $ACC
+ 4086:              ADD    $13, $ACC
+ 4089:              MOVE   $13, $ACC
+ 4092:              LOADI  $ACC, 2
+ 4098:              MUL    $13, $ACC
+ 4101:              MUL    $12, $ACC
+ 4104:              MOVE   $12, $ACC
+ 4107:              LOADI  $ACC, 1
+ 4113:              MOVE   $13, $ACC
+ 4116:              LOADI  $ACC, 1
+ 4122:              MOVE   $14, $ACC
+ 4125:              LOADI  $ACC, 1
+ 4131:              MOVE   $15, $ACC
+ 4134:              LOADI  $ACC, 5
+ 4140:              MOVE   $16, $ACC
+ 4143:              LOADI  $ACC, 1
+ 4149:              MOVE   $17, $ACC
+ 4152:              LOADI  $ACC, 1
+ 4158:              MOVE   $18, $ACC
+ 4161:              LOADI  $ACC, 1
+ 4167:              MOVE   $19, $ACC
+ 4170:              LOADI  $ACC, 1
+ 4176:              MOVE   $20, $ACC
+ 4179:              LOADI  $ACC, 0
+ 4185:              MOVE   $21, $ACC
+ 4188:              LOADI  $ACC, 1
+ 4194:              MOVE   $22, $ACC
+ 4197:              LOADI  $ACC, 5
+ 4203:              MOVE   $23, $ACC
+ 4206:              LOADI  $ACC, 1
+ 4212:              MOVE   $24, $ACC
+ 4215:              LOADI  $ACC, 1
+ 4221:              MOVE   $25, $ACC
+ 4224:              LOADI  $ACC, 0
+ 4230:              MOVE   $26, $ACC
+ 4233:              LOADI  $ACC, 0
+ 4239:              MOVE   $27, $ACC
+ 4242:              LOADI  $ACC, 0
+ 4248:              MOVE   $28, $ACC
+ 4251:              LOADI  $ACC, 0
+ 4257:              MOVE   $29, $ACC
+ 4260:              LOADI  $ACC, 3
+ 4266:              ADD    $29, $ACC
+ 4269:              ADD    $28, $ACC
+ 4272:              ADD    $27, $ACC
+ 4275:              ADD    $26, $ACC
+ 4278:              ADD    $25, $ACC
+ 4281:              ADD    $24, $ACC
+ 4284:              SUB    $23, $ACC
+ 4287:              ADD    $22, $ACC
+ 4290:              ADD    $21, $ACC
+ 4293:              ADD    $20, $ACC
+ 4296:              ADD    $19, $ACC
+ 4299:              ADD    $18, $ACC
+ 4302:              ADD    $17, $ACC
+ 4305:              SUB    $16, $ACC
+ 4308:              ADD    $15, $ACC
+ 4311:              ADD    $14, $ACC
+ 4314:              ADD    $13, $ACC
+ 4317:              MOVE   $13, $ACC
+ 4320:              LOADI  $ACC, 2
+ 4326:              MUL    $13, $ACC
+ 4329:              MOVE   $13, $ACC
+ 4332:              LOADI  $ACC, 1
+ 4338:              MOVE   $14, $ACC
+ 4341:              LOADI  $ACC, 1
+ 4347:              MOVE   $15, $ACC
+ 4350:              LOADI  $ACC, 1
+ 4356:              MOVE   $16, $ACC
+ 4359:              LOADI  $ACC, 5
+ 4365:              MOVE   $17, $ACC
+ 4368:              LOADI  $ACC, 1
+ 4374:              MOVE   $18, $ACC
+ 4377:              LOADI  $ACC, 1
+ 4383:              MOVE   $19, $ACC
+ 4386:              LOADI  $ACC, 1
+ 4392:              MOVE   $20, $ACC
+ 4395:              LOADI  $ACC, 1
+ 4401:              MOVE   $21, $ACC
+ 4404:              LOADI  $ACC, 0
+ 4410:              MOVE   $22, $ACC
+ 4413:              LOADI  $ACC, 1
+ 4419:              MOVE   $23, $ACC
+ 4422:              LOADI  $ACC, 5
+ 4428:              MOVE   $24, $ACC
+ 4431:              LOADI  $ACC, 1
+ 4437:              MOVE   $25, $ACC
+ 4440:              LOADI  $ACC, 1
+ 4446:              MOVE   $26, $ACC
+ 4449:              LOADI  $ACC, 0
+ 4455:              MOVE   $27, $ACC
+ 4458:              LOADI  $ACC, 0
+ 4464:              MOVE   $28, $ACC
+ 4467:              LOADI  $ACC, 0
+ 4473:              MOVE   $29, $ACC
+ 4476:              LOADI  $ACC, 0
+ 4482:              MOVE   $30, $ACC
+ 4485:              LOADI  $ACC, 3
+ 4491:              ADD    $30, $ACC
+ 4494:              ADD    $29, $ACC
+ 4497:              ADD    $28, $ACC
+ 4500:              ADD    $27, $ACC
+ 4503:              ADD    $26, $ACC
+ 4506:              ADD    $25, $ACC
+ 4509:              SUB    $24, $ACC
+ 4512:              ADD    $23, $ACC
+ 4515:              ADD    $22, $ACC
+ 4518:              ADD    $21, $ACC
+ 4521:              ADD    $20, $ACC
+ 4524:              ADD    $19, $ACC
+ 4527:              ADD    $18, $ACC
+ 4530:              SUB    $17, $ACC
+ 4533:              ADD    $16, $ACC
+ 4536:              ADD    $15, $ACC
+ 4539:              ADD    $14, $ACC
+ 4542:              MOVE   $14, $ACC
+ 4545:              LOADI  $ACC, 2
+ 4551:              MUL    $14, $ACC
+ 4554:              MUL    $13, $ACC
+ 4557:              ADD    $12, $ACC
+ 4560:              MOVE   $12, $ACC
+ 4563:              LOADI  $ACC, 1
+ 4569:              MOVE   $13, $ACC
+ 4572:              LOADI  $ACC, 1
+ 4578:              MOVE   $14, $ACC
+ 4581:              LOADI  $ACC, 1
+ 4587:              MOVE   $15, $ACC
+ 4590:              LOADI  $ACC, 5
+ 4596:              MOVE   $16, $ACC
+ 4599:              LOADI  $ACC, 1
+ 4605:              MOVE   $17, $ACC
+ 4608:              LOADI  $ACC, 1
+ 4614:              MOVE   $18, $ACC
+ 4617:              LOADI  $ACC, 1
+ 4623:              MOVE   $19, $ACC
+ 4626:              LOADI  $ACC, 1
+ 4632:              MOVE   $20, $ACC
+ 4635:              LOADI  $ACC, 0
+ 4641:              MOVE   $21, $ACC
+ 4644:              LOADI  $ACC, 1
+ 4650:              MOVE   $22, $ACC
+ 4653:              LOADI  $ACC, 5
+ 4659:              MOVE   $23, $ACC
+ 4662:              LOADI  $ACC, 1
+ 4668:              MOVE   $24, $ACC
+ 4671:              LOADI  $ACC, 1
+ 4677:              MOVE   $25, $ACC
+ 4680:              LOADI  $ACC, 0
+ 4686:              MOVE   $26, $ACC
+ 4689:              LOADI  $ACC, 0
+ 4695:              MOVE   $27, $ACC
+ 4698:              LOADI  $ACC, 0
+ 4704:              MOVE   $28, $ACC
+ 4707:              LOADI  $ACC, 0
+ 4713:              MOVE   $29, $ACC
+ 4716:              LOADI  $ACC, 3
+ 4722:              ADD    $29, $ACC
+ 4725:              ADD    $28, $ACC
+ 4728:              ADD    $27, $ACC
+ 4731:              ADD    $26, $ACC
+ 4734:              ADD    $25, $ACC
+ 4737:              ADD    $24, $ACC
+ 4740:              SUB    $23, $ACC
+ 4743:              ADD    $22, $ACC
+ 4746:              ADD    $21, $ACC
+ 4749:              ADD    $20, $ACC
+ 4752:              ADD    $19, $ACC
+ 4755:              ADD    $18, $ACC
+ 4758:              ADD    $17, $ACC
+ 4761:              SUB    $16, $ACC
+ 4764:              ADD    $15, $ACC
+ 4767:              ADD    $14, $ACC
+ 4770:              ADD    $13, $ACC
+ 4773:              MOVE   $13, $ACC
+ 4776:              LOADI  $ACC, 2
+ 4782:              MUL    $13, $ACC
+ 4785:              MOVE   $13, $ACC
+ 4788:              LOADI  $ACC, 1
+ 4794:              MOVE   $14, $ACC
+ 4797:              LOADI  $ACC, 1
+ 4803:              MOVE   $15, $ACC
+ 4806:              LOADI  $ACC, 1
+ 4812:              MOVE   $16, $ACC
+ 4815:              LOADI  $ACC, 5
+ 4821:              MOVE   $17, $ACC
+ 4824:              LOADI  $ACC, 1
+ 4830:              MOVE   $18, $ACC
+ 4833:              LOADI  $ACC, 1
+ 4839:              MOVE   $19, $ACC
+ 4842:              LOADI  $ACC, 1
+ 4848:              MOVE   $20, $ACC
+ 4851:              LOADI  $ACC, 1
+ 4857:              MOVE   $21, $ACC
+ 4860:              LOADI  $ACC, 0
+ 4866:              MOVE   $22, $ACC
+ 4869:              LOADI  $ACC, 1
+ 4875:              MOVE   $23, $ACC
+ 4878:              LOADI  $ACC, 5
+ 4884:              MOVE   $24, $ACC
+ 4887:              LOADI  $ACC, 1
+ 4893:              MOVE   $25, $ACC
+ 4896:              LOADI  $ACC, 1
+ 4902:              MOVE   $26, $ACC
+ 4905:              LOADI  $ACC, 0
+ 4911:              MOVE   $27, $ACC
+ 4914:              LOADI  $ACC, 0
+ 4920:              MOVE   $28, $ACC
+ 4923:              LOADI  $ACC, 0
+ 4929:              MOVE   $29, $ACC
+ 4932:              LOADI  $ACC, 0
+ 4938:              MOVE   $30, $ACC
+ 4941:              LOADI  $ACC, 3
+ 4947:              ADD    $30, $ACC
+ 4950:              ADD    $29, $ACC
+ 4953:              ADD    $28, $ACC
+ 4956:              ADD    $27, $ACC
+ 4959:              ADD    $26, $ACC
+ 4962:              ADD    $25, $ACC
+ 4965:              SUB    $24, $ACC
+ 4968:              ADD    $23, $ACC
+ 4971:              ADD    $22, $ACC
+ 4974:              ADD    $21, $ACC
+ 4977:              ADD    $20, $ACC
+ 4980:              ADD    $19, $ACC
+ 4983:              ADD    $18, $ACC
+ 4986:              SUB    $17, $ACC
+ 4989:              ADD    $16, $ACC
+ 4992:              ADD    $15, $ACC
+ 4995:              ADD    $14, $ACC
+ 4998:              MOVE   $14, $ACC
+ 5001:              LOADI  $ACC, 2
+ 5007:              MUL    $14, $ACC
+ 5010:              MUL    $13, $ACC
+ 5013:              MOVE   $13, $ACC
+ 5016:              LOADI  $ACC, 1
+ 5022:              MOVE   $14, $ACC
+ 5025:              LOADI  $ACC, 1
+ 5031:              MOVE   $15, $ACC
+ 5034:              LOADI  $ACC, 1
+ 5040:              MOVE   $16, $ACC
+ 5043:              LOADI  $ACC, 5
+ 5049:              MOVE   $17, $ACC
+ 5052:              LOADI  $ACC, 1
+ 5058:              MOVE   $18, $ACC
+ 5061:              LOADI  $ACC, 1
+ 5067:              MOVE   $19, $ACC
+ 5070:              LOADI  $ACC, 1
+ 5076:              MOVE   $20, $ACC
+ 5079:              LOADI  $ACC, 1
+ 5085:              MOVE   $21, $ACC
+ 5088:              LOADI  $ACC, 0
+ 5094:              MOVE   $22, $ACC
+ 5097:              LOADI  $ACC, 1
+ 5103:              MOVE   $23, $ACC
+ 5106:              LOADI  $ACC, 5
+ 5112:              MOVE   $24, $ACC
+ 5115:              LOADI  $ACC, 1
+ 5121:              MOVE   $25, $ACC
+ 5124:              LOADI  $ACC, 1
+ 5130:              MOVE   $26, $ACC
+ 5133:              LOADI  $ACC, 0
+ 5139:              MOVE   $27, $ACC
+ 5142:              LOADI  $ACC, 0
+ 5148:              MOVE   $28, $ACC
+ 5151:              LOADI  $ACC, 0
+ 5157:              MOVE   $29, $ACC
+ 5160:              LOADI  $ACC, 0
+ 5166:              MOVE   $30, $ACC
+ 5169:              LOADI  $ACC, 3
+ 5175:              ADD    $30, $ACC
+ 5178:              ADD    $29, $ACC
+ 5181:              ADD    $28, $ACC
+ 5184:              ADD    $27, $ACC
+ 5187:              ADD    $26, $ACC
+ 5190:              ADD    $25, $ACC
+ 5193:              SUB    $24, $ACC
+ 5196:              ADD    $23, $ACC
+ 5199:              ADD    $22, $ACC
+ 5202:              ADD    $21, $ACC
+ 5205:              ADD    $20, $ACC
+ 5208:              ADD    $19, $ACC
+ 5211:              ADD    $18, $ACC
+ 5214:              SUB    $17, $ACC
+ 5217:              ADD    $16, $ACC
+ 5220:              ADD    $15, $ACC
+ 5223:              ADD    $14, $ACC
+ 5226:              MOVE   $14, $ACC
+ 5229:              LOADI  $ACC, 2
+ 5235:              MUL    $14, $ACC
+ 5238:              MOVE   $14, $ACC
+ 5241:              LOADI  $ACC, 1
+ 5247:              MOVE   $15, $ACC
+ 5250:              LOADI  $ACC, 1
+ 5256:              MOVE   $16, $ACC
+ 5259:              LOADI  $ACC, 1
+ 5265:              MOVE   $17, $ACC
+ 5268:              LOADI  $ACC, 5
+ 5274:              MOVE   $18, $ACC
+ 5277:              LOADI  $ACC, 1
+ 5283:              MOVE   $19, $ACC
+ 5286:              LOADI  $ACC, 1
+ 5292:              MOVE   $20, $ACC
+ 5295:              LOADI  $ACC, 1
+ 5301:              MOVE   $21, $ACC
+ 5304:              LOADI  $ACC, 1
+ 5310:              MOVE   $22, $ACC
+ 5313:              LOADI  $ACC, 0
+ 5319:              MOVE   $23, $ACC
+ 5322:              LOADI  $ACC, 1
+ 5328:              MOVE   $24, $ACC
+ 5331:              LOADI  $ACC, 5
+ 5337:              MOVE   $25, $ACC
+ 5340:              LOADI  $ACC, 1
+ 5346:              MOVE   $26, $ACC
+ 5349:              LOADI  $ACC, 1
+ 5355:              MOVE   $27, $ACC
+ 5358:              LOADI  $ACC, 0
+ 5364:              MOVE   $28, $ACC
+ 5367:              LOADI  $ACC, 0
+ 5373:              MOVE   $29, $ACC
+ 5376:              LOADI  $ACC, 0
+ 5382:              MOVE   $30, $ACC
+ 5385:              LOADI  $ACC, 0
+ 5391:              MOVE   $31, $ACC
+ 5394:              LOADI  $ACC, 3
+ 5400:              ADD    $31, $ACC
+ 5403:              ADD    $30, $ACC
+ 5406:              ADD    $29, $ACC
+ 5409:              ADD    $28, $ACC
+ 5412:              ADD    $27, $ACC
+ 5415:              ADD    $26, $ACC
+ 5418:              SUB    $25, $ACC
+ 5421:              ADD    $24, $ACC
+ 5424:              ADD    $23, $ACC
+ 5427:              ADD    $22, $ACC
+ 5430:              ADD    $21, $ACC
+ 5433:              ADD    $20, $ACC
+ 5436:              ADD    $19, $ACC
+ 5439:              SUB    $18, $ACC
+ 5442:              ADD    $17, $ACC
+ 5445:              ADD    $16, $ACC
+ 5448:              ADD    $15, $ACC
+ 5451:              MOVE   $15, $ACC
+ 5454:              LOADI  $ACC, 2
+ 5460:              MUL    $15, $ACC
+ 5463:              MUL    $14, $ACC
+ 5466:              ADD    $13, $ACC
+ 5469:              MUL    $12, $ACC
+ 5472:              MOVE   $12, $ACC
+ 5475:              LOADI  $ACC, 1
+ 5481:              MOVE   $13, $ACC
+ 5484:              LOADI  $ACC, 1
+ 5490:              MOVE   $14, $ACC
+ 5493:              LOADI  $ACC, 1
+ 5499:              MOVE   $15, $ACC
+ 5502:              LOADI  $ACC, 5
+ 5508:              MOVE   $16, $ACC
+ 5511:              LOADI  $ACC, 1
+ 5517:              MOVE   $17, $ACC
+ 5520:              LOADI  $ACC, 1
+ 5526:              MOVE   $18, $ACC
+ 5529:              LOADI  $ACC, 1
+ 5535:              MOVE   $19, $ACC
+ 5538:              LOADI  $ACC, 1
+ 5544:              MOVE   $20, $ACC
+ 5547:              LOADI  $ACC, 0
+ 5553:              MOVE   $21, $ACC
+ 5556:              LOADI  $ACC, 1
+ 5562:              MOVE   $22, $ACC
+ 5565:              LOADI  $ACC, 5
+ 5571:              MOVE   $23, $ACC
+ 5574:              LOADI  $ACC, 1
+ 5580:              MOVE   $24, $ACC
+ 5583:              LOADI  $ACC, 1
+ 5589:              MOVE   $25, $ACC
+ 5592:              LOADI  $ACC, 0
+ 5598:              MOVE   $26, $ACC
+ 5601:              LOADI  $ACC, 0
+ 5607:              MOVE   $27, $ACC
+ 5610:              LOADI  $ACC, 0
+ 5616:              MOVE   $28, $ACC
+ 5619:              LOADI  $ACC, 0
+ 5625:              MOVE   $29, $ACC
+ 5628:              LOADI  $ACC, 3
+ 5634:              ADD    $29, $ACC
+ 5637:              ADD    $28, $ACC
+ 5640:              ADD    $27, $ACC
+ 5643:              ADD    $26, $ACC
+ 5646:              ADD    $25, $ACC
+ 5649:              ADD    $24, $ACC
+ 5652:              SUB    $23, $ACC
+ 5655:              ADD    $22, $ACC
+ 5658:              ADD    $21, $ACC
+ 5661:              ADD    $20, $ACC
+ 5664:              ADD    $19, $ACC
+ 5667:              ADD    $18, $ACC
+ 5670:              ADD    $17, $ACC
+ 5673:              SUB    $16, $ACC
+ 5676:              ADD    $15, $ACC
+ 5679:              ADD    $14, $ACC
+ 5682:              ADD    $13, $ACC
+ 5685:              MOVE   $13, $ACC
+ 5688:              LOADI  $ACC, 2
+ 5694:              MUL    $13, $ACC
+ 5697:              MOVE   $13, $ACC
+ 5700:              LOADI  $ACC, 1
+ 5706:              MOVE   $14, $ACC
+ 5709:              LOADI  $ACC, 1
+ 5715:              MOVE   $15, $ACC
+ 5718:              LOADI  $ACC, 1
+ 5724:              MOVE   $16, $ACC
+ 5727:              LOADI  $ACC, 5
+ 5733:              MOVE   $17, $ACC
+ 5736:              LOADI  $ACC, 1
+ 5742:              MOVE   $18, $ACC
+ 5745:              LOADI  $ACC, 1
+ 5751:              MOVE   $19, $ACC
+ 5754:              LOADI  $ACC, 1
+ 5760:              MOVE   $20, $ACC
+ 5763:              LOADI  $ACC, 1
+ 5769:              MOVE   $21, $ACC
+ 5772:              LOADI  $ACC, 0
+ 5778:              MOVE   $22, $ACC
+ 5781:              LOADI  $ACC, 1
+ 5787:              MOVE   $23, $ACC
+ 5790:              LOADI  $ACC, 5
+ 5796:              MOVE   $24, $ACC
+ 5799:              LOADI  $ACC, 1
+ 5805:              MOVE   $25, $ACC
+ 5808:              LOADI  $ACC, 1
+ 5814:              MOVE   $26, $ACC
+ 5817:              LOADI  $ACC, 0
+ 5823:              MOVE   $27, $ACC
+ 5826:              LOADI  $ACC, 0
+ 5832:              MOVE   $28, $ACC
+ 5835:              LOADI  $ACC, 0
+ 5841:              MOVE   $29, $ACC
+ 5844:              LOADI  $ACC, 0
+ 5850:              MOVE   $30, $ACC
+ 5853:              LOADI  $ACC, 3
+ 5859:              ADD    $30, $ACC
+ 5862:              ADD    $29, $ACC
+ 5865:              ADD    $28, $ACC
+ 5868:              ADD    $27, $ACC
+ 5871:              ADD    $26, $ACC
+ 5874:              ADD    $25, $ACC
+ 5877:              SUB    $24, $ACC
+ 5880:              ADD    $23, $ACC
+ 5883:              ADD    $22, $ACC
+ 5886:              ADD    $21, $ACC
+ 5889:              ADD    $20, $ACC
+ 5892:              ADD    $19, $ACC
+ 5895:              ADD    $18, $ACC
+ 5898:              SUB    $17, $ACC
+ 5901:              ADD    $16, $ACC
+ 5904:              ADD    $15, $ACC
+ 5907:              ADD    $14, $ACC
+ 5910:              MOVE   $14, $ACC
+ 5913:              LOADI  $ACC, 2
+ 5919:              MUL    $14, $ACC
+ 5922:              MUL    $13, $ACC
+ 5925:              MOVE   $13, $ACC
+ 5928:              LOADI  $ACC, 1
+ 5934:              MOVE   $14, $ACC
+ 5937:              LOADI  $ACC, 1
+ 5943:              MOVE   $15, $ACC
+ 5946:              LOADI  $ACC, 1
+ 5952:              MOVE   $16, $ACC
+ 5955:              LOADI  $ACC, 5
+ 5961:              MOVE   $17, $ACC
+ 5964:              LOADI  $ACC, 1
+ 5970:              MOVE   $18, $ACC
+ 5973:              LOADI  $ACC, 1
+ 5979:              MOVE   $19, $ACC
+ 5982:              LOADI  $ACC, 1
+ 5988:              MOVE   $20, $ACC
+ 5991:              LOADI  $ACC, 1
+ 5997:              MOVE   $21, $ACC
+ 6000:              LOADI  $ACC, 0
+ 6006:              MOVE   $22, $ACC
+ 6009:              LOADI  $ACC, 1
+ 6015:              MOVE   $23, $ACC
+ 6018:              LOADI  $ACC, 5
+ 6024:              MOVE   $24, $ACC
+ 6027:              LOADI  $ACC, 1
+ 6033:              MOVE   $25, $ACC
+ 6036:              LOADI  $ACC, 1
+ 6042:              MOVE   $26, $ACC
+ 6045:              LOADI  $ACC, 0
+ 6051:              MOVE   $27, $ACC
+ 6054:              LOADI  $ACC, 0
+ 6060:              MOVE   $28, $ACC
+ 6063:              LOADI  $ACC, 0
+ 6069:              MOVE   $29, $ACC
+ 6072:              LOADI  $ACC, 0
+ 6078:              MOVE   $30, $ACC
+ 6081:              LOADI  $ACC, 3
+ 6087:              ADD    $30, $ACC
+ 6090:              ADD    $29, $ACC
+ 6093:              ADD    $28, $ACC
+ 6096:              ADD    $27, $ACC
+ 6099:              ADD    $26, $ACC
+ 6102:              ADD    $25, $ACC
+ 6105:              SUB    $24, $ACC
+ 6108:              ADD    $23, $ACC
+ 6111:              ADD    $22, $ACC
+ 6114:              ADD    $21, $ACC
+ 6117:              ADD    $20, $ACC
+ 6120:              ADD    $19, $ACC
+ 6123:              ADD    $18, $ACC
+ 6126:              SUB    $17, $ACC
+ 6129:              ADD    $16, $ACC
+ 6132:              ADD    $15, $ACC
+ 6135:              ADD    $14, $ACC
+ 6138:              MOVE   $14, $ACC
+ 6141:              LOADI  $ACC, 2
+ 6147:              MUL    $14, $ACC
+ 6150:              MOVE   $14, $ACC
+ 6153:              LOADI  $ACC, 1
+ 6159:              MOVE   $15, $ACC
+ 6162:              LOADI  $ACC, 1
+ 6168:              MOVE   $16, $ACC
+ 6171:              LOADI  $ACC, 1
+ 6177:              MOVE   $17, $ACC
+ 6180:              LOADI  $ACC, 5
+ 6186:              MOVE   $18, $ACC
+ 6189:              LOADI  $ACC, 1
+ 6195:              MOVE   $19, $ACC
+ 6198:              LOADI  $ACC, 1
+ 6204:              MOVE   $20, $ACC
+ 6207:              LOADI  $ACC, 1
+ 6213:              MOVE   $21, $ACC
+ 6216:              LOADI  $ACC, 1
+ 6222:              MOVE   $22, $ACC
+ 6225:              LOADI  $ACC, 0
+ 6231:              MOVE   $23, $ACC
+ 6234:              LOADI  $ACC, 1
+ 6240:              MOVE   $24, $ACC
+ 6243:              LOADI  $ACC, 5
+ 6249:              MOVE   $25, $ACC
+ 6252:              LOADI  $ACC, 1
+ 6258:              MOVE   $26, $ACC
+ 6261:              LOADI  $ACC, 1
+ 6267:              MOVE   $27, $ACC
+ 6270:              LOADI  $ACC, 0
+ 6276:              MOVE   $28, $ACC
+ 6279:              LOADI  $ACC, 0
+ 6285:              MOVE   $29, $ACC
+ 6288:              LOADI  $ACC, 0
+ 6294:              MOVE   $30, $ACC
+ 6297:              LOADI  $ACC, 0
+ 6303:              MOVE   $31, $ACC
+ 6306:              LOADI  $ACC, 3
+ 6312:              ADD    $31, $ACC
+ 6315:              ADD    $30, $ACC
+ 6318:              ADD    $29, $ACC
+ 6321:              ADD    $28, $ACC
+ 6324:              ADD    $27, $ACC
+ 6327:              ADD    $26, $ACC
+ 6330:              SUB    $25, $ACC
+ 6333:              ADD    $24, $ACC
+ 6336:              ADD    $23, $ACC
+ 6339:              ADD    $22, $ACC
+ 6342:              ADD    $21, $ACC
+ 6345:              ADD    $20, $ACC
+ 6348:              ADD    $19, $ACC
+ 6351:              SUB    $18, $ACC
+ 6354:              ADD    $17, $ACC
+ 6357:              ADD    $16, $ACC
+ 6360:              ADD    $15, $ACC
+ 6363:              MOVE   $15, $ACC
+ 6366:              LOADI  $ACC, 2
+ 6372:              MUL    $15, $ACC
+ 6375:              MUL    $14, $ACC
+ 6378:              ADD    $13, $ACC
+ 6381:              MOVE   $13, $ACC
+ 6384:              LOADI  $ACC, 1
+ 6390:              MOVE   $14, $ACC
+ 6393:              LOADI  $ACC, 1
+ 6399:              MOVE   $15, $ACC
+ 6402:              LOADI  $ACC, 1
+ 6408:              MOVE   $16, $ACC
+ 6411:              LOADI  $ACC, 5
+ 6417:              MOVE   $17, $ACC
+ 6420:              LOADI  $ACC, 1
+ 6426:              MOVE   $18, $ACC
+ 6429:              LOADI  $ACC, 1
+ 6435:              MOVE   $19, $ACC
+ 6438:              LOADI  $ACC, 1
+ 6444:              MOVE   $20, $ACC
+ 6447:              LOADI  $ACC, 1
+ 6453:              MOVE   $21, $ACC
+ 6456:              LOADI  $ACC, 0
+ 6462:              MOVE   $22, $ACC
+ 6465:              LOADI  $ACC, 1
+ 6471:              MOVE   $23, $ACC
+ 6474:              LOADI  $ACC, 5
+ 6480:              MOVE   $24, $ACC
+ 6483:              LOADI  $ACC, 1
+ 6489:              MOVE   $25, $ACC
+ 6492:              LOADI  $ACC, 1
+ 6498:              MOVE   $26, $ACC
+ 6501:              LOADI  $ACC, 0
+ 6507:              MOVE   $27, $ACC
+ 6510:              LOADI  $ACC, 0
+ 6516:              MOVE   $28, $ACC
+ 6519:              LOADI  $ACC, 0
+ 6525:              MOVE   $29, $ACC
+ 6528:              LOADI  $ACC, 0
+ 6534:              MOVE   $30, $ACC
+ 6537:              LOADI  $ACC, 3
+ 6543:              ADD    $30, $ACC
+ 6546:              ADD    $29, $ACC
+ 6549:              ADD    $28, $ACC
+ 6552:              ADD    $27, $ACC
+ 6555:              ADD    $26, $ACC
+ 6558:              ADD    $25, $ACC
+ 6561:              SUB    $24, $ACC
+ 6564:              ADD    $23, $ACC
+ 6567:              ADD    $22, $ACC
+ 6570:              ADD    $21, $ACC
+ 6573:              ADD    $20, $ACC
+ 6576:              ADD    $19, $ACC
+ 6579:              ADD    $18, $ACC
+ 6582:              SUB    $17, $ACC
+ 6585:              ADD    $16, $ACC
+ 6588:              ADD    $15, $ACC
+ 6591:              ADD    $14, $ACC
+ 6594:              MOVE   $14, $ACC
+ 6597:              LOADI  $ACC, 2
+ 6603:              MUL    $14, $ACC
+ 6606:              MOVE   $14, $ACC
+ 6609:              LOADI  $ACC, 1
+ 6615:              MOVE   $15, $ACC
+ 6618:              LOADI  $ACC, 1
+ 6624:              MOVE   $16, $ACC
+ 6627:              LOADI  $ACC, 1
+ 6633:              MOVE   $17, $ACC
+ 6636:              LOADI  $ACC, 5
+ 6642:              MOVE   $18, $ACC
+ 6645:              LOADI  $ACC, 1
+ 6651:              MOVE   $19, $ACC
+ 6654:              LOADI  $ACC, 1
+ 6660:              MOVE   $20, $ACC
+ 6663:              LOADI  $ACC, 1
+ 6669:              MOVE   $21, $ACC
+ 6672:              LOADI  $ACC, 1
+ 6678:              MOVE   $22, $ACC
+ 6681:              LOADI  $ACC, 0
+ 6687:              MOVE   $23, $ACC
+ 6690:              LOADI  $ACC, 1
+ 6696:              MOVE   $24, $ACC
+ 6699:              LOADI  $ACC, 5
+ 6705:              MOVE   $25, $ACC
+ 6708:              LOADI  $ACC, 1
+ 6714:              MOVE   $26, $ACC
+ 6717:              LOADI  $ACC, 1
+ 6723:              MOVE   $27, $ACC
+ 6726:              LOADI  $ACC, 0
+ 6732:              MOVE   $28, $ACC
+ 6735:              LOADI  $ACC, 0
+ 6741:              MOVE   $29, $ACC
+ 6744:              LOADI  $ACC, 0
+ 6750:              MOVE   $30, $ACC
+ 6753:              LOADI  $ACC, 0
+ 6759:              MOVE   $31, $ACC
+ 6762:              LOADI  $ACC, 3
+ 6768:              ADD    $31, $ACC
+ 6771:              ADD    $30, $ACC
+ 6774:              ADD    $29, $ACC
+ 6777:              ADD    $28, $ACC
+ 6780:              ADD    $27, $ACC
+ 6783:              ADD    $26, $ACC
+ 6786:              SUB    $25, $ACC
+ 6789:              ADD    $24, $ACC
+ 6792:              ADD    $23, $ACC
+ 6795:              ADD    $22, $ACC
+ 6798:              ADD    $21, $ACC
+ 6801:              ADD    $20, $ACC
+ 6804:              ADD    $19, $ACC
+ 6807:              SUB    $18, $ACC
+ 6810:              ADD    $17, $ACC
+ 6813:              ADD    $16, $ACC
+ 6816:              ADD    $15, $ACC
+ 6819:              MOVE   $15, $ACC
+ 6822:              LOADI  $ACC, 2
+ 6828:              MUL    $15, $ACC
+ 6831:              MUL    $14, $ACC
+ 6834:              MOVE   $14, $ACC
+ 6837:              LOADI  $ACC, 1
+ 6843:              MOVE   $15, $ACC
+ 6846:              LOADI  $ACC, 1
+ 6852:              MOVE   $16, $ACC
+ 6855:              LOADI  $ACC, 1
+ 6861:              MOVE   $17, $ACC
+ 6864:              LOADI  $ACC, 5
+ 6870:              MOVE   $18, $ACC
+ 6873:              LOADI  $ACC, 1
+ 6879:              MOVE   $19, $ACC
+ 6882:              LOADI  $ACC, 1
+ 6888:              MOVE   $20, $ACC
+ 6891:              LOADI  $ACC, 1
+ 6897:              MOVE   $21, $ACC
+ 6900:              LOADI  $ACC, 1
+ 6906:              MOVE   $22, $ACC
+ 6909:              LOADI  $ACC, 0
+ 6915:              MOVE   $23, $ACC
+ 6918:              LOADI  $ACC, 1
+ 6924:              MOVE   $24, $ACC
+ 6927:              LOADI  $ACC, 5
+ 6933:              MOVE   $25, $ACC
+ 6936:              LOADI  $ACC, 1
+ 6942:              MOVE   $26, $ACC
+ 6945:              LOADI  $ACC, 1
+ 6951:              MOVE   $27, $ACC
+ 6954:              LOADI  $ACC, 0
+ 6960:              MOVE   $28, $ACC
+ 6963:              LOADI  $ACC, 0
+ 6969:              MOVE   $29, $ACC
+ 6972:              LOADI  $ACC, 0
+ 6978:              MOVE   $30, $ACC
+ 6981:              LOADI  $ACC, 0
+ 6987:              MOVE   $31, $ACC
+ 6990:              LOADI  $ACC, 3
+ 6996:              ADD    $31, $ACC
+ 6999:              ADD    $30, $ACC
+ 7002:              ADD    $29, $ACC
+ 7005:              ADD    $28, $ACC
+ 7008:              ADD    $27, $ACC
+ 7011:              ADD    $26, $ACC
+ 7014:              SUB    $25, $ACC
+ 7017:              ADD    $24, $ACC
+ 7020:              ADD    $23, $ACC
+ 7023:              ADD    $22, $ACC
+ 7026:              ADD    $21, $ACC
+ 7029:              ADD    $20, $ACC
+ 7032:              ADD    $19, $ACC
+ 7035:              SUB    $18, $ACC
+ 7038:              ADD    $17, $ACC
+ 7041:              ADD    $16, $ACC
+ 7044:              ADD    $15, $ACC
+ 7047:              MOVE   $15, $ACC
+ 7050:              LOADI  $ACC, 2
+ 7056:              MUL    $15, $ACC
+ 7059:              MOVE   $15, $ACC
+ 7062:              LOADI  $ACC, 1
+ 7068:              MOVE   $16, $ACC
+ 7071:              LOADI  $ACC, 1
+ 7077:              MOVE   $17, $ACC
+ 7080:              LOADI  $ACC, 1
+ 7086:              MOVE   $18, $ACC
+ 7089:              LOADI  $ACC, 5
+ 7095:              MOVE   $19, $ACC
+ 7098:              LOADI  $ACC, 1
+ 7104:              MOVE   $20, $ACC
+ 7107:              LOADI  $ACC, 1
+ 7113:              MOVE   $21, $ACC
+ 7116:              LOADI  $ACC, 1
+ 7122:              MOVE   $22, $ACC
+ 7125:              LOADI  $ACC, 1
+ 7131:              MOVE   $23, $ACC
+ 7134:              LOADI  $ACC, 0
+ 7140:              MOVE   $24, $ACC
+ 7143:              LOADI  $ACC, 1
+ 7149:              MOVE   $25, $ACC
+ 7152:              LOADI  $ACC, 5
+ 7158:              MOVE   $26, $ACC
+ 7161:              LOADI  $ACC, 1
+ 7167:              MOVE   $27, $ACC
+ 7170:              LOADI  $ACC, 1
+ 7176:              MOVE   $28, $ACC
+ 7179:              LOADI  $ACC, 0
+ 7185:              MOVE   $29, $ACC
+ 7188:              LOADI  $ACC, 0
+ 7194:              MOVE   $30, $ACC
+ 7197:              LOADI  $ACC, 0
+ 7203:              MOVE   $31, $ACC
+ 7206:              LOADI  $ACC, 0
+ 7212:              MOVE   $32, $ACC
+ 7215:              LOADI  $ACC, 3
+ 7221:              ADD    $32, $ACC
+ 7224:              ADD    $31, $ACC
+ 7227:              ADD    $30, $ACC
+ 7230:              ADD    $29, $ACC
+ 7233:              ADD    $28, $ACC
+ 7236:              ADD    $27, $ACC
+ 7239:              SUB    $26, $ACC
+ 7242:              ADD    $25, $ACC
+ 7245:              ADD    $24, $ACC
+ 7248:              ADD    $23, $ACC
+ 7251:              ADD    $22, $ACC
+ 7254:              ADD    $21, $ACC
+ 7257:              ADD    $20, $ACC
+ 7260:              SUB    $19, $ACC
+ 7263:              ADD    $18, $ACC
+ 7266:              ADD    $17, $ACC
+ 7269:              ADD    $16, $ACC
+ 7272:              MOVE   $16, $ACC
+ 7275:              LOADI  $ACC, 2
+ 7281:              MUL    $16, $ACC
+ 7284:              MUL    $15, $ACC
+ 7287:              ADD    $14, $ACC
+ 7290:              MUL    $13, $ACC
+ 7293:              ADD    $12, $ACC
+ 7296:              MUL    $11, $ACC
+ 7299:              MOVE   $11, $ACC
+ 7302:              LOADI  $ACC, 1
+ 7308:              MOVE   $12, $ACC
+ 7311:              LOADI  $ACC, 1
+ 7317:              MOVE   $13, $ACC
+ 7320:              LOADI  $ACC, 1
+ 7326:              MOVE   $14, $ACC
+ 7329:              LOADI  $ACC, 5
+ 7335:              MOVE   $15, $ACC
+ 7338:              LOADI  $ACC, 1
+ 7344:              MOVE   $16, $ACC
+ 7347:              LOADI  $ACC, 1
+ 7353:              MOVE   $17, $ACC
+ 7356:              LOADI  $ACC, 1
+ 7362:              MOVE   $18, $ACC
+ 7365:              LOADI  $ACC, 1
+ 7371:              MOVE   $19, $ACC
+ 7374:              LOADI  $ACC, 0
+ 7380:              MOVE   $20, $ACC
+ 7383:              LOADI  $ACC, 1
+ 7389:              MOVE   $21, $ACC
+ 7392:              LOADI  $ACC, 5
+ 7398:              MOVE   $22, $ACC
+ 7401:              LOADI  $ACC, 1
+ 7407:              MOVE   $23, $ACC
+ 7410:              LOADI  $ACC, 1
+ 7416:              MOVE   $24, $ACC
+ 7419:              LOADI  $ACC, 0
+ 7425:              MOVE   $25, $ACC
+ 7428:              LOADI  $ACC, 0
+ 7434:              MOVE   $26, $ACC
+ 7437:              LOADI  $ACC, 0
+ 7443:              MOVE   $27, $ACC
+ 7446:              LOADI  $ACC, 0
+ 7452:              MOVE   $28, $ACC
+ 7455:              LOADI  $ACC, 3
+ 7461:              ADD    $28, $ACC
+ 7464:              ADD    $27, $ACC
+ 7467:              ADD    $26, $ACC
+ 7470:              ADD    $25, $ACC
+ 7473:              ADD    $24, $ACC
+ 7476:              ADD    $23, $ACC
+ 7479:              SUB    $22, $ACC
+ 7482:              ADD    $21, $ACC
+ 7485:              ADD    $20, $ACC
+ 7488:              ADD    $19, $ACC
+ 7491:              ADD    $18, $ACC
+ 7494:              ADD    $17, $ACC
+ 7497:              ADD    $16, $ACC
+ 7500:              SUB    $15, $ACC
+ 7503:              ADD    $14, $ACC
+ 7506:              ADD    $13, $ACC
+ 7509:              ADD    $12, $ACC
+ 7512:              MOVE   $12, $ACC
+ 7515:              LOADI  $ACC, 2
+ 7521:              MUL    $12, $ACC
+ 7524:              MOVE   $12, $ACC
+ 7527:              LOADI  $ACC, 1
+ 7533:              MOVE   $13, $ACC
+ 7536:              LOADI  $ACC, 1
+ 7542:              MOVE   $14, $ACC
+ 7545:              LOADI  $ACC, 1
+ 7551:              MOVE   $15, $ACC
+ 7554:              LOADI  $ACC, 5
+ 7560:              MOVE   $16, $ACC
+ 7563:              LOADI  $ACC, 1
+ 7569:              MOVE   $17, $ACC
+ 7572:              LOADI  $ACC, 1
+ 7578:              MOVE   $18, $ACC
+ 7581:              LOADI  $ACC, 1
+ 7587:              MOVE   $19, $ACC
+ 7590:              LOADI  $ACC, 1
+ 7596:              MOVE   $20, $ACC
+ 7599:              LOADI  $ACC, 0
+ 7605:              MOVE   $21, $ACC
+ 7608:              LOADI  $ACC, 1
+ 7614:              MOVE   $22, $ACC
+ 7617:              LOADI  $ACC, 5
+ 7623:              MOVE   $23, $ACC
+ 7626:              LOADI  $ACC, 1
+ 7632:              MOVE   $24, $ACC
+ 7635:              LOADI  $ACC, 1
+ 7641:              MOVE   $25, $ACC
+ 7644:              LOADI  $ACC, 0
+ 7650:              MOVE   $26, $ACC
+ 7653:              LOADI  $ACC, 0
+ 7659:              MOVE   $27, $ACC
+ 7662:              LOADI  $ACC, 0
+ 7668:              MOVE   $28, $ACC
+ 7671:              LOADI  $ACC, 0
+ 7677:              MOVE   $29, $ACC
+ 7680:              LOADI  $ACC, 3
+ 7686:              ADD    $29, $ACC
+ 7689:              ADD    $28, $ACC
+ 7692:              ADD    $27, $ACC
+ 7695:              ADD    $26, $ACC
+ 7698:              ADD    $25, $ACC
+ 7701:              ADD    $24, $ACC
+ 7704:              SUB    $23, $ACC
+ 7707:              ADD    $22, $ACC
+ 7710:              ADD    $21, $ACC
+ 7713:              ADD    $20, $ACC
+ 7716:              ADD    $19, $ACC
+ 7719:              ADD    $18, $ACC
+ 7722:              ADD    $17, $ACC
+ 7725:              SUB    $16, $ACC
+ 7728:              ADD    $15, $ACC
+ 7731:              ADD    $14, $ACC
+ 7734:              ADD    $13, $ACC
+ 7737:              MOVE   $13, $ACC
+ 7740:              LOADI  $ACC, 2
+ 7746:              MUL    $13, $ACC
+ 7749:              MUL    $12, $ACC
+ 7752:              MOVE   $12, $ACC
+ 7755:              LOADI  $ACC, 1
+ 7761:              MOVE   $13, $ACC
+ 7764:              LOADI  $ACC, 1
+ 7770:              MOVE   $14, $ACC
+ 7773:              LOADI  $ACC, 1
+ 7779:              MOVE   $15, $ACC
+ 7782:              LOADI  $ACC, 5
+ 7788:              MOVE   $16, $ACC
+ 7791:              LOADI  $ACC, 1
+ 7797:              MOVE   $17, $ACC
+ 7800:              LOADI  $ACC, 1
+ 7806:              MOVE   $18, $ACC
+ 7809:              LOADI  $ACC, 1
+ 7815:              MOVE   $19, $ACC
+ 7818:              LOADI  $ACC, 1
+ 7824:              MOVE   $20, $ACC
+ 7827:              LOADI  $ACC, 0
+ 7833:              MOVE   $21, $ACC
+ 7836:              LOADI  $ACC, 1
+ 7842:              MOVE   $22, $ACC
+ 7845:              LOADI  $ACC, 5
+ 7851:              MOVE   $23, $ACC
+ 7854:              LOADI  $ACC, 1
+ 7860:              MOVE   $24, $ACC
+ 7863:              LOADI  $ACC, 1
+ 7869:              MOVE   $25, $ACC
+ 7872:              LOADI  $ACC, 0
+ 7878:              MOVE   $26, $ACC
+ 7881:              LOADI  $ACC, 0
+ 7887:              MOVE   $27, $ACC
+ 7890:              LOADI  $ACC, 0
+ 7896:              MOVE   $28, $ACC
+ 7899:              LOADI  $ACC, 0
+ 7905:              MOVE   $29, $ACC
+ 7908:              LOADI  $ACC, 3
+ 7914:              ADD    $29, $ACC
+ 7917:              ADD    $28, $ACC
+ 7920:              ADD    $27, $ACC
+ 7923:              ADD    $26, $ACC
+ 7926:              ADD    $25, $ACC
+ 7929:              ADD    $24, $ACC
+ 7932:              SUB    $23, $ACC
+ 7935:              ADD    $22, $ACC
+ 7938:              ADD    $21, $ACC
+ 7941:              ADD    $20, $ACC
+ 7944:              ADD    $19, $ACC
+ 7947:              ADD    $18, $ACC
+ 7950:              ADD    $17, $ACC
+ 7953:              SUB    $16, $ACC
+ 7956:              ADD    $15, $ACC
+ 7959:              ADD    $14, $ACC
+ 7962:              ADD    $13, $ACC
+ 7965:              MOVE   $13, $ACC
+ 7968:              LOADI  $ACC, 2
+ 7974:              MUL    $13, $ACC
+ 7977:              MOVE   $13, $ACC
+ 7980:              LOADI  $ACC, 1
+ 7986:              MOVE   $14, $ACC
+ 7989:              LOADI  $ACC, 1
+ 7995:              MOVE   $15, $ACC
+ 7998:              LOADI  $ACC, 1
+ 8004:              MOVE   $16, $ACC
+ 8007:              LOADI  $ACC, 5
+ 8013:              MOVE   $17, $ACC
+ 8016:              LOADI  $ACC, 1
+ 8022:              MOVE   $18, $ACC
+ 8025:              LOADI  $ACC, 1
+ 8031:              MOVE   $19, $ACC
+ 8034:              LOADI  $ACC, 1
+ 8040:              MOVE   $20, $ACC
+ 8043:              LOADI  $ACC, 1
+ 8049:              MOVE   $21, $ACC
+ 8052:              LOADI  $ACC, 0
+ 8058:              MOVE   $22, $ACC
+ 8061:              LOADI  $ACC, 1
+ 8067:              MOVE   $23, $ACC
+ 8070:              LOADI  $ACC, 5
+ 8076:              MOVE   $24, $ACC
+ 8079:              LOADI  $ACC, 1
+ 8085:              MOVE   $25, $ACC
+ 8088:              LOADI  $ACC, 1
+ 8094:              MOVE   $26, $ACC
+ 8097:              LOADI  $ACC, 0
+ 8103:              MOVE   $27, $ACC
+ 8106:              LOADI  $ACC, 0
+ 8112:              MOVE   $28, $ACC
+ 8115:              LOADI  $ACC, 0
+ 8121:              MOVE   $29, $ACC
+ 8124:              LOADI  $ACC, 0
+ 8130:              MOVE   $30, $ACC
+ 8133:              LOADI  $ACC, 3
+ 8139:              ADD    $30, $ACC
+ 8142:              ADD    $29, $ACC
+ 8145:              ADD    $28, $ACC
+ 8148:              ADD    $27, $ACC
+ 8151:              ADD    $26, $ACC
+ 8154:              ADD    $25, $ACC
+ 8157:              SUB    $24, $ACC
+ 8160:              ADD    $23, $ACC
+ 8163:              ADD    $22, $ACC
+ 8166:              ADD    $21, $ACC
+ 8169:              ADD    $20, $ACC
+ 8172:              ADD    $19, $ACC
+ 8175:              ADD    $18, $ACC
+ 8178:              SUB    $17, $ACC
+ 8181:              ADD    $16, $ACC
+ 8184:              ADD    $15, $ACC
+ 8187:              ADD    $14, $ACC
+ 8190:              MOVE   $14, $ACC
+ 8193:              LOADI  $ACC, 2
+ 8199:              MUL    $14, $ACC
+ 8202:              MUL    $13, $ACC
+ 8205:              ADD    $12, $ACC
+ 8208:              MOVE   $12, $ACC
+ 8211:              LOADI  $ACC, 1
+ 8217:              MOVE   $13, $ACC
+ 8220:              LOADI  $ACC, 1
+ 8226:              MOVE   $14, $ACC
+ 8229:              LOADI  $ACC, 1
+ 8235:              MOVE   $15, $ACC
+ 8238:              LOADI  $ACC, 5
+ 8244:              MOVE   $16, $ACC
+ 8247:              LOADI  $ACC, 1
+ 8253:              MOVE   $17, $ACC
+ 8256:              LOADI  $ACC, 1
+ 8262:              MOVE   $18, $ACC
+ 8265:              LOADI  $ACC, 1
+ 8271:              MOVE   $19, $ACC
+ 8274:              LOADI  $ACC, 1
+ 8280:              MOVE   $20, $ACC
+ 8283:              LOADI  $ACC, 0
+ 8289:              MOVE   $21, $ACC
+ 8292:              LOADI  $ACC, 1
+ 8298:              MOVE   $22, $ACC
+ 8301:              LOADI  $ACC, 5
+ 8307:              MOVE   $23, $ACC
+ 8310:              LOADI  $ACC, 1
+ 8316:              MOVE   $24, $ACC
+ 8319:              LOADI  $ACC, 1
+ 8325:              MOVE   $25, $ACC
+ 8328:              LOADI  $ACC, 0
+ 8334:              MOVE   $26, $ACC
+ 8337:              LOADI  $ACC, 0
+ 8343:              MOVE   $27, $ACC
+ 8346:              LOADI  $ACC, 0
+ 8352:              MOVE   $28, $ACC
+ 8355:              LOADI  $ACC, 0
+ 8361:              MOVE   $29, $ACC
+ 8364:              LOADI  $ACC, 3
+ 8370:              ADD    $29, $ACC
+ 8373:              ADD    $28, $ACC
+ 8376:              ADD    $27, $ACC
+ 8379:              ADD    $26, $ACC
+ 8382:              ADD    $25, $ACC
+ 8385:              ADD    $24, $ACC
+ 8388:              SUB    $23, $ACC
+ 8391:              ADD    $22, $ACC
+ 8394:              ADD    $21, $ACC
+ 8397:              ADD    $20, $ACC
+ 8400:              ADD    $19, $ACC
+ 8403:              ADD    $18, $ACC
+ 8406:              ADD    $17, $ACC
+ 8409:              SUB    $16, $ACC
+ 8412:              ADD    $15, $ACC
+ 8415:              ADD    $14, $ACC
+ 8418:              ADD    $13, $ACC
+ 8421:              MOVE   $13, $ACC
+ 8424:              LOADI  $ACC, 2
+ 8430:              MUL    $13, $ACC
+ 8433:              MOVE   $13, $ACC
+ 8436:              LOADI  $ACC, 1
+ 8442:              MOVE   $14, $ACC
+ 8445:              LOADI  $ACC, 1
+ 8451:              MOVE   $15, $ACC
+ 8454:              LOADI  $ACC, 1
+ 8460:              MOVE   $16, $ACC
+ 8463:              LOADI  $ACC, 5
+ 8469:              MOVE   $17, $ACC
+ 8472:              LOADI  $ACC, 1
+ 8478:              MOVE   $18, $ACC
+ 8481:              LOADI  $ACC, 1
+ 8487:              MOVE   $19, $ACC
+ 8490:              LOADI  $ACC, 1
+ 8496:              MOVE   $20, $ACC
+ 8499:              LOADI  $ACC, 1
+ 8505:              MOVE   $21, $ACC
+ 8508:              LOADI  $ACC, 0
+ 8514:              MOVE   $22, $ACC
+ 8517:              LOADI  $ACC, 1
+ 8523:              MOVE   $23, $ACC
+ 8526:              LOADI  $ACC, 5
+ 8532:              MOVE   $24, $ACC
+ 8535:              LOADI  $ACC, 1
+ 8541:              MOVE   $25, $ACC
+ 8544:              LOADI  $ACC, 1
+ 8550:              MOVE   $26, $ACC
+ 8553:              LOADI  $ACC, 0
+ 8559:              MOVE   $27, $ACC
+ 8562:              LOADI  $ACC, 0
+ 8568:              MOVE   $28, $ACC
+ 8571:              LOADI  $ACC, 0
+ 8577:              MOVE   $29, $ACC
+ 8580:              LOADI  $ACC, 0
+ 8586:              MOVE   $30, $ACC
+ 8589:              LOADI  $ACC, 3
+ 8595:              ADD    $30, $ACC
+ 8598:              ADD    $29, $ACC
+ 8601:              ADD    $28, $ACC
+ 8604:              ADD    $27, $ACC
+ 8607:              ADD    $26, $ACC
+ 8610:              ADD    $25, $ACC
+ 8613:              SUB    $24, $ACC
+ 8616:              ADD    $23, $ACC
+ 8619:              ADD    $22, $ACC
+ 8622:              ADD    $21, $ACC
+ 8625:              ADD    $20, $ACC
+ 8628:              ADD    $19, $ACC
+ 8631:              ADD    $18, $ACC
+ 8634:              SUB    $17, $ACC
+ 8637:              ADD    $16, $ACC
+ 8640:              ADD    $15, $ACC
+ 8643:              ADD    $14, $ACC
+ 8646:              MOVE   $14, $ACC
+ 8649:              LOADI  $ACC, 2
+ 8655:              MUL    $14, $ACC
+ 8658:              MUL    $13, $ACC
+ 8661:              MOVE   $13, $ACC
+ 8664:              LOADI  $ACC, 1
+ 8670:              MOVE   $14, $ACC
+ 8673:              LOADI  $ACC, 1
+ 8679:              MOVE   $15, $ACC
+ 8682:              LOADI  $ACC, 1
+ 8688:              MOVE   $16, $ACC
+ 8691:              LOADI  $ACC, 5
+ 8697:              MOVE   $17, $ACC
+ 8700:              LOADI  $ACC, 1
+ 8706:              MOVE   $18, $ACC
+ 8709:              LOADI  $ACC, 1
+ 8715:              MOVE   $19, $ACC
+ 8718:              LOADI  $ACC, 1
+ 8724:              MOVE   $20, $ACC
+ 8727:              LOADI  $ACC, 1
+ 8733:              MOVE   $21, $ACC
+ 8736:              LOADI  $ACC, 0
+ 8742:              MOVE   $22, $ACC
+ 8745:              LOADI  $ACC, 1
+ 8751:              MOVE   $23, $ACC
+ 8754:              LOADI  $ACC, 5
+ 8760:              MOVE   $24, $ACC
+ 8763:              LOADI  $ACC, 1
+ 8769:              MOVE   $25, $ACC
+ 8772:              LOADI  $ACC, 1
+ 8778:              MOVE   $26, $ACC
+ 8781:              LOADI  $ACC, 0
+ 8787:              MOVE   $27, $ACC
+ 8790:              LOADI  $ACC, 0
+ 8796:              MOVE   $28, $ACC
+ 8799:              LOADI  $ACC, 0
+ 8805:              MOVE   $29, $ACC
+ 8808:              LOADI  $ACC, 0
+ 8814:              MOVE   $30, $ACC
+ 8817:              LOADI  $ACC, 3
+ 8823:              ADD    $30, $ACC
+ 8826:              ADD    $29, $ACC
+ 8829:              ADD    $28, $ACC
+ 8832:              ADD    $27, $ACC
+ 8835:              ADD    $26, $ACC
+ 8838:              ADD    $25, $ACC
+ 8841:              SUB    $24, $ACC
+ 8844:              ADD    $23, $ACC
+ 8847:              ADD    $22, $ACC
+ 8850:              ADD    $21, $ACC
+ 8853:              ADD    $20, $ACC
+ 8856:              ADD    $19, $ACC
+ 8859:              ADD    $18, $ACC
+ 8862:              SUB    $17, $ACC
+ 8865:              ADD    $16, $ACC
+ 8868:              ADD    $15, $ACC
+ 8871:              ADD    $14, $ACC
+ 8874:              MOVE   $14, $ACC
+ 8877:              LOADI  $ACC, 2
+ 8883:              MUL    $14, $ACC
+ 8886:              MOVE   $14, $ACC
+ 8889:              LOADI  $ACC, 1
+ 8895:              MOVE   $15, $ACC
+ 8898:              LOADI  $ACC, 1
+ 8904:              MOVE   $16, $ACC
+ 8907:              LOADI  $ACC, 1
+ 8913:              MOVE   $17, $ACC
+ 8916:              LOADI  $ACC, 5
+ 8922:              MOVE   $18, $ACC
+ 8925:              LOADI  $ACC, 1
+ 8931:              MOVE   $19, $ACC
+ 8934:              LOADI  $ACC, 1
+ 8940:              MOVE   $20, $ACC
+ 8943:              LOADI  $ACC, 1
+ 8949:              MOVE   $21, $ACC
+ 8952:              LOADI  $ACC, 1
+ 8958:              MOVE   $22, $ACC
+ 8961:              LOADI  $ACC, 0
+ 8967:              MOVE   $23, $ACC
+ 8970:              LOADI  $ACC, 1
+ 8976:              MOVE   $24, $ACC
+ 8979:              LOADI  $ACC, 5
+ 8985:              MOVE   $25, $ACC
+ 8988:              LOADI  $ACC, 1
+ 8994:              MOVE   $26, $ACC
+ 8997:              LOADI  $ACC, 1
+ 9003:              MOVE   $27, $ACC
+ 9006:              LOADI  $ACC, 0
+ 9012:              MOVE   $28, $ACC
+ 9015:              LOADI  $ACC, 0
+ 9021:              MOVE   $29, $ACC
+ 9024:              LOADI  $ACC, 0
+ 9030:              MOVE   $30, $ACC
+ 9033:              LOADI  $ACC, 0
+ 9039:              MOVE   $31, $ACC
+ 9042:              LOADI  $ACC, 3
+ 9048:              ADD    $31, $ACC
+ 9051:              ADD    $30, $ACC
+ 9054:              ADD    $29, $ACC
+ 9057:              ADD    $28, $ACC
+ 9060:              ADD    $27, $ACC
+ 9063:              ADD    $26, $ACC
+ 9066:              SUB    $25, $ACC
+ 9069:              ADD    $24, $ACC
+ 9072:              ADD    $23, $ACC
+ 9075:              ADD    $22, $ACC
+ 9078:              ADD    $21, $ACC
+ 9081:              ADD    $20, $ACC
+ 9084:              ADD    $19, $ACC
+ 9087:              SUB    $18, $ACC
+ 9090:              ADD    $17, $ACC
+ 9093:              ADD    $16, $ACC
+ 9096:              ADD    $15, $ACC
+ 9099:              MOVE   $15, $ACC
+ 9102:              LOADI  $ACC, 2
+ 9108:              MUL    $15, $ACC
+ 9111:              MUL    $14, $ACC
+ 9114:              ADD    $13, $ACC
+ 9117:              MUL    $12, $ACC
+ 9120:              MOVE   $12, $ACC
+ 9123:              LOADI  $ACC, 1
+ 9129:              MOVE   $13, $ACC
+ 9132:              LOADI  $ACC, 1
+ 9138:              MOVE   $14, $ACC
+ 9141:              LOADI  $ACC, 1
+ 9147:              MOVE   $15, $ACC
+ 9150:              LOADI  $ACC, 5
+ 9156:              MOVE   $16, $ACC
+ 9159:              LOADI  $ACC, 1
+ 9165:              MOVE   $17, $ACC
+ 9168:              LOADI  $ACC, 1
+ 9174:              MOVE   $18, $ACC
+ 9177:              LOADI  $ACC, 1
+ 9183:              MOVE   $19, $ACC
+ 9186:              LOADI  $ACC, 1
+ 9192:              MOVE   $20, $ACC
+ 9195:              LOADI  $ACC, 0
+ 9201:              MOVE   $21, $ACC
+ 9204:              LOADI  $ACC, 1
+ 9210:              MOVE   $22, $ACC
+ 9213:              LOADI  $ACC, 5
+ 9219:              MOVE   $23, $ACC
+ 9222:              LOADI  $ACC, 1
+ 9228:              MOVE   $24, $ACC
+ 9231:              LOADI  $ACC, 1
+ 9237:              MOVE   $25, $ACC
+ 9240:              LOADI  $ACC, 0
+ 9246:              MOVE   $26, $ACC
+ 9249:              LOADI  $ACC, 0
+ 9255:              MOVE   $27, $ACC
+ 9258:              LOADI  $ACC, 0
+ 9264:              MOVE   $28, $ACC
+ 9267:              LOADI  $ACC, 0
+ 9273:              MOVE   $29, $ACC
+ 9276:              LOADI  $ACC, 3
+ 9282:              ADD    $29, $ACC
+ 9285:              ADD    $28, $ACC
+ 9288:              ADD    $27, $ACC
+ 9291:              ADD    $26, $ACC
+ 9294:              ADD    $25, $ACC
+ 9297:              ADD    $24, $ACC
+ 9300:              SUB    $23, $ACC
+ 9303:              ADD    $22, $ACC
+ 9306:              ADD    $21, $ACC
+ 9309:              ADD    $20, $ACC
+ 9312:              ADD    $19, $ACC
+ 9315:              ADD    $18, $ACC
+ 9318:              ADD    $17, $ACC
+ 9321:              SUB    $16, $ACC
+ 9324:              ADD    $15, $ACC
+ 9327:              ADD    $14, $ACC
+ 9330:              ADD    $13, $ACC
+ 9333:              MOVE   $13, $ACC
+ 9336:              LOADI  $ACC, 2
+ 9342:              MUL    $13, $ACC
+ 9345:              MOVE   $13, $ACC
+ 9348:              LOADI  $ACC, 1
+ 9354:              MOVE   $14, $ACC
+ 9357:              LOADI  $ACC, 1
+ 9363:              MOVE   $15, $ACC
+ 9366:              LOADI  $ACC, 1
+ 9372:              MOVE   $16, $ACC
+ 9375:              LOADI  $ACC, 5
+ 9381:              MOVE   $17, $ACC
+ 9384:              LOADI  $ACC, 1
+ 9390:              MOVE   $18, $ACC
+ 9393:              LOADI  $ACC, 1
+ 9399:              MOVE   $19, $ACC
+ 9402:              LOADI  $ACC, 1
+ 9408:              MOVE   $20, $ACC
+ 9411:              LOADI  $ACC, 1
+ 9417:              MOVE   $21, $ACC
+ 9420:              LOADI  $ACC, 0
+ 9426:              MOVE   $22, $ACC
+ 9429:              LOADI  $ACC, 1
+ 9435:              MOVE   $23, $ACC
+ 9438:              LOADI  $ACC, 5
+ 9444:              MOVE   $24, $ACC
+ 9447:              LOADI  $ACC, 1
+ 9453:              MOVE   $25, $ACC
+ 9456:              LOADI  $ACC, 1
+ 9462:              MOVE   $26, $ACC
+ 9465:              LOADI  $ACC, 0
+ 9471:              MOVE   $27, $ACC
+ 9474:              LOADI  $ACC, 0
+ 9480:              MOVE   $28, $ACC
+ 9483:              LOADI  $ACC, 0
+ 9489:              MOVE   $29, $ACC
+ 9492:              LOADI  $ACC, 0
+ 9498:              MOVE   $30, $ACC
+ 9501:              LOADI  $ACC, 3
+ 9507:              ADD    $30, $ACC
+ 9510:              ADD    $29, $ACC
+ 9513:              ADD    $28, $ACC
+ 9516:              ADD    $27, $ACC
+ 9519:              ADD    $26, $ACC
+ 9522:              ADD    $25, $ACC
+ 9525:              SUB    $24, $ACC
+ 9528:              ADD    $23, $ACC
+ 9531:              ADD    $22, $ACC
+ 9534:              ADD    $21, $ACC
+ 9537:              ADD    $20, $ACC
+ 9540:              ADD    $19, $ACC
+ 9543:              ADD    $18, $ACC
+ 9546:              SUB    $17, $ACC
+ 9549:              ADD    $16, $ACC
+ 9552:              ADD    $15, $ACC
+ 9555:              ADD    $14, $ACC
+ 9558:              MOVE   $14, $ACC
+ 9561:              LOADI  $ACC, 2
+ 9567:              MUL    $14, $ACC
+ 9570:              MUL    $13, $ACC
+ 9573:              MOVE   $13, $ACC
+ 9576:              LOADI  $ACC, 1
+ 9582:              MOVE   $14, $ACC
+ 9585:              LOADI  $ACC, 1
+ 9591:              MOVE   $15, $ACC
+ 9594:              LOADI  $ACC, 1
+ 9600:              MOVE   $16, $ACC
+ 9603:              LOADI  $ACC, 5
+ 9609:              MOVE   $17, $ACC
+ 9612:              LOADI  $ACC, 1
+ 9618:              MOVE   $18, $ACC
+ 9621:              LOADI  $ACC, 1
+ 9627:              MOVE   $19, $ACC
+ 9630:              LOADI  $ACC, 1
+ 9636:              MOVE   $20, $ACC
+ 9639:              LOADI  $ACC, 1
+ 9645:              MOVE   $21, $ACC
+ 9648:              LOADI  $ACC, 0
+ 9654:              MOVE   $22, $ACC
+ 9657:              LOADI  $ACC, 1
+ 9663:              MOVE   $23, $ACC
+ 9666:              LOADI  $ACC, 5
+ 9672:              MOVE   $24, $ACC
+ 9675:              LOADI  $ACC, 1
+ 9681:              MOVE   $25, $ACC
+ 9684:              LOADI  $ACC, 1
+ 9690:              MOVE   $26, $ACC
+ 9693:              LOADI  $ACC, 0
+ 9699:              MOVE   $27, $ACC
+ 9702:              LOADI  $ACC, 0
+ 9708:              MOVE   $28, $ACC
+ 9711:              LOADI  $ACC, 0
+ 9717:              MOVE   $29, $ACC
+ 9720:              LOADI  $ACC, 0
+ 9726:              MOVE   $30, $ACC
+ 9729:              LOADI  $ACC, 3
+ 9735:              ADD    $30, $ACC
+ 9738:              ADD    $29, $ACC
+ 9741:              ADD    $28, $ACC
+ 9744:              ADD    $27, $ACC
+ 9747:              ADD    $26, $ACC
+ 9750:              ADD    $25, $ACC
+ 9753:              SUB    $24, $ACC
+ 9756:              ADD    $23, $ACC
+ 9759:              ADD    $22, $ACC
+ 9762:              ADD    $21, $ACC
+ 9765:              ADD    $20, $ACC
+ 9768:              ADD    $19, $ACC
+ 9771:              ADD    $18, $ACC
+ 9774:              SUB    $17, $ACC
+ 9777:              ADD    $16, $ACC
+ 9780:              ADD    $15, $ACC
+ 9783:              ADD    $14, $ACC
+ 9786:              MOVE   $14, $ACC
+ 9789:              LOADI  $ACC, 2
+ 9795:              MUL    $14, $ACC
+ 9798:              MOVE   $14, $ACC
+ 9801:              LOADI  $ACC, 1
+ 9807:              MOVE   $15, $ACC
+ 9810:              LOADI  $ACC, 1
+ 9816:              MOVE   $16, $ACC
+ 9819:              LOADI  $ACC, 1
+ 9825:              MOVE   $17, $ACC
+ 9828:              LOADI  $ACC, 5
+ 9834:              MOVE   $18, $ACC
+ 9837:              LOADI  $ACC, 1
+ 9843:              MOVE   $19, $ACC
+ 9846:              LOADI  $ACC, 1
+ 9852:              MOVE   $20, $ACC
+ 9855:              LOADI  $ACC, 1
+ 9861:              MOVE   $21, $ACC
+ 9864:              LOADI  $ACC, 1
+ 9870:              MOVE   $22, $ACC
+ 9873:              LOADI  $ACC, 0
+ 9879:              MOVE   $23, $ACC
+ 9882:              LOADI  $ACC, 1
+ 9888:              MOVE   $24, $ACC
+ 9891:              LOADI  $ACC, 5
+ 9897:              MOVE   $25, $ACC
+ 9900:              LOADI  $ACC, 1
+ 9906:              MOVE   $26, $ACC
+ 9909:              LOADI  $ACC, 1
+ 9915:              MOVE   $27, $ACC
+ 9918:              LOADI  $ACC, 0
+ 9924:              MOVE   $28, $ACC
+ 9927:              LOADI  $ACC, 0
+ 9933:              MOVE   $29, $ACC
+ 9936:              LOADI  $ACC, 0
+ 9942:              MOVE   $30, $ACC
+ 9945:              LOADI  $ACC, 0
+ 9951:              MOVE   $31, $ACC
+ 9954:              LOADI  $ACC, 3
+ 9960:              ADD    $31, $ACC
+ 9963:              ADD    $30, $ACC
+ 9966:              ADD    $29, $ACC
+ 9969:              ADD    $28, $ACC
+ 9972:              ADD    $27, $ACC
+ 9975:              ADD    $26, $ACC
+ 9978:              SUB    $25, $ACC
+ 9981:              ADD    $24, $ACC
+ 9984:              ADD    $23, $ACC
+ 9987:              ADD    $22, $ACC
+ 9990:              ADD    $21, $ACC
+ 9993:              ADD    $20, $ACC
+ 9996:              ADD    $19, $ACC
+ 9999:              SUB    $18, $ACC
+10002:              ADD    $17, $ACC
+10005:              ADD    $16, $ACC
+10008:              ADD    $15, $ACC
+10011:              MOVE   $15, $ACC
+10014:              LOADI  $ACC, 2
+10020:              MUL    $15, $ACC
+10023:              MUL    $14, $ACC
+10026:              ADD    $13, $ACC
+10029:              MOVE   $13, $ACC
+10032:              LOADI  $ACC, 1
+10038:              MOVE   $14, $ACC
+10041:              LOADI  $ACC, 1
+10047:              MOVE   $15, $ACC
+10050:              LOADI  $ACC, 1
+10056:              MOVE   $16, $ACC
+10059:              LOADI  $ACC, 5
+10065:              MOVE   $17, $ACC
+10068:              LOADI  $ACC, 1
+10074:              MOVE   $18, $ACC
+10077:              LOADI  $ACC, 1
+10083:              MOVE   $19, $ACC
+10086:              LOADI  $ACC, 1
+10092:              MOVE   $20, $ACC
+10095:              LOADI  $ACC, 1
+10101:              MOVE   $21, $ACC
+10104:              LOADI  $ACC, 0
+10110:              MOVE   $22, $ACC
+10113:              LOADI  $ACC, 1
+10119:              MOVE   $23, $ACC
+10122:              LOADI  $ACC, 5
+10128:              MOVE   $24, $ACC
+10131:              LOADI  $ACC, 1
+10137:              MOVE   $25, $ACC
+10140:              LOADI  $ACC, 1
+10146:              MOVE   $26, $ACC
+10149:              LOADI  $ACC, 0
+10155:              MOVE   $27, $ACC
+10158:              LOADI  $ACC, 0
+10164:              MOVE   $28, $ACC
+10167:              LOADI  $ACC, 0
+10173:              MOVE   $29, $ACC
+10176:              LOADI  $ACC, 0
+10182:              MOVE   $30, $ACC
+10185:              LOADI  $ACC, 3
+10191:              ADD    $30, $ACC
+10194:              ADD    $29, $ACC
+10197:              ADD    $28, $ACC
+10200:              ADD    $27, $ACC
+10203:              ADD    $26, $ACC
+10206:              ADD    $25, $ACC
+10209:              SUB    $24, $ACC
+10212:              ADD    $23, $ACC
+10215:              ADD    $22, $ACC
+10218:              ADD    $21, $ACC
+10221:              ADD    $20, $ACC
+10224:              ADD    $19, $ACC
+10227:              ADD    $18, $ACC
+10230:              SUB    $17, $ACC
+10233:              ADD    $16, $ACC
+10236:              ADD    $15, $ACC
+10239:              ADD    $14, $ACC
+10242:              MOVE   $14, $ACC
+10245:              LOADI  $ACC, 2
+10251:              MUL    $14, $ACC
+10254:              MOVE   $14, $ACC
+10257:              LOADI  $ACC, 1
+10263:              MOVE   $15, $ACC
+10266:              LOADI  $ACC, 1
+10272:              MOVE   $16, $ACC
+10275:              LOADI  $ACC, 1
+10281:              MOVE   $17, $ACC
+10284:              LOADI  $ACC, 5
+10290:              MOVE   $18, $ACC
+10293:              LOADI  $ACC, 1
+10299:              MOVE   $19, $ACC
+10302:              LOADI  $ACC, 1
+10308:              MOVE   $20, $ACC
+10311:              LOADI  $ACC, 1
+10317:              MOVE   $21, $ACC
+10320:              LOADI  $ACC, 1
+10326:              MOVE   $22, $ACC
+10329:              LOADI  $ACC, 0
+10335:              MOVE   $23, $ACC
+10338:              LOADI  $ACC, 1
+10344:              MOVE   $24, $ACC
+10347:              LOADI  $ACC, 5
+10353:              MOVE   $25, $ACC
+10356:              LOADI  $ACC, 1
+10362:              MOVE   $26, $ACC
+10365:              LOADI  $ACC, 1
+10371:              MOVE   $27, $ACC
+10374:              LOADI  $ACC, 0
+10380:              MOVE   $28, $ACC
+10383:              LOADI  $ACC, 0
+10389:              MOVE   $29, $ACC
+10392:              LOADI  $ACC, 0
+10398:              MOVE   $30, $ACC
+10401:              LOADI  $ACC, 0
+10407:              MOVE   $31, $ACC
+10410:              LOADI  $ACC, 3
+10416:              ADD    $31, $ACC
+10419:              ADD    $30, $ACC
+10422:              ADD    $29, $ACC
+10425:              ADD    $28, $ACC
+10428:              ADD    $27, $ACC
+10431:              ADD    $26, $ACC
+10434:              SUB    $25, $ACC
+10437:              ADD    $24, $ACC
+10440:              ADD    $23, $ACC
+10443:              ADD    $22, $ACC
+10446:              ADD    $21, $ACC
+10449:              ADD    $20, $ACC
+10452:              ADD    $19, $ACC
+10455:              SUB    $18, $ACC
+10458:              ADD    $17, $ACC
+10461:              ADD    $16, $ACC
+10464:              ADD    $15, $ACC
+10467:              MOVE   $15, $ACC
+10470:              LOADI  $ACC, 2
+10476:              MUL    $15, $ACC
+10479:              MUL    $14, $ACC
+10482:              MOVE   $14, $ACC
+10485:              LOADI  $ACC, 1
+10491:              MOVE   $15, $ACC
+10494:              LOADI  $ACC, 1
+10500:              MOVE   $16, $ACC
+10503:              LOADI  $ACC, 1
+10509:              MOVE   $17, $ACC
+10512:              LOADI  $ACC, 5
+10518:              MOVE   $18, $ACC
+10521:              LOADI  $ACC, 1
+10527:              MOVE   $19, $ACC
+10530:              LOADI  $ACC, 1
+10536:              MOVE   $20, $ACC
+10539:              LOADI  $ACC, 1
+10545:              MOVE   $21, $ACC
+10548:              LOADI  $ACC, 1
+10554:              MOVE   $22, $ACC
+10557:              LOADI  $ACC, 0
+10563:              MOVE   $23, $ACC
+10566:              LOADI  $ACC, 1
+10572:              MOVE   $24, $ACC
+10575:              LOADI  $ACC, 5
+10581:              MOVE   $25, $ACC
+10584:              LOADI  $ACC, 1
+10590:              MOVE   $26, $ACC
+10593:              LOADI  $ACC, 1
+10599:              MOVE   $27, $ACC
+10602:              LOADI  $ACC, 0
+10608:              MOVE   $28, $ACC
+10611:              LOADI  $ACC, 0
+10617:              MOVE   $29, $ACC
+10620:              LOADI  $ACC, 0
+10626:              MOVE   $30, $ACC
+10629:              LOADI  $ACC, 0
+10635:              MOVE   $31, $ACC
+10638:              LOADI  $ACC, 3
+10644:              ADD    $31, $ACC
+10647:              ADD    $30, $ACC
+10650:              ADD    $29, $ACC
+10653:              ADD    $28, $ACC
+10656:              ADD    $27, $ACC
+10659:              ADD    $26, $ACC
+10662:              SUB    $25, $ACC
+10665:              ADD    $24, $ACC
+10668:              ADD    $23, $ACC
+10671:              ADD    $22, $ACC
+10674:              ADD    $21, $ACC
+10677:              ADD    $20, $ACC
+10680:              ADD    $19, $ACC
+10683:              SUB    $18, $ACC
+10686:              ADD    $17, $ACC
+10689:              ADD    $16, $ACC
+10692:              ADD    $15, $ACC
+10695:              MOVE   $15, $ACC
+10698:              LOADI  $ACC, 2
+10704:              MUL    $15, $ACC
+10707:              MOVE   $15, $ACC
+10710:              LOADI  $ACC, 1
+10716:              MOVE   $16, $ACC
+10719:              LOADI  $ACC, 1
+10725:              MOVE   $17, $ACC
+10728:              LOADI  $ACC, 1
+10734:              MOVE   $18, $ACC
+10737:              LOADI  $ACC, 5
+10743:              MOVE   $19, $ACC
+10746:              LOADI  $ACC, 1
+10752:              MOVE   $20, $ACC
+10755:              LOADI  $ACC, 1
+10761:              MOVE   $21, $ACC
+10764:              LOADI  $ACC, 1
+10770:              MOVE   $22, $ACC
+10773:              LOADI  $ACC, 1
+10779:              MOVE   $23, $ACC
+10782:              LOADI  $ACC, 0
+10788:              MOVE   $24, $ACC
+10791:              LOADI  $ACC, 1
+10797:              MOVE   $25, $ACC
+10800:              LOADI  $ACC, 5
+10806:              MOVE   $26, $ACC
+10809:              LOADI  $ACC, 1
+10815:              MOVE   $27, $ACC
+10818:              LOADI  $ACC, 1
+10824:              MOVE   $28, $ACC
+10827:              LOADI  $ACC, 0
+10833:              MOVE   $29, $ACC
+10836:              LOADI  $ACC, 0
+10842:              MOVE   $30, $ACC
+10845:              LOADI  $ACC, 0
+10851:              MOVE   $31, $ACC
+10854:              LOADI  $ACC, 0
+10860:              MOVE   $32, $ACC
+10863:              LOADI  $ACC, 3
+10869:              ADD    $32, $ACC
+10872:              ADD    $31, $ACC
+10875:              ADD    $30, $ACC
+10878:              ADD    $29, $ACC
+10881:              ADD    $28, $ACC
+10884:              ADD    $27, $ACC
+10887:              SUB    $26, $ACC
+10890:              ADD    $25, $ACC
+10893:              ADD    $24, $ACC
+10896:              ADD    $23, $ACC
+10899:              ADD    $22, $ACC
+10902:              ADD    $21, $ACC
+10905:              ADD    $20, $ACC
+10908:              SUB    $19, $ACC
+10911:              ADD    $18, $ACC
+10914:              ADD    $17, $ACC
+10917:              ADD    $16, $ACC
+10920:              MOVE   $16, $ACC
+10923:              LOADI  $ACC, 2
+10929:              MUL    $16, $ACC
+10932:              MUL    $15, $ACC
+10935:              ADD    $14, $ACC
+10938:              MUL    $13, $ACC
+10941:              ADD    $12, $ACC
+10944:              MOVE   $12, $ACC
+10947:              LOADI  $ACC, 1
+10953:              MOVE   $13, $ACC
+10956:              LOADI  $ACC, 1
+10962:              MOVE   $14, $ACC
+10965:              LOADI  $ACC, 1
+10971:              MOVE   $15, $ACC
+10974:              LOADI  $ACC, 5
+10980:              MOVE   $16, $ACC
+10983:              LOADI  $ACC, 1
+10989:              MOVE   $17, $ACC
+10992:              LOADI  $ACC, 1
+10998:              MOVE   $18, $ACC
+11001:              LOADI  $ACC, 1
+11007:              MOVE   $19, $ACC
+11010:              LOADI  $ACC, 1
+11016:              MOVE   $20, $ACC
+11019:              LOADI  $ACC, 0
+11025:              MOVE   $21, $ACC
+11028:              LOADI  $ACC, 1
+11034:              MOVE   $22, $ACC
+11037:              LOADI  $ACC, 5
+11043:              MOVE   $23, $ACC
+11046:              LOADI  $ACC, 1
+11052:              MOVE   $24, $ACC
+11055:              LOADI  $ACC, 1
+11061:              MOVE   $25, $ACC
+11064:              LOADI  $ACC, 0
+11070:              MOVE   $26, $ACC
+11073:              LOADI  $ACC, 0
+11079:              MOVE   $27, $ACC
+11082:              LOADI  $ACC, 0
+11088:              MOVE   $28, $ACC
+11091:              LOADI  $ACC, 0
+11097:              MOVE   $29, $ACC
+11100:              LOADI  $ACC, 3
+11106:              ADD    $29, $ACC
+11109:              ADD    $28, $ACC
+11112:              ADD    $27, $ACC
+11115:              ADD    $26, $ACC
+11118:              ADD    $25, $ACC
+11121:              ADD    $24, $ACC
+11124:              SUB    $23, $ACC
+11127:              ADD    $22, $ACC
+11130:              ADD    $21, $ACC
+11133:              ADD    $20, $ACC
+11136:              ADD    $19, $ACC
+11139:              ADD    $18, $ACC
+11142:              ADD    $17, $ACC
+11145:              SUB    $16, $ACC
+11148:              ADD    $15, $ACC
+11151:              ADD    $14, $ACC
+11154:              ADD    $13, $ACC
+11157:              MOVE   $13, $ACC
+11160:              LOADI  $ACC, 2
+11166:              MUL    $13, $ACC
+11169:              MOVE   $13, $ACC
+11172:              LOADI  $ACC, 1
+11178:              MOVE   $14, $ACC
+11181:              LOADI  $ACC, 1
+11187:              MOVE   $15, $ACC
+11190:              LOADI  $ACC, 1
+11196:              MOVE   $16, $ACC
+11199:              LOADI  $ACC, 5
+11205:              MOVE   $17, $ACC
+11208:              LOADI  $ACC, 1
+11214:              MOVE   $18, $ACC
+11217:              LOADI  $ACC, 1
+11223:              MOVE   $19, $ACC
+11226:              LOADI  $ACC, 1
+11232:              MOVE   $20, $ACC
+11235:              LOADI  $ACC, 1
+11241:              MOVE   $21, $ACC
+11244:              LOADI  $ACC, 0
+11250:              MOVE   $22, $ACC
+11253:              LOADI  $ACC, 1
+11259:              MOVE   $23, $ACC
+11262:              LOADI  $ACC, 5
+11268:              MOVE   $24, $ACC
+11271:              LOADI  $ACC, 1
+11277:              MOVE   $25, $ACC
+11280:              LOADI  $ACC, 1
+11286:              MOVE   $26, $ACC
+11289:              LOADI  $ACC, 0
+11295:              MOVE   $27, $ACC
+11298:              LOADI  $ACC, 0
+11304:              MOVE   $28, $ACC
+11307:              LOADI  $ACC, 0
+11313:              MOVE   $29, $ACC
+11316:              LOADI  $ACC, 0
+11322:              MOVE   $30, $ACC
+11325:              LOADI  $ACC, 3
+11331:              ADD    $30, $ACC
+11334:              ADD    $29, $ACC
+11337:              ADD    $28, $ACC
+11340:              ADD    $27, $ACC
+11343:              ADD    $26, $ACC
+11346:              ADD    $25, $ACC
+11349:              SUB    $24, $ACC
+11352:              ADD    $23, $ACC
+11355:              ADD    $22, $ACC
+11358:              ADD    $21, $ACC
+11361:              ADD    $20, $ACC
+11364:              ADD    $19, $ACC
+11367:              ADD    $18, $ACC
+11370:              SUB    $17, $ACC
+11373:              ADD    $16, $ACC
+11376:              ADD    $15, $ACC
+11379:              ADD    $14, $ACC
+11382:              MOVE   $14, $ACC
+11385:              LOADI  $ACC, 2
+11391:              MUL    $14, $ACC
+11394:              MUL    $13, $ACC
+11397:              MOVE   $13, $ACC
+11400:              LOADI  $ACC, 1
+11406:              MOVE   $14, $ACC
+11409:              LOADI  $ACC, 1
+11415:              MOVE   $15, $ACC
+11418:              LOADI  $ACC, 1
+11424:              MOVE   $16, $ACC
+11427:              LOADI  $ACC, 5
+11433:              MOVE   $17, $ACC
+11436:              LOADI  $ACC, 1
+11442:              MOVE   $18, $ACC
+11445:              LOADI  $ACC, 1
+11451:              MOVE   $19, $ACC
+11454:              LOADI  $ACC, 1
+11460:              MOVE   $20, $ACC
+11463:              LOADI  $ACC, 1
+11469:              MOVE   $21, $ACC
+11472:              LOADI  $ACC, 0
+11478:              MOVE   $22, $ACC
+11481:              LOADI  $ACC, 1
+11487:              MOVE   $23, $ACC
+11490:              LOADI  $ACC, 5
+11496:              MOVE   $24, $ACC
+11499:              LOADI  $ACC, 1
+11505:              MOVE   $25, $ACC
+11508:              LOADI  $ACC, 1
+11514:              MOVE   $26, $ACC
+11517:              LOADI  $ACC, 0
+11523:              MOVE   $27, $ACC
+11526:              LOADI  $ACC, 0
+11532:              MOVE   $28, $ACC
+11535:              LOADI  $ACC, 0
+11541:              MOVE   $29, $ACC
+11544:              LOADI  $ACC, 0
+11550:              MOVE   $30, $ACC
+11553:              LOADI  $ACC, 3
+11559:              ADD    $30, $ACC
+11562:              ADD    $29, $ACC
+11565:              ADD    $28, $ACC
+11568:              ADD    $27, $ACC
+11571:              ADD    $26, $ACC
+11574:              ADD    $25, $ACC
+11577:              SUB    $24, $ACC
+11580:              ADD    $23, $ACC
+11583:              ADD    $22, $ACC
+11586:              ADD    $21, $ACC
+11589:              ADD    $20, $ACC
+11592:              ADD    $19, $ACC
+11595:              ADD    $18, $ACC
+11598:              SUB    $17, $ACC
+11601:              ADD    $16, $ACC
+11604:              ADD    $15, $ACC
+11607:              ADD    $14, $ACC
+11610:              MOVE   $14, $ACC
+11613:              LOADI  $ACC, 2
+11619:              MUL    $14, $ACC
+11622:              MOVE   $14, $ACC
+11625:              LOADI  $ACC, 1
+11631:              MOVE   $15, $ACC
+11634:              LOADI  $ACC, 1
+11640:              MOVE   $16, $ACC
+11643:              LOADI  $ACC, 1
+11649:              MOVE   $17, $ACC
+11652:              LOADI  $ACC, 5
+11658:              MOVE   $18, $ACC
+11661:              LOADI  $ACC, 1
+11667:              MOVE   $19, $ACC
+11670:              LOADI  $ACC, 1
+11676:              MOVE   $20, $ACC
+11679:              LOADI  $ACC, 1
+11685:              MOVE   $21, $ACC
+11688:              LOADI  $ACC, 1
+11694:              MOVE   $22, $ACC
+11697:              LOADI  $ACC, 0
+11703:              MOVE   $23, $ACC
+11706:              LOADI  $ACC, 1
+11712:              MOVE   $24, $ACC
+11715:              LOADI  $ACC, 5
+11721:              MOVE   $25, $ACC
+11724:              LOADI  $ACC, 1
+11730:              MOVE   $26, $ACC
+11733:              LOADI  $ACC, 1
+11739:              MOVE   $27, $ACC
+11742:              LOADI  $ACC, 0
+11748:              MOVE   $28, $ACC
+11751:              LOADI  $ACC, 0
+11757:              MOVE   $29, $ACC
+11760:              LOADI  $ACC, 0
+11766:              MOVE   $30, $ACC
+11769:              LOADI  $ACC, 0
+11775:              MOVE   $31, $ACC
+11778:              LOADI  $ACC, 3
+11784:              ADD    $31, $ACC
+11787:              ADD    $30, $ACC
+11790:              ADD    $29, $ACC
+11793:              ADD    $28, $ACC
+11796:              ADD    $27, $ACC
+11799:              ADD    $26, $ACC
+11802:              SUB    $25, $ACC
+11805:              ADD    $24, $ACC
+11808:              ADD    $23, $ACC
+11811:              ADD    $22, $ACC
+11814:              ADD    $21, $ACC
+11817:              ADD    $20, $ACC
+11820:              ADD    $19, $ACC
+11823:              SUB    $18, $ACC
+11826:              ADD    $17, $ACC
+11829:              ADD    $16, $ACC
+11832:              ADD    $15, $ACC
+11835:              MOVE   $15, $ACC
+11838:              LOADI  $ACC, 2
+11844:              MUL    $15, $ACC
+11847:              MUL    $14, $ACC
+11850:              ADD    $13, $ACC
+11853:              MOVE   $13, $ACC
+11856:              LOADI  $ACC, 1
+11862:              MOVE   $14, $ACC
+11865:              LOADI  $ACC, 1
+11871:              MOVE   $15, $ACC
+11874:              LOADI  $ACC, 1
+11880:              MOVE   $16, $ACC
+11883:              LOADI  $ACC, 5
+11889:              MOVE   $17, $ACC
+11892:              LOADI  $ACC, 1
+11898:              MOVE   $18, $ACC
+11901:              LOADI  $ACC, 1
+11907:              MOVE   $19, $ACC
+11910:              LOADI  $ACC, 1
+11916:              MOVE   $20, $ACC
+11919:              LOADI  $ACC, 1
+11925:              MOVE   $21, $ACC
+11928:              LOADI  $ACC, 0
+11934:              MOVE   $22, $ACC
+11937:              LOADI  $ACC, 1
+11943:              MOVE   $23, $ACC
+11946:              LOADI  $ACC, 5
+11952:              MOVE   $24, $ACC
+11955:              LOADI  $ACC, 1
+11961:              MOVE   $25, $ACC
+11964:              LOADI  $ACC, 1
+11970:              MOVE   $26, $ACC
+11973:              LOADI  $ACC, 0
+11979:              MOVE   $27, $ACC
+11982:              LOADI  $ACC, 0
+11988:              MOVE   $28, $ACC
+11991:              LOADI  $ACC, 0
+11997:              MOVE   $29, $ACC
+12000:              LOADI  $ACC, 0
+12006:              MOVE   $30, $ACC
+12009:              LOADI  $ACC, 3
+12015:              ADD    $30, $ACC
+12018:              ADD    $29, $ACC
+12021:              ADD    $28, $ACC
+12024:              ADD    $27, $ACC
+12027:              ADD    $26, $ACC
+12030:              ADD    $25, $ACC
+12033:              SUB    $24, $ACC
+12036:              ADD    $23, $ACC
+12039:              ADD    $22, $ACC
+12042:              ADD    $21, $ACC
+12045:              ADD    $20, $ACC
+12048:              ADD    $19, $ACC
+12051:              ADD    $18, $ACC
+12054:              SUB    $17, $ACC
+12057:              ADD    $16, $ACC
+12060:              ADD    $15, $ACC
+12063:              ADD    $14, $ACC
+12066:              MOVE   $14, $ACC
+12069:              LOADI  $ACC, 2
+12075:              MUL    $14, $ACC
+12078:              MOVE   $14, $ACC
+12081:              LOADI  $ACC, 1
+12087:              MOVE   $15, $ACC
+12090:              LOADI  $ACC, 1
+12096:              MOVE   $16, $ACC
+12099:              LOADI  $ACC, 1
+12105:              MOVE   $17, $ACC
+12108:              LOADI  $ACC, 5
+12114:              MOVE   $18, $ACC
+12117:              LOADI  $ACC, 1
+12123:              MOVE   $19, $ACC
+12126:              LOADI  $ACC, 1
+12132:              MOVE   $20, $ACC
+12135:              LOADI  $ACC, 1
+12141:              MOVE   $21, $ACC
+12144:              LOADI  $ACC, 1
+12150:              MOVE   $22, $ACC
+12153:              LOADI  $ACC, 0
+12159:              MOVE   $23, $ACC
+12162:              LOADI  $ACC, 1
+12168:              MOVE   $24, $ACC
+12171:              LOADI  $ACC, 5
+12177:              MOVE   $25, $ACC
+12180:              LOADI  $ACC, 1
+12186:              MOVE   $26, $ACC
+12189:              LOADI  $ACC, 1
+12195:              MOVE   $27, $ACC
+12198:              LOADI  $ACC, 0
+12204:              MOVE   $28, $ACC
+12207:              LOADI  $ACC, 0
+12213:              MOVE   $29, $ACC
+12216:              LOADI  $ACC, 0
+12222:              MOVE   $30, $ACC
+12225:              LOADI  $ACC, 0
+12231:              MOVE   $31, $ACC
+12234:              LOADI  $ACC, 3
+12240:              ADD    $31, $ACC
+12243:              ADD    $30, $ACC
+12246:              ADD    $29, $ACC
+12249:              ADD    $28, $ACC
+12252:              ADD    $27, $ACC
+12255:              ADD    $26, $ACC
+12258:              SUB    $25, $ACC
+12261:              ADD    $24, $ACC
+12264:              ADD    $23, $ACC
+12267:              ADD    $22, $ACC
+12270:              ADD    $21, $ACC
+12273:              ADD    $20, $ACC
+12276:              ADD    $19, $ACC
+12279:              SUB    $18, $ACC
+12282:              ADD    $17, $ACC
+12285:              ADD    $16, $ACC
+12288:              ADD    $15, $ACC
+12291:              MOVE   $15, $ACC
+12294:              LOADI  $ACC, 2
+12300:              MUL    $15, $ACC
+12303:              MUL    $14, $ACC
+12306:              MOVE   $14, $ACC
+12309:              LOADI  $ACC, 1
+12315:              MOVE   $15, $ACC
+12318:              LOADI  $ACC, 1
+12324:              MOVE   $16, $ACC
+12327:              LOADI  $ACC, 1
+12333:              MOVE   $17, $ACC
+12336:              LOADI  $ACC, 5
+12342:              MOVE   $18, $ACC
+12345:              LOADI  $ACC, 1
+12351:              MOVE   $19, $ACC
+12354:              LOADI  $ACC, 1
+12360:              MOVE   $20, $ACC
+12363:              LOADI  $ACC, 1
+12369:              MOVE   $21, $ACC
+12372:              LOADI  $ACC, 1
+12378:              MOVE   $22, $ACC
+12381:              LOADI  $ACC, 0
+12387:              MOVE   $23, $ACC
+12390:              LOADI  $ACC, 1
+12396:              MOVE   $24, $ACC
+12399:              LOADI  $ACC, 5
+12405:              MOVE   $25, $ACC
+12408:              LOADI  $ACC, 1
+12414:              MOVE   $26, $ACC
+12417:              LOADI  $ACC, 1
+12423:              MOVE   $27, $ACC
+12426:              LOADI  $ACC, 0
+12432:              MOVE   $28, $ACC
+12435:              LOADI  $ACC, 0
+12441:              MOVE   $29, $ACC
+12444:              LOADI  $ACC, 0
+12450:              MOVE   $30, $ACC
+12453:              LOADI  $ACC, 0
+12459:              MOVE   $31, $ACC
+12462:              LOADI  $ACC, 3
+12468:              ADD    $31, $ACC
+12471:              ADD    $30, $ACC
+12474:              ADD    $29, $ACC
+12477:              ADD    $28, $ACC
+12480:              ADD    $27, $ACC
+12483:              ADD    $26, $ACC
+12486:              SUB    $25, $ACC
+12489:              ADD    $24, $ACC
+12492:              ADD    $23, $ACC
+12495:              ADD    $22, $ACC
+12498:              ADD    $21, $ACC
+12501:              ADD    $20, $ACC
+12504:              ADD    $19, $ACC
+12507:              SUB    $18, $ACC
+12510:              ADD    $17, $ACC
+12513:              ADD    $16, $ACC
+12516:              ADD    $15, $ACC
+12519:              MOVE   $15, $ACC
+12522:              LOADI  $ACC, 2
+12528:              MUL    $15, $ACC
+12531:              MOVE   $15, $ACC
+12534:              LOADI  $ACC, 1
+12540:              MOVE   $16, $ACC
+12543:              LOADI  $ACC, 1
+12549:              MOVE   $17, $ACC
+12552:              LOADI  $ACC, 1
+12558:              MOVE   $18, $ACC
+12561:              LOADI  $ACC, 5
+12567:              MOVE   $19, $ACC
+12570:              LOADI  $ACC, 1
+12576:              MOVE   $20, $ACC
+12579:              LOADI  $ACC, 1
+12585:              MOVE   $21, $ACC
+12588:              LOADI  $ACC, 1
+12594:              MOVE   $22, $ACC
+12597:              LOADI  $ACC, 1
+12603:              MOVE   $23, $ACC
+12606:              LOADI  $ACC, 0
+12612:              MOVE   $24, $ACC
+12615:              LOADI  $ACC, 1
+12621:              MOVE   $25, $ACC
+12624:              LOADI  $ACC, 5
+12630:              MOVE   $26, $ACC
+12633:              LOADI  $ACC, 1
+12639:              MOVE   $27, $ACC
+12642:              LOADI  $ACC, 1
+12648:              MOVE   $28, $ACC
+12651:              LOADI  $ACC, 0
+12657:              MOVE   $29, $ACC
+12660:              LOADI  $ACC, 0
+12666:              MOVE   $30, $ACC
+12669:              LOADI  $ACC, 0
+12675:              MOVE   $31, $ACC
+12678:              LOADI  $ACC, 0
+12684:              MOVE   $32, $ACC
+12687:              LOADI  $ACC, 3
+12693:              ADD    $32, $ACC
+12696:              ADD    $31, $ACC
+12699:              ADD    $30, $ACC
+12702:              ADD    $29, $ACC
+12705:              ADD    $28, $ACC
+12708:              ADD    $27, $ACC
+12711:              SUB    $26, $ACC
+12714:              ADD    $25, $ACC
+12717:              ADD    $24, $ACC
+12720:              ADD    $23, $ACC
+12723:              ADD    $22, $ACC
+12726:              ADD    $21, $ACC
+12729:              ADD    $20, $ACC
+12732:              SUB    $19, $ACC
+12735:              ADD    $18, $ACC
+12738:              ADD    $17, $ACC
+12741:              ADD    $16, $ACC
+12744:              MOVE   $16, $ACC
+12747:              LOADI  $ACC, 2
+12753:              MUL    $16, $ACC
+12756:              MUL    $15, $ACC
+12759:              ADD    $14, $ACC
+12762:              MUL    $13, $ACC
+12765:              MOVE   $13, $ACC
+12768:              LOADI  $ACC, 1
+12774:              MOVE   $14, $ACC
+12777:              LOADI  $ACC, 1
+12783:              MOVE   $15, $ACC
+12786:              LOADI  $ACC, 1
+12792:              MOVE   $16, $ACC
+12795:              LOADI  $ACC, 5
+12801:              MOVE   $17, $ACC
+12804:              LOADI  $ACC, 1
+12810:              MOVE   $18, $ACC
+12813:              LOADI  $ACC, 1
+12819:              MOVE   $19, $ACC
+12822:              LOADI  $ACC, 1
+12828:              MOVE   $20, $ACC
+12831:              LOADI  $ACC, 1
+12837:              MOVE   $21, $ACC
+12840:              LOADI  $ACC, 0
+12846:              MOVE   $22, $ACC
+12849:              LOADI  $ACC, 1
+12855:              MOVE   $23, $ACC
+12858:              LOADI  $ACC, 5
+12864:              MOVE   $24, $ACC
+12867:              LOADI  $ACC, 1
+12873:              MOVE   $25, $ACC
+12876:              LOADI  $ACC, 1
+12882:              MOVE   $26, $ACC
+12885:              LOADI  $ACC, 0
+12891:              MOVE   $27, $ACC
+12894:              LOADI  $ACC, 0
+12900:              MOVE   $28, $ACC
+12903:              LOADI  $ACC, 0
+12909:              MOVE   $29, $ACC
+12912:              LOADI  $ACC, 0
+12918:              MOVE   $30, $ACC
+12921:              LOADI  $ACC, 3
+12927:              ADD    $30, $ACC
+12930:              ADD    $29, $ACC
+12933:              ADD    $28, $ACC
+12936:              ADD    $27, $ACC
+12939:              ADD    $26, $ACC
+12942:              ADD    $25, $ACC
+12945:              SUB    $24, $ACC
+12948:              ADD    $23, $ACC
+12951:              ADD    $22, $ACC
+12954:              ADD    $21, $ACC
+12957:              ADD    $20, $ACC
+12960:              ADD    $19, $ACC
+12963:              ADD    $18, $ACC
+12966:              SUB    $17, $ACC
+12969:              ADD    $16, $ACC
+12972:              ADD    $15, $ACC
+12975:              ADD    $14, $ACC
+12978:              MOVE   $14, $ACC
+12981:              LOADI  $ACC, 2
+12987:              MUL    $14, $ACC
+12990:              MOVE   $14, $ACC
+12993:              LOADI  $ACC, 1
+12999:              MOVE   $15, $ACC
+13002:              LOADI  $ACC, 1
+13008:              MOVE   $16, $ACC
+13011:              LOADI  $ACC, 1
+13017:              MOVE   $17, $ACC
+13020:              LOADI  $ACC, 5
+13026:              MOVE   $18, $ACC
+13029:              LOADI  $ACC, 1
+13035:              MOVE   $19, $ACC
+13038:              LOADI  $ACC, 1
+13044:              MOVE   $20, $ACC
+13047:              LOADI  $ACC, 1
+13053:              MOVE   $21, $ACC
+13056:              LOADI  $ACC, 1
+13062:              MOVE   $22, $ACC
+13065:              LOADI  $ACC, 0
+13071:              MOVE   $23, $ACC
+13074:              LOADI  $ACC, 1
+13080:              MOVE   $24, $ACC
+13083:              LOADI  $ACC, 5
+13089:              MOVE   $25, $ACC
+13092:              LOADI  $ACC, 1
+13098:              MOVE   $26, $ACC
+13101:              LOADI  $ACC, 1
+13107:              MOVE   $27, $ACC
+13110:              LOADI  $ACC, 0
+13116:              MOVE   $28, $ACC
+13119:              LOADI  $ACC, 0
+13125:              MOVE   $29, $ACC
+13128:              LOADI  $ACC, 0
+13134:              MOVE   $30, $ACC
+13137:              LOADI  $ACC, 0
+13143:              MOVE   $31, $ACC
+13146:              LOADI  $ACC, 3
+13152:              ADD    $31, $ACC
+13155:              ADD    $30, $ACC
+13158:              ADD    $29, $ACC
+13161:              ADD    $28, $ACC
+13164:              ADD    $27, $ACC
+13167:              ADD    $26, $ACC
+13170:              SUB    $25, $ACC
+13173:              ADD    $24, $ACC
+13176:              ADD    $23, $ACC
+13179:              ADD    $22, $ACC
+13182:              ADD    $21, $ACC
+13185:              ADD    $20, $ACC
+13188:              ADD    $19, $ACC
+13191:              SUB    $18, $ACC
+13194:              ADD    $17, $ACC
+13197:              ADD    $16, $ACC
+13200:              ADD    $15, $ACC
+13203:              MOVE   $15, $ACC
+13206:              LOADI  $ACC, 2
+13212:              MUL    $15, $ACC
+13215:              MUL    $14, $ACC
+13218:              MOVE   $14, $ACC
+13221:              LOADI  $ACC, 1
+13227:              MOVE   $15, $ACC
+13230:              LOADI  $ACC, 1
+13236:              MOVE   $16, $ACC
+13239:              LOADI  $ACC, 1
+13245:              MOVE   $17, $ACC
+13248:              LOADI  $ACC, 5
+13254:              MOVE   $18, $ACC
+13257:              LOADI  $ACC, 1
+13263:              MOVE   $19, $ACC
+13266:              LOADI  $ACC, 1
+13272:              MOVE   $20, $ACC
+13275:              LOADI  $ACC, 1
+13281:              MOVE   $21, $ACC
+13284:              LOADI  $ACC, 1
+13290:              MOVE   $22, $ACC
+13293:              LOADI  $ACC, 0
+13299:              MOVE   $23, $ACC
+13302:              LOADI  $ACC, 1
+13308:              MOVE   $24, $ACC
+13311:              LOADI  $ACC, 5
+13317:              MOVE   $25, $ACC
+13320:              LOADI  $ACC, 1
+13326:              MOVE   $26, $ACC
+13329:              LOADI  $ACC, 1
+13335:              MOVE   $27, $ACC
+13338:              LOADI  $ACC, 0
+13344:              MOVE   $28, $ACC
+13347:              LOADI  $ACC, 0
+13353:              MOVE   $29, $ACC
+13356:              LOADI  $ACC, 0
+13362:              MOVE   $30, $ACC
+13365:              LOADI  $ACC, 0
+13371:              MOVE   $31, $ACC
+13374:              LOADI  $ACC, 3
+13380:              ADD    $31, $ACC
+13383:              ADD    $30, $ACC
+13386:              ADD    $29, $ACC
+13389:              ADD    $28, $ACC
+13392:              ADD    $27, $ACC
+13395:              ADD    $26, $ACC
+13398:              SUB    $25, $ACC
+13401:              ADD    $24, $ACC
+13404:              ADD    $23, $ACC
+13407:              ADD    $22, $ACC
+13410:              ADD    $21, $ACC
+13413:              ADD    $20, $ACC
+13416:              ADD    $19, $ACC
+13419:              SUB    $18, $ACC
+13422:              ADD    $17, $ACC
+13425:              ADD    $16, $ACC
+13428:              ADD    $15, $ACC
+13431:              MOVE   $15, $ACC
+13434:              LOADI  $ACC, 2
+13440:              MUL    $15, $ACC
+13443:              MOVE   $15, $ACC
+13446:              LOADI  $ACC, 1
+13452:              MOVE   $16, $ACC
+13455:              LOADI  $ACC, 1
+13461:              MOVE   $17, $ACC
+13464:              LOADI  $ACC, 1
+13470:              MOVE   $18, $ACC
+13473:              LOADI  $ACC, 5
+13479:              MOVE   $19, $ACC
+13482:              LOADI  $ACC, 1
+13488:              MOVE   $20, $ACC
+13491:              LOADI  $ACC, 1
+13497:              MOVE   $21, $ACC
+13500:              LOADI  $ACC, 1
+13506:              MOVE   $22, $ACC
+13509:              LOADI  $ACC, 1
+13515:              MOVE   $23, $ACC
+13518:              LOADI  $ACC, 0
+13524:              MOVE   $24, $ACC
+13527:              LOADI  $ACC, 1
+13533:              MOVE   $25, $ACC
+13536:              LOADI  $ACC, 5
+13542:              MOVE   $26, $ACC
+13545:              LOADI  $ACC, 1
+13551:              MOVE   $27, $ACC
+13554:              LOADI  $ACC, 1
+13560:              MOVE   $28, $ACC
+13563:              LOADI  $ACC, 0
+13569:              MOVE   $29, $ACC
+13572:              LOADI  $ACC, 0
+13578:              MOVE   $30, $ACC
+13581:              LOADI  $ACC, 0
+13587:              MOVE   $31, $ACC
+13590:              LOADI  $ACC, 0
+13596:              MOVE   $32, $ACC
+13599:              LOADI  $ACC, 3
+13605:              ADD    $32, $ACC
+13608:              ADD    $31, $ACC
+13611:              ADD    $30, $ACC
+13614:              ADD    $29, $ACC
+13617:              ADD    $28, $ACC
+13620:              ADD    $27, $ACC
+13623:              SUB    $26, $ACC
+13626:              ADD    $25, $ACC
+13629:              ADD    $24, $ACC
+13632:              ADD    $23, $ACC
+13635:              ADD    $22, $ACC
+13638:              ADD    $21, $ACC
+13641:              ADD    $20, $ACC
+13644:              SUB    $19, $ACC
+13647:              ADD    $18, $ACC
+13650:              ADD    $17, $ACC
+13653:              ADD    $16, $ACC
+13656:              MOVE   $16, $ACC
+13659:              LOADI  $ACC, 2
+13665:              MUL    $16, $ACC
+13668:              MUL    $15, $ACC
+13671:              ADD    $14, $ACC
+13674:              MOVE   $14, $ACC
+13677:              LOADI  $ACC, 1
+13683:              MOVE   $15, $ACC
+13686:              LOADI  $ACC, 1
+13692:              MOVE   $16, $ACC
+13695:              LOADI  $ACC, 1
+13701:              MOVE   $17, $ACC
+13704:              LOADI  $ACC, 5
+13710:              MOVE   $18, $ACC
+13713:              LOADI  $ACC, 1
+13719:              MOVE   $19, $ACC
+13722:              LOADI  $ACC, 1
+13728:              MOVE   $20, $ACC
+13731:              LOADI  $ACC, 1
+13737:              MOVE   $21, $ACC
+13740:              LOADI  $ACC, 1
+13746:              MOVE   $22, $ACC
+13749:              LOADI  $ACC, 0
+13755:              MOVE   $23, $ACC
+13758:              LOADI  $ACC, 1
+13764:              MOVE   $24, $ACC
+13767:              LOADI  $ACC, 5
+13773:              MOVE   $25, $ACC
+13776:              LOADI  $ACC, 1
+13782:              MOVE   $26, $ACC
+13785:              LOADI  $ACC, 1
+13791:              MOVE   $27, $ACC
+13794:              LOADI  $ACC, 0
+13800:              MOVE   $28, $ACC
+13803:              LOADI  $ACC, 0
+13809:              MOVE   $29, $ACC
+13812:              LOADI  $ACC, 0
+13818:              MOVE   $30, $ACC
+13821:              LOADI  $ACC, 0
+13827:              MOVE   $31, $ACC
+13830:              LOADI  $ACC, 3
+13836:              ADD    $31, $ACC
+13839:              ADD    $30, $ACC
+13842:              ADD    $29, $ACC
+13845:              ADD    $28, $ACC
+13848:              ADD    $27, $ACC
+13851:              ADD    $26, $ACC
+13854:              SUB    $25, $ACC
+13857:              ADD    $24, $ACC
+13860:              ADD    $23, $ACC
+13863:              ADD    $22, $ACC
+13866:              ADD    $21, $ACC
+13869:              ADD    $20, $ACC
+13872:              ADD    $19, $ACC
+13875:              SUB    $18, $ACC
+13878:              ADD    $17, $ACC
+13881:              ADD    $16, $ACC
+13884:              ADD    $15, $ACC
+13887:              MOVE   $15, $ACC
+13890:              LOADI  $ACC, 2
+13896:              MUL    $15, $ACC
+13899:              MOVE   $15, $ACC
+13902:              LOADI  $ACC, 1
+13908:              MOVE   $16, $ACC
+13911:              LOADI  $ACC, 1
+13917:              MOVE   $17, $ACC
+13920:              LOADI  $ACC, 1
+13926:              MOVE   $18, $ACC
+13929:              LOADI  $ACC, 5
+13935:              MOVE   $19, $ACC
+13938:              LOADI  $ACC, 1
+13944:              MOVE   $20, $ACC
+13947:              LOADI  $ACC, 1
+13953:              MOVE   $21, $ACC
+13956:              LOADI  $ACC, 1
+13962:              MOVE   $22, $ACC
+13965:              LOADI  $ACC, 1
+13971:              MOVE   $23, $ACC
+13974:              LOADI  $ACC, 0
+13980:              MOVE   $24, $ACC
+13983:              LOADI  $ACC, 1
+13989:              MOVE   $25, $ACC
+13992:              LOADI  $ACC, 5
+13998:              MOVE   $26, $ACC
+14001:              LOADI  $ACC, 1
+14007:              MOVE   $27, $ACC
+14010:              LOADI  $ACC, 1
+14016:              MOVE   $28, $ACC
+14019:              LOADI  $ACC, 0
+14025:              MOVE   $29, $ACC
+14028:              LOADI  $ACC, 0
+14034:              MOVE   $30, $ACC
+14037:              LOADI  $ACC, 0
+14043:              MOVE   $31, $ACC
+14046:              LOADI  $ACC, 0
+14052:              MOVE   $32, $ACC
+14055:              LOADI  $ACC, 3
+14061:              ADD    $32, $ACC
+14064:              ADD    $31, $ACC
+14067:              ADD    $30, $ACC
+14070:              ADD    $29, $ACC
+14073:              ADD    $28, $ACC
+14076:              ADD    $27, $ACC
+14079:              SUB    $26, $ACC
+14082:              ADD    $25, $ACC
+14085:              ADD    $24, $ACC
+14088:              ADD    $23, $ACC
+14091:              ADD    $22, $ACC
+14094:              ADD    $21, $ACC
+14097:              ADD    $20, $ACC
+14100:              SUB    $19, $ACC
+14103:              ADD    $18, $ACC
+14106:              ADD    $17, $ACC
+14109:              ADD    $16, $ACC
+14112:              MOVE   $16, $ACC
+14115:              LOADI  $ACC, 2
+14121:              MUL    $16, $ACC
+14124:              MUL    $15, $ACC
+14127:              MOVE   $15, $ACC
+14130:              LOADI  $ACC, 1
+14136:              MOVE   $16, $ACC
+14139:              LOADI  $ACC, 1
+14145:              MOVE   $17, $ACC
+14148:              LOADI  $ACC, 1
+14154:              MOVE   $18, $ACC
+14157:              LOADI  $ACC, 5
+14163:              MOVE   $19, $ACC
+14166:              LOADI  $ACC, 1
+14172:              MOVE   $20, $ACC
+14175:              LOADI  $ACC, 1
+14181:              MOVE   $21, $ACC
+14184:              LOADI  $ACC, 1
+14190:              MOVE   $22, $ACC
+14193:              LOADI  $ACC, 1
+14199:              MOVE   $23, $ACC
+14202:              LOADI  $ACC, 0
+14208:              MOVE   $24, $ACC
+14211:              LOADI  $ACC, 1
+14217:              MOVE   $25, $ACC
+14220:              LOADI  $ACC, 5
+14226:              MOVE   $26, $ACC
+14229:              LOADI  $ACC, 1
+14235:              MOVE   $27, $ACC
+14238:              LOADI  $ACC, 1
+14244:              MOVE   $28, $ACC
+14247:              LOADI  $ACC, 0
+14253:              MOVE   $29, $ACC
+14256:              LOADI  $ACC, 0
+14262:              MOVE   $30, $ACC
+14265:              LOADI  $ACC, 0
+14271:              MOVE   $31, $ACC
+14274:              LOADI  $ACC, 0
+14280:              MOVE   $32, $ACC
+14283:              LOADI  $ACC, 3
+14289:              ADD    $32, $ACC
+14292:              ADD    $31, $ACC
+14295:              ADD    $30, $ACC
+14298:              ADD    $29, $ACC
+14301:              ADD    $28, $ACC
+14304:              ADD    $27, $ACC
+14307:              SUB    $26, $ACC
+14310:              ADD    $25, $ACC
+14313:              ADD    $24, $ACC
+14316:              ADD    $23, $ACC
+14319:              ADD    $22, $ACC
+14322:              ADD    $21, $ACC
+14325:              ADD    $20, $ACC
+14328:              SUB    $19, $ACC
+14331:              ADD    $18, $ACC
+14334:              ADD    $17, $ACC
+14337:              ADD    $16, $ACC
+14340:              MOVE   $16, $ACC
+14343:              LOADI  $ACC, 2
+14349:              MUL    $16, $ACC
+14352:              MOVE   $16, $ACC
+14355:              LOADI  $ACC, 1
+14361:              MOVE   $17, $ACC
+14364:              LOADI  $ACC, 1
+14370:              MOVE   $18, $ACC
+14373:              LOADI  $ACC, 1
+14379:              MOVE   $19, $ACC
+14382:              LOADI  $ACC, 5
+14388:              MOVE   $20, $ACC
+14391:              LOADI  $ACC, 1
+14397:              MOVE   $21, $ACC
+14400:              LOADI  $ACC, 1
+14406:              MOVE   $22, $ACC
+14409:              LOADI  $ACC, 1
+14415:              MOVE   $23, $ACC
+14418:              LOADI  $ACC, 1
+14424:              MOVE   $24, $ACC
+14427:              LOADI  $ACC, 0
+14433:              MOVE   $25, $ACC
+14436:              LOADI  $ACC, 1
+14442:              MOVE   $26, $ACC
+14445:              LOADI  $ACC, 5
+14451:              MOVE   $27, $ACC
+14454:              LOADI  $ACC, 1
+14460:              MOVE   $28, $ACC
+14463:              LOADI  $ACC, 1
+14469:              MOVE   $29, $ACC
+14472:              LOADI  $ACC, 0
+14478:              MOVE   $30, $ACC
+14481:              LOADI  $ACC, 0
+14487:              MOVE   $31, $ACC
+14490:              LOADI  $ACC, 0
+14496:              MOVE   $32, $ACC
+14499:              LOADI  $ACC, 0
+14505:              MOVE   $33, $ACC
+14508:              LOADI  $ACC, 3
+14514:              ADD    $33, $ACC
+14517:              ADD    $32, $ACC
+14520:              ADD    $31, $ACC
+14523:              ADD    $30, $ACC
+14526:              ADD    $29, $ACC
+14529:              ADD    $28, $ACC
+14532:              SUB    $27, $ACC
+14535:              ADD    $26, $ACC
+14538:              ADD    $25, $ACC
+14541:              ADD    $24, $ACC
+14544:              ADD    $23, $ACC
+14547:              ADD    $22, $ACC
+14550:              ADD    $21, $ACC
+14553:              SUB    $20, $ACC
+14556:              ADD    $19, $ACC
+14559:              ADD    $18, $ACC
+14562:              ADD    $17, $ACC
+14565:              MOVE   $17, $ACC
+14568:              LOADI  $ACC, 2
+14574:              MUL    $17, $ACC
+14577:              MUL    $16, $ACC
+14580:              ADD    $15, $ACC
+14583:              MUL    $14, $ACC
+14586:              ADD    $13, $ACC
+14589:              MUL    $12, $ACC
+14592:              ADD    $11, $ACC
+14595:              ADD    $10, $ACC
+14598:              MOVE   $tmp.x, $ACC
+14601:              LOADI  $ACC, 1
+14607:              SUB    $SP, $ACC
+14610:              MOVE   $SP, $ACC
+14613:              STORE  $tmp.x, ($SP)
+14616:              MOVE   $ACC, $tmp.x
+14619:              MOVE   $10, $ACC
+14622:              LOADI  $ACC, 1
+14628:              SUB    $SP, $ACC
+14631:              MOVE   $SP, $ACC
+14634:              STORE  $10, ($SP)
+14637:              LOADI  $ACC, _printint
+14643:              JMPAL  $ACC
+14645:              LOAD   $tmp.x, ($SP)
+14648:              LOADI  $ACC, 1
+14654:              ADD    $SP, $ACC
+14657:              MOVE   $SP, $ACC
+14660:              MOVE   $ACC, $RV
+14663:              LOADI  $ACC, 1
+14669:              SUB    $SP, $ACC
+14672:              MOVE   $SP, $ACC
+14675:              STORE  $tmp.x, ($SP)
+14678:              LOADI  $ACC, 13
+14684:              MOVE   $10, $ACC
+14687:              LOADI  $ACC, 1
+14693:              SUB    $SP, $ACC
+14696:              MOVE   $SP, $ACC
+14699:              STORE  $10, ($SP)
+14702:              LOADI  $ACC, _printchar
+14708:              JMPAL  $ACC
+14710:              LOAD   $tmp.x, ($SP)
+14713:              LOADI  $ACC, 1
+14719:              ADD    $SP, $ACC
+14722:              MOVE   $SP, $ACC
+14725:              MOVE   $ACC, $RV
+14728:              LOADI  $ACC, 1
+14734:              SUB    $SP, $ACC
+14737:              MOVE   $SP, $ACC
+14740:              STORE  $tmp.x, ($SP)
+14743:              LOADI  $ACC, 10
+14749:              MOVE   $10, $ACC
+14752:              LOADI  $ACC, 1
+14758:              SUB    $SP, $ACC
+14761:              MOVE   $SP, $ACC
+14764:              STORE  $10, ($SP)
+14767:              LOADI  $ACC, _printchar
+14773:              JMPAL  $ACC
+14775:              LOAD   $tmp.x, ($SP)
+14778:              LOADI  $ACC, 1
+14784:              ADD    $SP, $ACC
+14787:              MOVE   $SP, $ACC
+14790:              MOVE   $ACC, $RV
+14793:              JMPI   _END
+14798:   _printint: LOADI  $ACC, 1
+14804:              SUB    $SP, $ACC
+14807:              MOVE   $SP, $ACC
+14810:              STORE  $RET, ($SP)
+14813:              LOADI  $ACC, 1
+14819:              SUB    $SP, $ACC
+14822:              MOVE   $SP, $ACC
+14825:              STORE  $FP, ($SP)
+14828:              MOVE   $FP, $SP
+14831:              LOADI  $ACC, 0
+14837:              SUB    $SP, $ACC
+14840:              MOVE   $SP, $ACC
+14843:              LOADI  $ACC, 2
+14849:              ADD    $FP, $ACC
+14852:              LOAD   $9, ($ACC)
+14855:              LOADI  $ACC, 0
+14861:              MOVE   $OUT, $9
+14864:              LOADI  $ACC, 1
+14870:              ADD    $FP, $ACC
+14873:              LOAD   $RET, ($ACC)
+14876:              LOAD   $FP, ($FP)
+14879:              LOADI  $ACC, 3
+14885:              ADD    $SP, $ACC
+14888:              MOVE   $SP, $ACC
+14891:              JMP    $RET
+14893:  _printchar: LOADI  $ACC, 1
+14899:              SUB    $SP, $ACC
+14902:              MOVE   $SP, $ACC
+14905:              STORE  $RET, ($SP)
+14908:              LOADI  $ACC, 1
+14914:              SUB    $SP, $ACC
+14917:              MOVE   $SP, $ACC
+14920:              STORE  $FP, ($SP)
+14923:              MOVE   $FP, $SP
+14926:              LOADI  $ACC, 0
+14932:              SUB    $SP, $ACC
+14935:              MOVE   $SP, $ACC
+14938:              LOADI  $ACC, 2
+14944:              ADD    $FP, $ACC
+14947:              LOAD   $9, ($ACC)
+14950:              LOADI  $ACC, 1
+14956:              MOVE   $OUT, $9
+14959:              LOADI  $ACC, 1
+14965:              ADD    $FP, $ACC
+14968:              LOAD   $RET, ($ACC)
+14971:              LOAD   $FP, ($FP)
+14974:              LOADI  $ACC, 3
+14980:              ADD    $SP, $ACC
+14983:              MOVE   $SP, $ACC
+14986:              JMP    $RET
+14988:        _END: 

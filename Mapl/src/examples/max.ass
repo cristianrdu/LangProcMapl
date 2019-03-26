@@ -1,0 +1,96 @@
+.data
+  ACC   : 1
+  FP    : 3
+  MEMHI : 7
+  MEMLO : 6
+  OUT   : 2
+  PC    : 0
+  RET   : 4
+  RV    : 8
+  SP    : 5
+  tmp.x : 9
+  tmp.y : 10
+
+.text
+    0:              MOVE   $ACC, $tmp.x
+    3:              MOVE   $11, $ACC
+    6:              MOVE   $ACC, $tmp.y
+    9:              LT     $11, $ACC
+   12:              JMP    $ACC
+   14:              LOADI  $ACC, 1
+   20:              SUB    $SP, $ACC
+   23:              MOVE   $SP, $ACC
+   26:              STORE  $tmp.x, ($SP)
+   29:              LOADI  $ACC, 1
+   35:              SUB    $SP, $ACC
+   38:              MOVE   $SP, $ACC
+   41:              STORE  $tmp.y, ($SP)
+   44:              LOADI  $ACC, 13
+   50:              MOVE   $11, $ACC
+   53:              LOADI  $ACC, 1
+   59:              SUB    $SP, $ACC
+   62:              MOVE   $SP, $ACC
+   65:              STORE  $11, ($SP)
+   68:              LOADI  $ACC, _printchar
+   74:              JMPAL  $ACC
+   76:              LOAD   $tmp.y, ($SP)
+   79:              LOADI  $ACC, 1
+   85:              ADD    $SP, $ACC
+   88:              MOVE   $SP, $ACC
+   91:              LOAD   $tmp.x, ($SP)
+   94:              LOADI  $ACC, 1
+  100:              ADD    $SP, $ACC
+  103:              MOVE   $SP, $ACC
+  106:              MOVE   $ACC, $RV
+  109:              LOADI  $ACC, 1
+  115:              SUB    $SP, $ACC
+  118:              MOVE   $SP, $ACC
+  121:              STORE  $tmp.x, ($SP)
+  124:              LOADI  $ACC, 1
+  130:              SUB    $SP, $ACC
+  133:              MOVE   $SP, $ACC
+  136:              STORE  $tmp.y, ($SP)
+  139:              LOADI  $ACC, 10
+  145:              MOVE   $11, $ACC
+  148:              LOADI  $ACC, 1
+  154:              SUB    $SP, $ACC
+  157:              MOVE   $SP, $ACC
+  160:              STORE  $11, ($SP)
+  163:              LOADI  $ACC, _printchar
+  169:              JMPAL  $ACC
+  171:              LOAD   $tmp.y, ($SP)
+  174:              LOADI  $ACC, 1
+  180:              ADD    $SP, $ACC
+  183:              MOVE   $SP, $ACC
+  186:              LOAD   $tmp.x, ($SP)
+  189:              LOADI  $ACC, 1
+  195:              ADD    $SP, $ACC
+  198:              MOVE   $SP, $ACC
+  201:              MOVE   $ACC, $RV
+  204:              JMPI   _END
+  209:  _printchar: LOADI  $ACC, 1
+  215:              SUB    $SP, $ACC
+  218:              MOVE   $SP, $ACC
+  221:              STORE  $RET, ($SP)
+  224:              LOADI  $ACC, 1
+  230:              SUB    $SP, $ACC
+  233:              MOVE   $SP, $ACC
+  236:              STORE  $FP, ($SP)
+  239:              MOVE   $FP, $SP
+  242:              LOADI  $ACC, 0
+  248:              SUB    $SP, $ACC
+  251:              MOVE   $SP, $ACC
+  254:              LOADI  $ACC, 2
+  260:              ADD    $FP, $ACC
+  263:              LOAD   $9, ($ACC)
+  266:              LOADI  $ACC, 1
+  272:              MOVE   $OUT, $9
+  275:              LOADI  $ACC, 1
+  281:              ADD    $FP, $ACC
+  284:              LOAD   $RET, ($ACC)
+  287:              LOAD   $FP, ($FP)
+  290:              LOADI  $ACC, 3
+  296:              ADD    $SP, $ACC
+  299:              MOVE   $SP, $ACC
+  302:              JMP    $RET
+  304:        _END: 
