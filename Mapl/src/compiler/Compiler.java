@@ -59,7 +59,9 @@ public class Compiler extends VisitorAdapter<String> {
 
     @Override
     public String visit(StmAssign n) {
-        return "MOVE(TEMP " + n.v.toString() + ", " + n.e.accept(this) + ")";
+        // return "MOVE(TEMP " + n.v.toString() + ", " + n.e.accept(this) + ")";
+        String b = "MOVE(MEM(BINOP(TEMP FP, ADD, CONST " + n.v.offset + ")," + n.e.accept(this) + ")";
+        return b;
     }
 
     @Override
@@ -71,7 +73,7 @@ public class Compiler extends VisitorAdapter<String> {
         String ifStm = "CJUMP(" + n.e.accept(this) + ", EQ, CONST 1, " + trueCase + "," + falseCase + ")";
         String labelTrue = "LABEL " + trueCase;
         String block1 = n.b1.accept(this);
-        String jumpDone = "JUMP(NAME done)";
+        String jumpDone = "JUMP(NAME " + done + ")";
         String labelFalse = "LABEL " + falseCase;
         String block2 = n.b2.accept(this);
         String labelDone = "LABEL " + done;
@@ -88,15 +90,15 @@ public class Compiler extends VisitorAdapter<String> {
 
     @Override
     public String visit(StmWhile n) {
-        String b1=FreshLabelGenerator.makeLabel("b");
-        String done=FreshLabelGenerator.makeLabel("done");
-        String start=FreshLabelGenerator.makeLabel("start");
-        String a = "LABEL "+start;
-        String b = "CJUMP (" + n.e.accept(this) + ", EQ, CONST 1, "+b1+" , "+done+")";
-        String c = "LABEL "+ b1;
+        String b1 = FreshLabelGenerator.makeLabel("b");
+        String done = FreshLabelGenerator.makeLabel("done");
+        String start = FreshLabelGenerator.makeLabel("start");
+        String a = "LABEL " + start;
+        String b = "CJUMP (" + n.e.accept(this) + ", EQ, CONST 1, " + b1 + " , " + done + ")";
+        String c = "LABEL " + b1;
         String d = visit(n.b);
-        String e = "JUMP(NAME "+start+")";
-        String f = "LABEL "+ done;
+        String e = "JUMP(NAME start)";
+        String f = "LABEL " + done;
         String completedWhileStatement = a;
         completedWhileStatement = seq(completedWhileStatement, b);
         completedWhileStatement = seq(completedWhileStatement, c);
@@ -128,7 +130,8 @@ public class Compiler extends VisitorAdapter<String> {
 
     @Override
     public String visit(ExpVar n) {
-        return "TEMP " + n.v.toString();
+        // return "TEMP " + n.v.toString();
+        return "MEM(BINOP(TEMP FP" + ", ADD, CONST " + n.v.offset + "))";
     }
 
     @Override
