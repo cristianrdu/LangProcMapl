@@ -22,11 +22,17 @@ public class Compiler extends VisitorAdapter<String> {
 
     @Override
     public String visit(Program n) {
-        String ir = "NOOP";
-        for (Stm s : n.pd.ss) {
-            ir = seq(ir, s.accept(this));
+        String params="";
+        for(int i=1;i<= n.pd.fs.size();++i){
+         params+=", MEM(BINOP(TEMP FP, SUB, CONST " + i + "))";
         }
-        return ir;
+        String a="EXP(CALL(NAME "+n.pd.id+params+"))";
+        a=seq(a,"JUMP (NAME _END)");
+        a=seq(a, n.pd.accept(this));
+        for(MethodDecl s:n.mds){
+                a=seq(a, s.accept(this));
+            }
+            return a;
     }
 
     /* ======================================================== */
@@ -170,5 +176,72 @@ public class Compiler extends VisitorAdapter<String> {
         }
         return "BINOP(" + n.e1.accept(this) + ", " + operator + ", " + n.e2.accept(this) + ")";
     }
+    @Override
+    public String visit(ExpCall n){
+            String a="CALL(NAME "+n.id;
+            for (Exp s : n.es) {
+                a=a+", ";
+                a = seq(a, s.accept(this));
+            }
+            a=a+")";
+             return a;
 
+
+    }
+    
+    @Override
+    public String visit(StmCall n){
+             String a="EXP(CALL(NAME "+n.id;
+            for (Exp s : n.es) {
+                a=a+", ";
+                a = seq(a, s.accept(this));
+            }
+            a=a+"))";
+             return a;
+            
+    }
+
+    @Override
+    public String visit(ProcDecl n){
+            String a1="LABEL "+n.id;
+            String a="PROLOGUE("+n.fs.size()+", "+n.stackAllocation+")";
+            String b="NOOP";
+            for(Stm s:n.ss){
+                b=seq(b, s.accept(this));
+            }
+            String c="EPILOGUE("+n.fs.size()+", "+n.stackAllocation+")";
+            String retStatement;
+            retStatement=seq(a1,a);
+            retStatement=seq(retStatement,b);
+            retStatement=seq(retStatement,c);
+            return retStatement;
+    }
+    
+    @Override
+    public String visit(FunDecl n){
+            String a1="LABEL "+n.id;
+            String a="PROLOGUE("+n.fs.size()+", "+n.stackAllocation+")";
+            String b="NOOP";
+            for(Stm s:n.ss){
+                b=seq(b, s.accept(this));
+            }
+            String move="MOVE(TEMP RV,"+n.e.accept(this)+")";
+            String c="EPILOGUE("+n.fs.size()+", "+n.stackAllocation+")";
+            String returnStatement;
+            returnStatement=seq(a1,a);
+            returnStatement=seq(returnStatement,b);
+            returnStatement=seq(returnStatement,move);
+            returnStatement=seq(returnStatement,c);
+            return returnStatement;
+    }
+    @Override
+    public String visit(ExpNewArray n){
+        String a="ESEQ(MOVE(TEMP "+n.e.accept(this)+", "
+        "CALL(NAME _malloc, "+n.e.accept(this)+")";
+    }
+    @Override
+    public String visit(ExpArrayLookup n){
+        
+         "CALL(NAME _malloc, "+n.e.accept(this)+")";
+    }
 }
