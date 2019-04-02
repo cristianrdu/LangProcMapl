@@ -235,13 +235,50 @@ public class Compiler extends VisitorAdapter<String> {
             return returnStatement;
     }
     @Override
-    public String visit(ExpNewArray n){
-        String a="ESEQ(MOVE(TEMP "+n.e.accept(this)+", "
-        "CALL(NAME _malloc, "+n.e.accept(this)+")";
+    public String visit(ExpNewArray n) {
+        String t = "MOVE(TEMP t," + n.e.accept(this) + ")";
+        String out = "MOVE(TEMP l,CALL(NAME _malloc, BINOP(TEMP t,ADD,CONST 1)))";
+        out = seq(t, out);
+        out = seq(out, "MOVE(MEM(BINOP(TEMP l, SUB, CONST 1)),TEMP t)");
+        out = "ESEQ(" + out + ", TEMP l)";
+
+        return out;
     }
     @Override
-    public String visit(ExpArrayLookup n){
-        
-         "CALL(NAME _malloc, "+n.e.accept(this)+")";
+    public String visit(ExpArrayLookup n) {
+        String t = makeLabel("t");
+        String f = makeLabel("f");
+        String t1 = makeLabel("t");
+        String e = makeLabel("e");
+        String i = makeLabel("i");
+        String exp = makeLabel("");
+        String exp1 = makeLabel("");
+        String exp2 = makeLabel("");
+        String exp3 = makeLabel("");
+        String out = "MOVE(TEMP " + exp1 + "," + n.e1.accept(this) + ")";
+        out = seq(out,"MOVE(TEMP " + exp2 + "," + n.e2.accept(this) + ")");
+        out = "MOVE( TEMP " + exp + ",BINOP(BINOP(CONST 0,LE,TEMP " + exp2 + "),MUL,BINOP( TEMP " + exp2 + ",LT, MEM(BINOP( TEMP " + exp1 + ",SUB,CONST 1) ))))";
+        out = seq(out, "CJUMP(TEMP " + exp + ", EQ, CONST 1 ," + t + "," + f + ")");
+        out = seq(out, "LABEL " + t);
+        out = seq(out, "MOVE(TEMP " + i + ",MEM(BINOP(  " + n.e1.accept(this) + ",ADD, " + n.e2.accept(this) + ")))");
+        out = seq(out, "JUMP(NAME " + e + ")");
+        out = seq(out, "LABEL " + f);
+        out = seq(out, "EXP(CALL(NAME _printstr,NAME np))");
+        out = seq(out, "JUMP(NAME _END)");
+        out = seq(out, "JUMP(NAME " + e + ")");
+        out = seq(out, "LABEL " + e);
+
+        out = "ESEQ(" + out + ",TEMP " + i + ")";
+
+        return out;
+    }
+    @Override
+    public String visit(ExpArrayLength n) {
+        return "MEM(BINOP(" + n.e.accept(this) + ",SUB,CONST 1))";
+    }
+    @Override
+    public String visit(StmArrayAssign n) {
+
+        return "MOVE(MEM(BINOP(" + n.e1.accept(this) + ", ADD," + n.e2.accept(this) + ")), " + n.e3.accept(this) + ")";
     }
 }
