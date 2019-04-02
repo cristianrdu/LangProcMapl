@@ -66,7 +66,7 @@ public class Compiler extends VisitorAdapter<String> {
     @Override
     public String visit(StmAssign n) {
         // return "MOVE(TEMP " + n.v.toString() + ", " + n.e.accept(this) + ")";
-        String b = "MOVE(MEM(BINOP(TEMP FP, ADD, CONST " + n.v.offset + ")," + n.e.accept(this) + ")";
+        String b = "MOVE(MEM(BINOP(TEMP FP, ADD, CONST " + n.v.offset + "))," + n.e.accept(this) + ")";
         return b;
     }
 
@@ -169,10 +169,34 @@ public class Compiler extends VisitorAdapter<String> {
             operator = "MUL";
             break;
         case AND:
-            String a = "BINOP(" + n.e1.accept(this) + ", EQ, CONST 1)";
-            String b = "BINOP(" + n.e2.accept(this) + ",EQ, CONST 1)";
-            operator = "BINOP(" + a + " , AND, " + b + ")";
-            return operator;
+            // String a = "BINOP(" + n.e1.accept(this) + ", EQ, CONST 1)";
+            // String b = "BINOP(" + n.e2.accept(this) + ",EQ, CONST 1)";
+            // operator = "BINOP(" + a + " , AND, " + b + ")";
+            // return operator;
+            String tmp = "";
+            String out = "";
+            String tl = makeLabel("");
+            String fl = makeLabel("");
+            String t2 = makeLabel("");
+            String el = makeLabel("");
+            String o = "";
+            String temp = "";
+            tmp = "CJUMP(" + n.e1.accept(this) + ", EQ, CONST 1, " + tl + "," + fl + ")";
+            String t = "";
+            t = seq("LABEL " + tl, "CJUMP(" + n.e2.accept(this) + ", EQ, CONST 1, " + t2 + "," + fl + ")");
+            t = seq(t, "JUMP(NAME " + el + ")");
+            String st = seq("LABEL " + t2, "MOVE(TEMP C, CONST 1)");
+            st = seq(st, "JUMP(NAME " + el + ")");
+            t = seq(st, t);
+            String f = "";
+            f = seq("LABEL " + fl, "MOVE(TEMP C,CONST 0)");
+            o = "CONTS 0";
+            f = seq(f, "JUMP(NAME " + el + ")");
+            String s = seq(t, f);
+            s = seq(s, "LABEL " + el);
+            out = seq(tmp, s);
+            out = "ESEQ(" + out + ",TEMP C)";
+            return out;
         }
         return "BINOP(" + n.e1.accept(this) + ", " + operator + ", " + n.e2.accept(this) + ")";
     }
@@ -246,31 +270,9 @@ public class Compiler extends VisitorAdapter<String> {
     }
     @Override
     public String visit(ExpArrayLookup n) {
-        String t = makeLabel("t");
-        String f = makeLabel("f");
-        String t1 = makeLabel("t");
-        String e = makeLabel("e");
-        String i = makeLabel("i");
-        String exp = makeLabel("");
-        String exp1 = makeLabel("");
-        String exp2 = makeLabel("");
-        String exp3 = makeLabel("");
-        String out = "MOVE(TEMP " + exp1 + "," + n.e1.accept(this) + ")";
-        out = seq(out,"MOVE(TEMP " + exp2 + "," + n.e2.accept(this) + ")");
-        out = "MOVE( TEMP " + exp + ",BINOP(BINOP(CONST 0,LE,TEMP " + exp2 + "),MUL,BINOP( TEMP " + exp2 + ",LT, MEM(BINOP( TEMP " + exp1 + ",SUB,CONST 1) ))))";
-        out = seq(out, "CJUMP(TEMP " + exp + ", EQ, CONST 1 ," + t + "," + f + ")");
-        out = seq(out, "LABEL " + t);
-        out = seq(out, "MOVE(TEMP " + i + ",MEM(BINOP(  " + n.e1.accept(this) + ",ADD, " + n.e2.accept(this) + ")))");
-        out = seq(out, "JUMP(NAME " + e + ")");
-        out = seq(out, "LABEL " + f);
-        out = seq(out, "EXP(CALL(NAME _printstr,NAME np))");
-        out = seq(out, "JUMP(NAME _END)");
-        out = seq(out, "JUMP(NAME " + e + ")");
-        out = seq(out, "LABEL " + e);
+        
 
-        out = "ESEQ(" + out + ",TEMP " + i + ")";
-
-        return out;
+        return "MEM(BINOP(" + n.e1.accept(this) + ",ADD, "+n.e2.accept(this)+"))";
     }
     @Override
     public String visit(ExpArrayLength n) {
